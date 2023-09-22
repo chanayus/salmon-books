@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/favicon.png" sizes="32x32" />
+    <title>Salmonbooks</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./scripts/main.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content" class="text-white bg-orange">
+      <section class="main-container">
+        <h1 class="heading-text">CONTACT</h1>
+        <p class="mb-8 text-lg text-center max-w-[75ch] mx-auto">
+          บริษัท บันลือ พับลิเคชั่นส์ จำกัด955 ซอยสุทธิพร ถ.ประชาสงเคราะห์ แขวงดินแดง เขตดินแดง กทม. 10400 Banlue Publications co.,ltd955 Soi Sutthiporn Prachasongkroh rd., Dindaeng, Bangkok 10400
+          <br class="inline sm:hidden" />
+          Tel: +66 2641 9955 ext. 506 <br class="inline sm:hidden" />
+          Fax: +66 2641 9955 ext. 518 <br />
+          Email: team@sal.mn
+        </p>
+        <div class="flex items-center justify-center mb-28 gap-x-5">
+          <a href="">
+            <img src="./icons/facebook-white.svg" alt="" />
+          </a>
+          <a href="">
+            <img src="./icons/instagram-white.svg" alt="" />
+          </a>
+          <a href="">
+            <img src="./icons/x-white.svg" alt="" />
+          </a>
+          <a href="">
+            <img src="./icons/tiktok-white.svg" alt="" />
+          </a>
+          <a href="">
+            <img src="./icons/youtube-white.svg" alt="" />
+          </a>
+        </div>
+
+        <figure class="overflow-hidden rounded-3xl">
+          <img src="./images/pages/contact/map.webp" alt="" />
+        </figure>
+      </section>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>

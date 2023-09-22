@@ -1,0 +1,55 @@
+$orange: #fc744a;
+$yellow: #f8c520;
+$sky-blue: #66bdd8;
+$body-white: #f1f1f1;
+$gray: #8a8a8a;
+
+$colors: (
+    "orange": $orange,
+    "yellow": $yellow,
+    "sky-blue": $sky-blue,
+    "body-white": $body-white,
+    "gray": $gray
+);
+
+@each $key, $value in $colors {
+    .text-#{$key} {
+        color: $value;
+    }
+    .bg-#{$key} {
+        background: $value;
+    }
+    .accent-#{$key} {
+        accent-color: $value;
+    }
+    .border-#{$key} {
+        border-color: $value;
+    }
+    .hover-bg-#{$key}:hover {
+        background: $value;
+    }
+    .hover-text-#{$key}:hover {
+        color: $value;
+    }
+}
+
+@for $i from 1 through 10 {
+    .line-clamp-#{$i} {
+        display: -webkit-box;
+        -webkit-line-clamp: $i;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+.btn-orange {
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 9999px;
+    background-color: $orange;
+    display: flex;
+    justify-content: center;
+    column-gap: 0.5rem;
+    color: #fff;
+}

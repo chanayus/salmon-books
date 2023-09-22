@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/favicon.png" sizes="32x32" />
+    <title>Salmonbooks</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/readership.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content" class="space-y-11">
+      <header class="relative w-full bg-[url('./images/pages/readership/cover.webp')] bg-[70%_top] flex items-center bg-cover h-[100vh] max-h-[67.5rem]">
+        <div class="relative flex justify-center main-container lg:justify-start bottom-14">
+          <form id="login-form" action="" class="px-10 max-w-[27rem] w-full py-10 space-y-10 bg-white/80 backdrop-blur-md rounded-3xl">
+            <figure>
+              <img src="./images/pages/readership/logo.webp" alt="" width="260" class="mx-auto" />
+            </figure>
+
+            <section class="flex flex-col gap-y-6">
+              <div class="flex items-center px-5 py-2 bg-white rounded-full gap-x-2">
+                <img src="./icons/card-gray.svg" alt="" />
+                <input type="text" name="member-id" id="member-id" placeholder="หมายเลขบัตรสมัครชิก" class="w-full bg-transparent" />
+              </div>
+
+              <div class="flex items-center px-5 py-2 bg-white rounded-full gap-x-2">
+                <img src="./icons/mail-gray.svg" alt="" />
+                <input type="email" name="email" id="email" placeholder="อีเมล" class="w-full bg-transparent" />
+              </div>
+
+              <div class="flex items-center px-5 py-2 bg-white rounded-full gap-x-2">
+                <img src="./icons/phone-gray.svg" alt="" />
+                <input type="tel" name="phone-number" id="phone-number" placeholder="เบอร์โทรศัพท์" class="w-full bg-transparent" />
+              </div>
+
+              <p class="text-center text-gray">*กรุณากรอกอย่างน้อย 2 ข้อมูล</p>
+            </section>
+
+            <section class="space-y-8">
+              <button type="submit" class="btn-orange">เข้าสู่ระบบ</button>
+
+              <a href="" class="block w-full font-semibold text-center">สมัครสมาชิก</a>
+            </section>
+          </form>
+        </div>
+      </header>
+
+      <section class="main-container">
+        <p class="px-10 py-6 border border-orange rounded-3xl text-gray">
+          special discount at our event (book fair) and online store (minimore.com) ─ be the first priority or get free access to our activities ─ collect the point from every purchase to redeem a
+          discount or gift for the next purchase <br /><br />
+
+          รับส่วนลดและสิทธิพิเศษเพิ่มจากส่วนลดปกติที่บูธของสำนักพิมพ์ Salmon Books, BunBooks และ Banlue Books รวมถึงที่ shop at Banlue Group และ minimore.com ─ สิทธิ์เข้าร่วมกิจกรรมต่างๆฟรี!
+          หรือได้รับสิทธิ์ก่อนผู้อื่น ─ ทุกยอดการซื้อจะได้รับคะแนนสะสมไว้ใช้สำหรับแลกเป็นส่วนลดหรือรับของที่ระลึกในครั้งต่อไป :->
+        </p>
+      </section>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>
