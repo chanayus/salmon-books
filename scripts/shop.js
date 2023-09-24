@@ -1,3 +1,5 @@
+import { infiniteScroll } from "./modules/infiniteScroll.js";
+
 let currentFilterShow = null;
 
 const filter = {
@@ -15,19 +17,24 @@ const filterToggles = document.querySelectorAll(".filter-toggle");
 const filterOptions = document.querySelector(".filter-options");
 const optionContents = document.querySelectorAll(".filter-options-content");
 const optionsButton = document.querySelectorAll(".filter-options-content button");
-const productCategoryOption = filterOptions?.querySelectorAll(".filter-options-content[data-for='category'] button");
 
 const hideOptions = () => {
-  currentFilterShow = null;
+  const targetButton = document.querySelector(`.filter-toggle[data-for="${currentFilterShow}"]`);
   optionContents?.forEach((element) => {
     element.classList.remove("active");
   });
+  !targetButton.dataset.value && targetButton?.classList.remove("active");
   gsap.to(filterOptions, { autoAlpha: 0, duration: 0.25 });
+  currentFilterShow = null;
 };
 
 const showOptions = () => {
+  const targetButton = document.querySelector(`.filter-toggle[data-for="${currentFilterShow}"]`);
+
   filterToggles?.forEach((button) => !button.dataset.value && button.classList.remove("active"));
+
   if (currentFilterShow === null) return;
+
   optionContents?.forEach((element) => {
     if (element.dataset.for === currentFilterShow) {
       gsap.to(filterOptions, { autoAlpha: 1, duration: 0.25 });
@@ -36,6 +43,8 @@ const showOptions = () => {
       element.classList.remove("active");
     }
   });
+
+  targetButton.classList.add("active");
 };
 
 filterToggles?.forEach((button) => {
@@ -46,12 +55,9 @@ filterToggles?.forEach((button) => {
   button.addEventListener("click", (e) => {
     if (currentFilterShow === e.target.dataset.for) {
       hideOptions();
-      currentFilterShow = null;
-      !e.target.dataset.value && e.target.classList.remove("active");
     } else {
       currentFilterShow = e.target.dataset.for;
       showOptions();
-      e.target.classList.add("active");
     }
   });
 });
@@ -64,8 +70,6 @@ optionsButton?.forEach((button) => {
     const options = document.querySelectorAll(`.filter-options-content[data-for='${filterKey}'] button`);
 
     filter[filterKey] = value;
-
-    console.log(filter);
 
     options?.forEach((option) => {
       if (option.dataset.value === value) {
@@ -92,4 +96,20 @@ optionsButton?.forEach((button) => {
   });
 });
 
+window.addEventListener("click", (e) => {
+  const filterSection = document.querySelector("#filter-section");
+  if (e.target && !filterSection.contains(e.target) && currentFilterShow) {
+    hideOptions();
+  }
+});
+
 gsap.set(filterOptions, { autoAlpha: 0 });
+
+infiniteScroll("#product-content", () => {
+  const container = document.querySelector("#product-content");
+  const contents = document.querySelectorAll(".product-card");
+
+  [...contents]?.slice(0, 6)?.forEach((content) => {
+    container.innerHTML += content.outerHTML;
+  });
+});

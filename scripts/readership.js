@@ -19,5 +19,6 @@ const submitHandle = (e) => {
 };
 
 phoneInput?.addEventListener("input", numberOnlyHandle);
-// memberIdInput?.addEventListener("input", numberOnlyHandle);
 loginForm?.addEventListener("submit", submitHandle);
+
+gsap.fromTo("#login-form", { rotateY: 45, autoAlpha: 0 }, { rotateY: 0, autoAlpha: 1, ease: "expo", delay: 0.25, duration: 1 });

@@ -25,9 +25,9 @@ const changeCategory = (category) => {
   categoryButtons?.forEach((button) => {
     const buttonCategory = button.dataset.category;
     if (buttonCategory === currentCategory) {
-      button.className = "flex items-center justify-center py-2 text-white rounded-full px-9 bg-orange gap-x-2";
+      button.classList.add("active");
     } else {
-      button.className = "py-2 text-black bg-transparent rounded-full px-9";
+      button.classList.remove("active");
     }
   });
 };
@@ -40,9 +40,9 @@ categoryButtons?.forEach((button) => {
   const category = button.dataset.category;
 
   if (category === currentCategory) {
-    button.className = "flex items-center justify-center py-2 text-white rounded-full px-9 bg-orange gap-x-2";
+    button.classList.add("active");
   } else {
-    button.className = "py-2 text-black bg-transparent rounded-full px-9";
+    button.classList.remove("active");
   }
 
   button.addEventListener("click", () => changeCategory(category));

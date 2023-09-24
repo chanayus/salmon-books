@@ -41,8 +41,8 @@
     <main id="main-content">
       <h1 class="heading-text">Authors</h1>
 
-      <section class="relative flex justify-center mb-20">
-        <button id="author-select-button" data-for="category" class="filter-toggle">Category</button>
+      <section id="filter-section" class="relative flex justify-center mb-20">
+        <button id="author-select-button" data-for="category" class="filter-toggle">Select Author</button>
 
         <section class="filter-options">
           <div class="flex flex-col mb-4 lg:flex-row gap-y-6 main-container">
@@ -59,65 +59,93 @@
       </section>
 
       <section class="grid grid-cols-2 gap-10 main-container lg:grid-cols-4 sm:grid-cols-3 justify-items-center">
-        <a href="" class="[&:hover_img]:scale-110 space-y-4 text-lg text-center w-full max-w-[15rem]">
-          <figure class="w-full max-w-[14.5rem] pointer-events-none aspect-square mx-auto rounded-full overflow-hidden border">
+        <a href="" class="author-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/2d25/f126/7594159bace457183504773059310d8b?Expires=1696204800&Signature=LhYuTRQNdi7F1qoQ4kO6OiF1E~N1RfGI2-2GmRdOpa5hgwa3-vk5EJfzMgi9CbhSPx6Fze5sF35KXI3vcyGZwh2iUipw6Y0wc9f4rjEEdM-XVs9IsEBZdSPP~ts9vt-ewKnUVEkhPFwk1JiUe-Qt35UG18O8Mz4GQDIFqjpUm3l6AYXGnFVdR2jVp2Sc7duqPLmHMec1kwvBLiNbQVXbaw2Wz3C~RltFroaVo4qOywExx5BSKVM~BL0zGtOTw72Nl7fz0HDH2wJfUPTmkFw8XhT3iinpofvYFLeE3zdHV69G0fqLGOIVjZ58PFgNZNr3AFc~HBRLHsWfv8TrN0cZLA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+          <p>Art Jeeno</p>
+        </a>
+        <a href="" class="author-card">
+          <figure>
             <img
               src="https://s3-alpha-sig.figma.com/img/459a/e30b/a49bb55ee1ddb408838637fbb4e0d423?Expires=1696204800&Signature=mXIaEVMgMhiHpz4N~3ywVe8nlBi5CTE0qOchpBf~9w59NA55S7syYA5VqQYgD3QCTfV9IJGlIlLyn25dX6hZ2dDDhxGEXAnb1uYIpWgnaZ6ibfyXxyVmErH6MVNxPgXVu7ycphIEKgC5vU9HrR6-ZVvvsVTIBuvRb0H~sDWmmYEh0MoAE7qZv9~ULe0LMoLKPM4rU-clujV0y29SvZws35kJv1VCKa862nNFxvdfkxEb06nuMDCp3zWR0dSHobL~fkTKyjvV1gMEUsw2DDO0kU4Xk1f8O-5LD7SSzAxB-MjB0NA~YZ-qWRQ6iBrAjSocNtSMfV5zd9k0Mc0Ncjf9oQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
               alt=""
               width="235"
               height="235"
-              class="object-cover w-full h-full mx-auto duration-500"
             />
           </figure>
-          <p class="truncate">Banana Blah Blah</p>
+          <p>Banana Blah Blah</p>
         </a>
-        <a href="" class="[&:hover_img]:scale-110 space-y-4 text-lg text-center w-full max-w-[15rem]">
-          <figure class="w-full max-w-[14.5rem] pointer-events-none aspect-square mx-auto rounded-full overflow-hidden border">
+        <a href="" class="author-card">
+          <figure>
             <img
-              src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              src="https://s3-alpha-sig.figma.com/img/231e/776b/4e7e8b4cfb3eadeddc85c4e9fec1c8c3?Expires=1696204800&Signature=GDBaFf8J4DNZ53zSAXZ~xbTD46CLFfSD4Dpm4Vf7JmxPegUAkXu~yABE3v~ZtifhZcI7MSf3gVVQwoNVU2gsQb~nXhR6BUwyLKsuAeCns66ohMNblaFqLwXKc-1~PXtNJO8n9VaK~EUSLco4xQOVfYiohRgkBNosd5knHujEi5xnz8csmolLOH3nmT9RYldWRBKXQgluUofykXTPBifNMhWbDD4D34I9Jv4RwqOTZnm2KCUT~IuKd9mHiW1SwgU~7EgLHv2HaKFyzDEbYU5US8x5ZN8082oEEK7bR9qc9GGOzU2hK-wuViYJBWiyENo68fDG7Vk9i1X~Pi4gKrYh0Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
               alt=""
               width="235"
               height="235"
-              class="object-cover w-full h-full mx-auto duration-500"
             />
           </figure>
-          <p class="truncate">Banana Blah Blah</p>
+          <p>IANNNNN</p>
         </a>
-        <a href="" class="[&:hover_img]:scale-110 space-y-4 text-lg text-center w-full max-w-[15rem]">
-          <figure class="w-full max-w-[14.5rem] pointer-events-none aspect-square mx-auto rounded-full overflow-hidden border">
+        <a href="" class="author-card">
+          <figure>
             <img
-              src="https://s3-alpha-sig.figma.com/img/459a/e30b/a49bb55ee1ddb408838637fbb4e0d423?Expires=1696204800&Signature=mXIaEVMgMhiHpz4N~3ywVe8nlBi5CTE0qOchpBf~9w59NA55S7syYA5VqQYgD3QCTfV9IJGlIlLyn25dX6hZ2dDDhxGEXAnb1uYIpWgnaZ6ibfyXxyVmErH6MVNxPgXVu7ycphIEKgC5vU9HrR6-ZVvvsVTIBuvRb0H~sDWmmYEh0MoAE7qZv9~ULe0LMoLKPM4rU-clujV0y29SvZws35kJv1VCKa862nNFxvdfkxEb06nuMDCp3zWR0dSHobL~fkTKyjvV1gMEUsw2DDO0kU4Xk1f8O-5LD7SSzAxB-MjB0NA~YZ-qWRQ6iBrAjSocNtSMfV5zd9k0Mc0Ncjf9oQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              src="https://s3-alpha-sig.figma.com/img/2a1e/b9e6/e627d39955b358a0c65d93a71180b287?Expires=1696204800&Signature=NXNM39TfParO7FyGRKif5SfChQI6556h4h3jVBzg2UybKuPTNRf3jFooVumEgdFmKKJLsgZygkcpEuFWqmMQ2Balibh7lvF63ms39GpsrhhDhsqjxl56h-nVnbaz3Qrw-XQ0autqrPJoBtMO-6zI1W7AeERS390IPC3HFhBkvZRTsDdc9B6~ZYo5kApLRSpX5IShkUpmuWa-NbZMD~ytyT1Q9Ih5CxmX97jPvP8fl0V1rX-s~G7hiOJqxgbja2auSs8KP3CatuKM9xgEmXlaEA3MZtEGMDACF0yQZe54MxCKhfTVYwGHR6UWzkfyTKRTw7q7kfp3RRgNJ99GgXadOg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
               alt=""
               width="235"
               height="235"
-              class="object-cover w-full h-full mx-auto duration-500"
             />
           </figure>
-          <p class="truncate">Banana Blah Blah</p>
+          <p>juli baker and summer</p>
         </a>
-        <a href="" class="[&:hover_img]:scale-110 space-y-4 text-lg text-center w-full max-w-[15rem]">
-          <figure class="w-full max-w-[14.5rem] pointer-events-none aspect-square mx-auto rounded-full overflow-hidden border">
+        <a href="" class="author-card">
+          <figure>
             <img
-              src="https://s3-alpha-sig.figma.com/img/459a/e30b/a49bb55ee1ddb408838637fbb4e0d423?Expires=1696204800&Signature=mXIaEVMgMhiHpz4N~3ywVe8nlBi5CTE0qOchpBf~9w59NA55S7syYA5VqQYgD3QCTfV9IJGlIlLyn25dX6hZ2dDDhxGEXAnb1uYIpWgnaZ6ibfyXxyVmErH6MVNxPgXVu7ycphIEKgC5vU9HrR6-ZVvvsVTIBuvRb0H~sDWmmYEh0MoAE7qZv9~ULe0LMoLKPM4rU-clujV0y29SvZws35kJv1VCKa862nNFxvdfkxEb06nuMDCp3zWR0dSHobL~fkTKyjvV1gMEUsw2DDO0kU4Xk1f8O-5LD7SSzAxB-MjB0NA~YZ-qWRQ6iBrAjSocNtSMfV5zd9k0Mc0Ncjf9oQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              src="https://s3-alpha-sig.figma.com/img/d0b3/4a3e/b577e9d97e09037bbe71e0fa025cf90a?Expires=1696204800&Signature=HnusCgROJZNooVANkHAKK~aZpG2WvZPg5DOEOofdGJNaNSL7~eDJaAqnbWypI4I7fh7QAODvjnb1K~o5PR9NDaMDlxVz2KLK-85XqzpyMSYFuXGM3wxIu9ThX3~D5uyiwIkBBmtTC0jKTi3xO4la1kuMljU5BsRHqolHu5YbIT3UQbZ9IokJlMZCNNMLgPcRvU2ebxoRZTXwGlgletn~zr09amn1Q9Cs-~Lg1KypLIPNHIU~uo-xWTx-3N6NtuiSzweDgxl3nfzXI1SsDYK1hmhqP3ntgIdjNyQR0c4JALGj0G46mFrfW6LrLfAGISAqQB5oyob8dA~lMdqADSXPwQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
               alt=""
               width="235"
               height="235"
-              class="object-cover w-full h-full mx-auto duration-500"
             />
           </figure>
-          <p class="truncate">Banana Blah Blah</p>
+          <p>LADYS</p>
         </a>
-        <a href="" class="[&:hover_img]:scale-110 space-y-4 text-lg text-center w-full max-w-[15rem]">
-          <figure class="w-full max-w-[14.5rem] pointer-events-none aspect-square mx-auto rounded-full overflow-hidden border">
+        <a href="" class="author-card">
+          <figure>
             <img
-              src="https://s3-alpha-sig.figma.com/img/459a/e30b/a49bb55ee1ddb408838637fbb4e0d423?Expires=1696204800&Signature=mXIaEVMgMhiHpz4N~3ywVe8nlBi5CTE0qOchpBf~9w59NA55S7syYA5VqQYgD3QCTfV9IJGlIlLyn25dX6hZ2dDDhxGEXAnb1uYIpWgnaZ6ibfyXxyVmErH6MVNxPgXVu7ycphIEKgC5vU9HrR6-ZVvvsVTIBuvRb0H~sDWmmYEh0MoAE7qZv9~ULe0LMoLKPM4rU-clujV0y29SvZws35kJv1VCKa862nNFxvdfkxEb06nuMDCp3zWR0dSHobL~fkTKyjvV1gMEUsw2DDO0kU4Xk1f8O-5LD7SSzAxB-MjB0NA~YZ-qWRQ6iBrAjSocNtSMfV5zd9k0Mc0Ncjf9oQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              src="https://s3-alpha-sig.figma.com/img/2d24/0123/d9e795059d3b4bd3e6f36ca539a0abe3?Expires=1696204800&Signature=ixldD~ABojBMQ~hf34RhmOrwb4gFpoIPITwECoMQBmG86MeUisEXxg5tj9sCt4ucyqORkD0eowLMwbSgTqu72k6d74Vm5842nLvtDgtLTYMq95BBttfJdQvCxewgR7rhUoQJrUyCRnUIjd~qwMBrtht3II0tFc5q87c~KhaSrfr0u4hePauedXJ8JQzm9R~iJt9DSsqGw8H5nYt7mNbc0g6kg2n95uBB-vJNyL69tkCtTMCLkv8K2x6TNCNonLrVClSV5MT~JKyUlAT-6i1ERbtac8fxBSlz818kGZYO3Vouv8mzMAa85rfQNzjtDcvNM7pH-98iMwSdoE6fyYxskQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
               alt=""
               width="235"
               height="235"
-              class="object-cover w-full h-full mx-auto duration-500"
             />
           </figure>
-          <p class="truncate">Banana Blah Blah</p>
+          <p>MALIMALI</p>
+        </a>
+        <a href="" class="author-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/470c/5d90/6c0bef5dd19193793293e3912f15ae44?Expires=1696204800&Signature=bS1MZDlhSBWH8zDGhGb8jkdCFRDR9U2ednPrzYkV7G0dWUzWl13rjplHYWsl4JdRt~G5G5Qa7zf7dKqB1GNgeBaldz3OYGfn1~rKwC4TvpdE7CyPg8L0Z~GSJXSonNqaVzsQlYoOVD-sb9yiJtHsYl4CqkB7KuWZxz7HifC90ZJ3EF2uoOjPJZKHChkwPcY2VMlHsmLwocaNR3D3VNDx3jB1BEWCB-hY0GKgNNv~-vW~i-JjcxLZBL958ZRgRYV4OZ-Y~FrJh2r8PaCiEwqQ~R3~V-cNVt68EDZKuu~GPmVXzp1Ph0ywaQKABPYi9deKOwwDNGEkBYGXlqtx1~g3eQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+          <p>MISTER TOMPKIN</p>
+        </a>
+        <a href="" class="author-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/de45/7fd7/6128f2797ca14419a6e83e318c4c6f9a?Expires=1696204800&Signature=Y-kqKpDVoqFMnH1lX8oV6QFkPWO51RdOgocaLsBvwQNmFaPrTKlDhHieCJmQnOBqqisH7MOfi~jpxppIl5Xp8zwZfYJo4bRoTq8f4BHpEN8bAoM9r2xlLDF-DsZMgB94-Gw~1FC6t17nqI~Y7AfUXx5wnbtn5qy4hMNislWkBRzq40Z6rzNZVL2yKLNkjwFfV0gdpV6c1HeEa1thRA3hCOIk7L0bs~TDx~1oUe1l1qW~c6vzHwb6GdUbaLlqadCQLmQ0kcICAv2EuvA~KiNQ6WyJ6GmPpes1zxRdxq0DfZiVmPwPEhMih4S1wmGw6kQrGvnJXr~BE4OiQDXtHUDJ9w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+          <p>PLARIEX</p>
         </a>
       </section>
     </main>

@@ -60,7 +60,7 @@ selectorToggle?.addEventListener("click", () => {
   gsap.to(authorSelector, { autoAlpha: authorSelectorVisible ? 0 : 1, duration: 0.25 });
   authorSelectorVisible = !authorSelectorVisible;
 
-  selectorToggle.classList.toggle("active")
+  selectorToggle.classList.toggle("active");
 });
 
 authorInput?.addEventListener("input", (e) => {
@@ -68,6 +68,16 @@ authorInput?.addEventListener("input", (e) => {
   addAuthorsResult(result);
 });
 
+window.addEventListener("click", (e) => {
+  const filterSection = document.querySelector("#filter-section");
+  if (e.target && !filterSection.contains(e.target) && authorSelectorVisible) {
+    gsap.to(authorSelector, { autoAlpha: 0, duration: 0.25 });
+    authorSelectorVisible = false;
+    selectorToggle.classList.toggle("active");
+  }
+});
+
 addAuthorsResult([...authors, ...authors]);
 
 gsap.set(authorSelector, { autoAlpha: 0 });
+gsap.fromTo(".author-card", { autoAlpha: 0, scale: 0.75 }, { autoAlpha: 1, scale: 1, stagger: 0.05, duration: 1, ease: "expo" });
