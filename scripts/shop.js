@@ -48,9 +48,7 @@ const showOptions = () => {
 };
 
 filterToggles?.forEach((button) => {
-  if (button.dataset.category) {
-    button.classList.add("!hidden");
-  }
+  button.dataset.category && button.classList.add("!hidden");
 
   button.addEventListener("click", (e) => {
     if (currentFilterShow === e.target.dataset.for) {
@@ -96,14 +94,12 @@ optionsButton?.forEach((button) => {
   });
 });
 
-window.addEventListener("click", (e) => {
+document.addEventListener("click", (e) => {
   const filterSection = document.querySelector("#filter-section");
   if (e.target && !filterSection.contains(e.target) && currentFilterShow) {
     hideOptions();
   }
 });
-
-gsap.set(filterOptions, { autoAlpha: 0 });
 
 infiniteScroll("#product-content", () => {
   const container = document.querySelector("#product-content");

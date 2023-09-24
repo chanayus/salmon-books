@@ -14,8 +14,7 @@ const submitHandle = (e) => {
   const inputValues = [emailInput.value, phoneInput.value, memberIdInput.value];
   const emptyValueInput = inputValues.filter((value) => !value).length;
 
-  if (emptyValueInput >= 2) {
-  }
+  if (emptyValueInput >= 2) {}
 };
 
 phoneInput?.addEventListener("input", numberOnlyHandle);

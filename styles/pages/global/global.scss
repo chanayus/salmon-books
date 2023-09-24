@@ -36,6 +36,8 @@
     display: flex;
     flex-direction: column;
     height: 28rem;
+    opacity: 0;
+    visibility: hidden;
     .filter-options-content {
         @extend .main-container;
         display: none;

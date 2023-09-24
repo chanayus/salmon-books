@@ -52,7 +52,7 @@ const addAuthorsResult = (data) => {
       authorResult.innerHTML += `<a href="">${value}</a>`;
     });
   } else {
-    authorResult.innerHTML = `<p class="absolute top-2 z-10 w-full border !text-center text-black opacity-50">ไม่พบข้อมูล</p>`;
+    authorResult.innerHTML = `<p class="absolute top-2 z-10 w-full !text-center text-black opacity-50">ไม่พบข้อมูล</p>`;
   }
 };
 
@@ -68,7 +68,7 @@ authorInput?.addEventListener("input", (e) => {
   addAuthorsResult(result);
 });
 
-window.addEventListener("click", (e) => {
+document.addEventListener("click", (e) => {
   const filterSection = document.querySelector("#filter-section");
   if (e.target && !filterSection.contains(e.target) && authorSelectorVisible) {
     gsap.to(authorSelector, { autoAlpha: 0, duration: 0.25 });
@@ -79,5 +79,4 @@ window.addEventListener("click", (e) => {
 
 addAuthorsResult([...authors, ...authors]);
 
-gsap.set(authorSelector, { autoAlpha: 0 });
 gsap.fromTo(".author-card", { autoAlpha: 0, scale: 0.75 }, { autoAlpha: 1, scale: 1, stagger: 0.05, duration: 1, ease: "expo" });
