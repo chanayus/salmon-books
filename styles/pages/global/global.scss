@@ -1,1 +1,94 @@
 @import "../../modules/main";
+
+.filter-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    column-gap: 4px;
+    position: relative;
+    text-transform: uppercase;
+    &::after {
+        position: relative;
+        top: 2.5px;
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 17 17'%3E%3Cpath d='M4.29303 11.793L8.50003 16L12.707 11.793L11.9999 11.0859L9 14.0858L9 1.02387L8 1.02387L8 14.0857L5.00016 11.0859L4.29303 11.793Z' /%3E%3C/svg%3E");
+    }
+    &.active {
+        font-weight: 600;
+        color: $orange;
+        &::after {
+            top: -5px;
+            transform: rotate(180deg);
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 17 17'%3E%3Cpath d='M4.29303 11.793L8.50003 16L12.707 11.793L11.9999 11.0859L9 14.0858L9 1.02387L8 1.02387L8 14.0857L5.00016 11.0859L4.29303 11.793Z' fill='%23fc744a' /%3E%3C/svg%3E");
+        }
+    }
+}
+
+.filter-options {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 10;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.06);
+    background: $body-white;
+    display: flex;
+    flex-direction: column;
+    height: 28rem;
+    .filter-options-content {
+        @extend .main-container;
+        display: none;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        align-content: start;
+        overflow-y: auto;
+        gap: 2rem;
+        max-height: 26rem;
+        flex: 1 1 0;
+        padding-top: 1.5rem;
+        position: relative;
+
+        & .active {
+            color: $orange;
+            font-weight: bold;
+        }
+        * {
+            text-align: left;
+        }
+        @media (max-width: 640px) {
+            & {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        &.active {
+            display: grid;
+        }
+    }
+}
+
+.product-card {
+    width: 100%;
+    max-width: 15rem;
+    text-align: center;
+    & * {
+        pointer-events: none;
+    }
+    & figure {
+        width: 100%;
+        max-width: 14.5rem;
+        aspect-ratio: 0.7;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    & .product-name {
+        font-size: 1.125rem;
+        font-weight: bold;
+        margin-top: 0.25rem;
+        line-height: 1.25;
+        margin-bottom: 0.25rem;
+        @extend .line-clamp-3
+    }
+}

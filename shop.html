@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/favicon.png" sizes="32x32" />
+    <title>Salmonbooks</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/shop.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content">
+      <h1 class="heading-text">shop</h1>
+
+      <section class="relative flex justify-center mb-20">
+        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
+          <button data-for="category" class="filter-toggle">Category</button>
+          <!-- Shirt Filter -->
+          <button data-category="shirts" data-for="shirt-category" class="filter-toggle">Category</button>
+          <button data-category="shirts" data-for="shirt-color" class="filter-toggle">Color</button>
+          <button data-category="shirts" data-for="shirt-size" class="filter-toggle">Size</button>
+          <!-- Book Filter -->
+          <button data-category="books" data-for="book-category" class="filter-toggle">Category</button>
+          <button data-category="books" data-for="book-year" class="filter-toggle">Year</button>
+          <button data-category="books" data-for="book-author" class="filter-toggle">Author</button>
+          <button data-for="sort-by" class="filter-toggle">Newest</button>
+        </div>
+
+        <section class="filter-options">
+          <!-- product category options -->
+          <div data-for="category" class="filter-options-content">
+            <button data-value="books">Books</button>
+            <button data-value="shirts">Shirts</button>
+          </div>
+          <!-- book category options -->
+          <div data-for="book-category" class="filter-options-content">
+            <button data-value="All">All</button>
+            <button data-value="Comic">Comic</button>
+            <button data-value="Comic Essay">Comic Essay</button>
+            <button data-value="Comic Parody">Comic Parody</button>
+            <button data-value="Culture">Culture</button>
+            <button data-value="Graphic Novel">Graphic Novel</button>
+            <button data-value="Journey">Journey</button>
+            <button data-value="Lifestyle">Lifestyle</button>
+            <button data-value="Memoir">Memoir</button>
+            <button data-value="Non-Fiction">Non-Fiction</button>
+            <button data-value="Novel">Novel</button>
+            <button data-value="Perspective">Perspective</button>
+            <button data-value="Pop Science">Pop Science</button>
+            <button data-value="Retrospective">Retrospective</button>
+          </div>
+          <!-- year options -->
+          <div data-for="book-year" class="filter-options-content">
+            <button data-value="2023">2023</button>
+            <button data-value="2022">2022</button>
+            <button data-value="2021">2021</button>
+            <button data-value="2020">2020</button>
+          </div>
+          <!-- author options -->
+          <div data-for="book-author" class="filter-options-content">
+            <button data-value="A GIRL LIKE YOU">A GIRL LIKE YOU</button>
+            <button data-value="Art Jeeno">Art Jeeno</button>
+            <button data-value="Banana Blah Blah">Banana Blah Blah</button>
+            <button data-value="Banana Yoshimoto">Banana Yoshimoto</button>
+            <button data-value="Beth O'Leary">Beth O'Leary</button>
+            <button data-value="C.S.">C.S.</button>
+          </div>
+          <!-- shirt color options -->
+          <div data-for="shirt-color" class="filter-options-content">
+            <button data-value="red">Red</button>
+            <button data-value="green">Green</button>
+            <button data-value="blue">Blue</button>
+            <button data-value="black">Black</button>
+            <button data-value="white">White</button>
+          </div>
+          <!-- shirt type options -->
+          <div data-for="shirt-category" class="filter-options-content">
+            <button data-value="t-shirt">T-Shirt</button>
+            <button data-value="polo">Polo</button>
+          </div>
+          <!-- shirt size options -->
+          <div data-for="shirt-size" class="filter-options-content">
+            <button data-value="xl">XL</button>
+            <button data-value="l">L</button>
+            <button data-value="m">M</button>
+            <button data-value="s">S</button>
+            <button data-value="xs">XS</button>
+          </div>
+          <!-- sort by options -->
+          <div data-for="sort-by" class="filter-options-content">
+            <button data-value="newest">Newest</button>
+            <button data-value="oldest">Oldest</button>
+            <button data-value="alphabet">Alphabet (A-Z)</button>
+          </div>
+        </section>
+      </section>
+
+      <section class="grid grid-cols-2 gap-10 main-container lg:grid-cols-4 sm:grid-cols-3 justify-items-center">
+        <a href="" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/6615/e6b5/69202bac6a7ec881fe035d71252f2583?Expires=1696204800&Signature=nTzbq~AAwHULj2I6O~uZPcSABiHoxZqczVvEdzJRyy5Tf18KQnjTXvg7rTLfDv4vPmqhQ30HD-djOUNY5jZpy7AtiB05wJIqK54lTjCM8jYCf3mvoIMtZO3QzUhoy9qb88aEXxVnWZujcgr3kbv-c-SWmTkg-VpfK9BDbmGYdFXmBxOfpRlrhthmtKU8cOgcx6L5i1IiCIcMJ7o33A5KpisTQJ4yFO4-efzx7XdJCQhL0fD-ZQzBXLTApwS2mmC4uAofMDL2KLPzgx7SgEcZ1~xpaW7UUFRKEFWFjYPBfnkeqBJeCUNK1rrTfc1iqx9SS8PcRW4CkWvvwchS1fEG7Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Eighth Grade by Jenna Gribbon</h4>
+          <p>฿300.00</p>
+        </a>
+
+        <a href="" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1696204800&Signature=PlUMdDI2kckQ65clVF3yrqwITk1FQWPSCIC5Coq~nCZjSq7yi~-ScMaINSV4wIlvCSBFuL9xbzrwHS~yyrSKSmwuynKK2PGvKXRAcWGr9KMaq799y2Vz2A40y-9FrXwiA8oiGAxFilKOuiUoTedrg-23xLfuD4LY24umgpMWP~HKY9sWCNAS688I06IkVsZJ8HWHnzzYJDZIZVVbRKToVo1xWmlV3uxr~zivXDUhYv~OVRmld8b0FQiOYUYCtrB43S5j2sOe8EEhoCysS0zKFPt4z8aez10bN9YQ3YaiVbT~YxDyANzw2sdnNtauTso-2ZA4i5RXmSHhcVCXjYyAbw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">First Reformed Souvenir Hat</h4>
+          <p>฿300.00</p>
+        </a>
+
+        <a href="" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/504c/4ba4/98afcf4ac068c1c38848a8960a8541a3?Expires=1696204800&Signature=QwWqZAQZuZsyElvKmv-us-dHOLJKRs8ORao6bBnbMRoq4rttgIN758sDpQDEQkTpfYamrpELto8h65eJ-U78ZDpIhbmeQQxfmsfalFAceaeZ6baX9mBkM~dI14ZMW2XQdoeFRiyFj-eilZk774Cyf7cVi~9w~KCfot7OKYltNB3YumBwPcjTPUeoAAu71ZDAp3DdAR1gpibK~GnFDb3mvwC0-XptmUd6WVSAnyFTDs4Uwlj1J6D7SnbQ9kWqgxbkxzye5FqdiQlzUsE9sUL9QaBbjs~~7NpJ3tMf8ZwUAWsdE4hmefmKyZnVd-QuCxdrSVLkS-nHnavfre1tH67Yeg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Blue Dip-Dye LLC Tee</h4>
+          <p>฿300.00</p>
+        </a>
+
+        <a href="" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/9bf2/6d9c/73bb44a3329adbd9164587d2e564d6a8?Expires=1696204800&Signature=Jbx1EAU9JQlo9REjG-oi2F1huT15bEItrDHwxzBqf9i5uJX-g0TiAPbhH3C0cPFzlFXdHu~MnSR5DfUjuDtP7vQrQQ~DjVhdwl5R5kdqZWac1kYHGpRPfk7G6bWjWjlQJO7M2HXPuo0GGwU2cuwBNeTvIbYNtygl4vMelj2DkthoNnjkgkRv5ij1lNMbEJ~2QuT3w8fXTdRe0pUEIyjXLu~XZyfL~6p6e3cJy-GlT~aGD1A~QK~07s83TK39Wak-su-2-LEpRxrSWjA7akiRRFS1Hu5Vqwjok3gnP3O6zd0cW5u3fo4kpR7I5dy6kku3b-sD7rvdQK3d3CCLk2-mMQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Onboarding Bundle</h4>
+          <p>฿300.00</p>
+        </a>
+
+        <a href="" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/c73b/94b9/cebe647ff058821bf1462a1d45db2783?Expires=1696204800&Signature=BHy7SPPspnZXGcOa54HOCTt5aWps83qkRDflKciWNc4~KcT-l-pJMTfRJpCLBiR1OGKuVpL8DZK66BRIjOwbef707IzipXG6ZH5ns5TpBWx~VqfhAA2pgzQF4oPqyDaUnY9SF4Gpn6wW1EuMc4cm21MN8sztEJAFzKRLH2ixWR~wH94GPGLr3eZRb6XQlZiF0ki8AUw6C0~MI5mB~ciyHS4cYtJuFIltpN8~r0b1Rcx~GGD9Nbzq8hviZogPrq8cC6jkQ-UTC-O1bfSQHFTdmQd9kifKgetvulsDmAuyCQPgJ0oSyQr6FNBC700SLPK3aoQ9uS~Kiv0TB782MOVZ4Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Melty Logo Hat</h4>
+          <p>฿300.00</p>
+        </a>
+
+        <a href="" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/1966/cdd3/9e0646a47df2dbb12caffa06556ec3aa?Expires=1696204800&Signature=JnNf-Wo6o4GCFJLWCB1SkDFJP4A7lQ4Cw5MVAerH8Dr7VLB5ZE7vifrwzGUGsmdJKRm8TcBddTnj6iKlCuRAY8ro-LP9e9fkX0ol8Alny4WXmepojqUJMapBbM9DMekiGoXcNSS-KBULpkmKdg25dJYHEpfn8ATW9PXuHVexusAgpmx1CcL-ibeDIQGVoQMWUOolMyuIYWPE56Nhtm5xLxYB0-DEiOGVsl6uFB1k4CVttSYzx8vhzsFn36ms9eOs5HGXxHs676IQkHMN4LLFYHJ9a7oW4nAzhZP3TmfxZnjUNgRc9B96WAhY7jCpbQJlR7RYq-YF~HFolD7KSYQClw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Rop van Mierlo Raccoon Watercolor Tee</h4>
+          <p>฿300.00</p>
+        </a>
+      </section>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>

@@ -21,7 +21,7 @@ class Navbar extends HTMLElement {
             <a href="" class="hover-text-yellow ${this.getLinkStyle("")}">BOOKS</a>
             <a href="../authors.html" class="hover-text-yellow ${this.getLinkStyle("/authors.html")}">AUTHORS</a>
             <a href="" class="hover-text-yellow ${this.getLinkStyle("")}">ARTICLES</a>
-            <a href="" class="hover-text-yellow ${this.getLinkStyle("")}">SHOP</a>
+            <a href="../shop.html" class="hover-text-yellow ${this.getLinkStyle("/shop.html")}">SHOP</a>
             <a href="../readership.html" class="hover-text-yellow ${this.getLinkStyle("/readership.html")}">READERSHIP</a>
           </div>
         </div>
