@@ -43,7 +43,6 @@ let authorSelectorVisible = false;
 
 const selectorToggle = document.querySelector("#author-select-button");
 const authorSelector = document.querySelector(".filter-options");
-const icon = selectorToggle?.querySelector("svg path");
 const authorInput = document.querySelector("#author-name-input");
 const authorResult = document.querySelector("#author-result");
 
