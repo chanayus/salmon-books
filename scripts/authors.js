@@ -1,3 +1,5 @@
+import { gravityHover } from "./modules/gravityHover.js";
+
 const authors = [
   "A GIRL LIKE YOU",
   "Art Jeeno",
@@ -77,6 +79,8 @@ document.addEventListener("click", (e) => {
   }
 });
 
-addAuthorsResult([...authors, ...authors]);
+addAuthorsResult(authors);
 
 gsap.fromTo(".author-card", { autoAlpha: 0, scale: 0.75 }, { autoAlpha: 1, scale: 1, stagger: 0.05, duration: 1, ease: "expo" });
+
+gravityHover(".author-card");
