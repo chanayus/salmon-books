@@ -1,4 +1,5 @@
 import { gravityHover } from "./modules/gravityHover.js";
+import { getSelectedData } from "./modules/menuFilter.js";
 
 const authors = [
   "A GIRL LIKE YOU",
@@ -39,12 +40,8 @@ const authors = [
   "จิราภรณ์ วิหวา",
 ];
 
-let authorSelectorVisible = false;
-
-const selectorToggle = document.querySelector("#author-select-button");
-const authorSelector = document.querySelector(".filter-options");
 const authorInput = document.querySelector("#author-name-input");
-const authorResult = document.querySelector("#author-result");
+const authorResult = document.querySelector(".filter-options-content");
 
 const addAuthorsResult = (data) => {
   authorResult.innerHTML = ``;
@@ -57,25 +54,9 @@ const addAuthorsResult = (data) => {
   }
 };
 
-selectorToggle?.addEventListener("click", () => {
-  gsap.to(authorSelector, { autoAlpha: authorSelectorVisible ? 0 : 1, duration: 0.25 });
-  authorSelectorVisible = !authorSelectorVisible;
-
-  selectorToggle.classList.toggle("active");
-});
-
 authorInput?.addEventListener("input", (e) => {
-  const result = authors.filter((author) => author.includes(e.target.value));
+  const result = authors.filter((author) => author.toLowerCase().includes(e.target.value.toLowerCase()));
   addAuthorsResult(result);
-});
-
-document.addEventListener("click", (e) => {
-  const filterSection = document.querySelector("#filter-section");
-  if (e.target && !filterSection.contains(e.target) && authorSelectorVisible) {
-    gsap.to(authorSelector, { autoAlpha: 0, duration: 0.25 });
-    authorSelectorVisible = false;
-    selectorToggle.classList.toggle("active");
-  }
 });
 
 addAuthorsResult(authors);

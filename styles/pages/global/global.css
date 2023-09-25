@@ -754,7 +754,7 @@ main#main-content {
   visibility: hidden;
 }
 .filter-options .filter-options-content {
-  display: none;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   align-content: start;
   overflow-y: auto;
@@ -778,9 +778,6 @@ main#main-content {
   .filter-options .filter-options-content {
     grid-template-columns: 1fr 1fr;
   }
-}
-.filter-options .filter-options-content.active {
-  display: grid;
 }
 
 .product-card {

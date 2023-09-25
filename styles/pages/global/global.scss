@@ -38,9 +38,10 @@
     height: 28rem;
     opacity: 0;
     visibility: hidden;
+
     .filter-options-content {
         @extend .main-container;
-        display: none;
+        display: grid;
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         align-content: start;
         overflow-y: auto;
@@ -63,9 +64,6 @@
             & {
                 grid-template-columns: 1fr 1fr;
             }
-        }
-        &.active {
-            display: grid;
         }
     }
 }
