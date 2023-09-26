@@ -827,6 +827,7 @@ main#main-content {
   width: 100%;
   max-width: 15rem;
   text-align: center;
+  opacity: 0;
 }
 .author-card * {
   pointer-events: none;

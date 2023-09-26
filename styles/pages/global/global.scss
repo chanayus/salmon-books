@@ -117,6 +117,7 @@
     width: 100%;
     max-width: 15rem;
     text-align: center;
+    opacity: 0;
     & * {
         pointer-events: none;
     }
