@@ -63,62 +63,6 @@ button:disabled {
     width: 0;
 }
 
-// .collapsible {
-//     display: grid;
-//     text-align: left;
-//     justify-items: start;
-
-//     & > button,
-//     & > button > i {
-//         transition:
-//             color 0.25s,
-//             background-color 0.25s,
-//             transform 0.25s;
-//     }
-//     & > button:hover {
-//         color: $orange !important;
-//     }
-//     & > button * {
-//         pointer-events: none;
-//     }
-//     .collapsible-content-wrapper {
-//         display: grid;
-//         transition:
-//             grid-template-rows 0.25s,
-//             margin-top 0.25s;
-//     }
-//     &.active {
-//         & > button {
-//             color: $orange;
-//         }
-//         .collapsible-content-wrapper {
-//             grid-template-rows: 1fr;
-//             margin-top: 1.5rem;
-//             margin-bottom: 1.5rem;
-//         }
-//         i {
-//             transform: rotate(180deg);
-//         }
-//     }
-//     &:not(.active) {
-//         .collapsible-content-wrapper {
-//             grid-template-rows: 0fr;
-//         }
-//     }
-//     .collapsible-content {
-//         overflow: hidden;
-//         display: flex;
-//         flex-direction: column;
-//         a,
-//         button {
-//             padding-left: 1.25rem;
-//             overflow: hidden;
-//             text-overflow: ellipsis;
-//             white-space: nowrap;
-//         }
-//     }
-// }
-
 @keyframes fade-out {
     from {
         opacity: 1;
