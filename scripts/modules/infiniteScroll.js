@@ -20,7 +20,6 @@ export const infiniteScroll = (selector, callback) => {
       const scrollHeight = document.documentElement.scrollHeight;
 
       if (scrollHeight - currentScroll <= 0) {
-        console.log(scrollHeight);
         if (callback && !loading) {
           addLoader();
           setTimeout(() => {

@@ -48,10 +48,10 @@ class Navbar extends HTMLElement {
     </section>
 
     <section id="search-popup" class="fixed z-30 w-full h-full opacity-0 bg-body-white">
-      <div class="space-y-14 main-container pt-44">
+      <div class="space-y-14 main-container sm:pt-44 pt-36">
         <input type="text" name="search-text" placeholder="Type Anything..." class="bg-transparent py-4 border-b-2 border-black/30 w-full text-[clamp(2rem,10vw,5.5rem)]" />
 
-        <div class="nav-search-category flex text-xl gap-x-4 gap-y-8 flex-wrap">
+        <div class="nav-search-category flex lg:text-xl text-lg gap-x-4 gap-y-8 flex-wrap">
           <button data-category="all" >All</button>
           <button data-category="authors" >Authors</button>
           <button data-category="articles" >Articles</button>

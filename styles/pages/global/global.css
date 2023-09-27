@@ -356,7 +356,7 @@ main#main-content {
 }
 
 .heading-text {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw, 3rem);
   font-weight: bold;
   margin-top: 2.875rem;
   margin-bottom: 2.5rem;
@@ -487,6 +487,7 @@ main#main-content {
   transform: scale(1.15) rotate(-2deg);
 }
 .author-card figure {
+  background: #e0e0e0;
   width: 100%;
   max-width: 14.5rem;
   aspect-ratio: 1;

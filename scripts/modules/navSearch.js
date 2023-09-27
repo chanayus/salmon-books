@@ -4,6 +4,7 @@ let currentCategory = "all";
 const toggleSearchPopup = (type) => {
   const searchPopup = document.querySelector("#search-popup");
   const categories = document.querySelectorAll("#search-popup button");
+  const input = searchPopup?.querySelector("input");
 
   document.body.style.overflow = type === "open" ? "hidden" : "unset";
 
@@ -11,7 +12,12 @@ const toggleSearchPopup = (type) => {
     gsap
       .timeline()
       .fromTo(searchPopup, { autoAlpha: 0, scale: 0.9, filter: "blur(7px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 1, ease: "expo" }, "+=0.1")
-      .fromTo(categories, { autoAlpha: 0, y: 25 }, { autoAlpha: 1, y: 0, stagger: 0.075, ease: "expo" }, 0.5);
+      .fromTo(categories, { autoAlpha: 0, y: 25 }, { autoAlpha: 1, y: 0, stagger: 0.075, ease: "expo" }, 0);
+
+    setTimeout(() => {
+      input.focus();
+    }, 250);
+
     currentSearchVisible = true;
   } else if (type === "close" && searchPopup) {
     gsap.to(searchPopup, { autoAlpha: 0, scale: 0.975, filter: "blur(7px)", duration: 1, ease: "expo" });
