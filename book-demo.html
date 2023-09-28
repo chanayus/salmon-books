@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>SALMON.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/bookDemo.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content" class="flex flex-col">
+      <section id="reader-top-menu" class="reader-menu sticky lg:top-[6rem] top-[5rem] duration-75 z-10 py-4 bg-white">
+        <div class="flex items-center justify-between main-container">
+          <div class="flex items-center text-lg gap-x-2">
+            <div class="p-2 border rounded-full w-fit border-gray">
+              <img class="icon-img" src="./icons/book-menu.svg" width="20" height="20" alt="" />
+            </div>
+            ตอนที่ 2 Chapter 1
+          </div>
+          <div class="flex gap-x-2">
+            <div class="relative">
+              <button id="text-adjust-button" class="p-2 border rounded-full w-fit border-gray">
+                <img class="icon-img" src="./icons/font.svg" width="20" height="20" alt="" />
+              </button>
+              <div id="text-adjust" class="invisible opacity-0 absolute w-44 font-semibold whitespace-nowrap text-xs p-2.5 space-y-3 bg-white rounded right-0 top-full mt-6">
+                <div class="space-y-1">
+                  <p>ขนาดตัวอักษร</p>
+                  <div class="flex gap-x-2">
+                    <button class="flex-1 text-xl leading-[1.1] border rounded">-</button>
+                    <button class="flex-1 text-xl leading-[1.1] border rounded">+</button>
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <p>ระยะห่างบรรทัด</p>
+                  <div class="flex gap-x-1">
+                    <button class="flex-1 px-2 py-1.5 space-y-0.5 text-xl border rounded">
+                      <div class="w-full h-0.5 bg-black"></div>
+                      <div class="w-full h-0.5 bg-black"></div>
+                      <div class="w-full h-0.5 bg-black"></div>
+                    </button>
+                    <button class="flex-1 px-2 py-1.5 space-y-1 text-xl border rounded">
+                      <div class="w-full h-0.5 bg-black"></div>
+                      <div class="w-full h-0.5 bg-black"></div>
+                      <div class="w-full h-0.5 bg-black"></div>
+                    </button>
+                    <button class="flex-1 px-2 py-1.5 space-y-1.5 text-xl border rounded">
+                      <div class="w-full h-0.5 bg-black"></div>
+                      <div class="w-full h-0.5 bg-black"></div>
+                      <div class="w-full h-0.5 bg-black"></div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button id="darkmode-toggle" class="p-2 border rounded-full w-fit border-gray">
+              <img class="icon-img" src="./icons/moon.svg" width="20" height="20" alt="" />
+            </button>
+            <button class="p-2 border rounded-full w-fit border-gray">
+              <img class="icon-img" src="./icons/share.svg" width="20" height="20" alt="" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-container-sm flex-[1_1_0] py-14">
+        <div class="mb-14">
+          <h5 class="mb-2 font-bold">พัศชนันท์ เจียจิรโชติ <span class="ml-1 font-normal opacity-50">พ. 15 มี.ค. 2566</span></h5>
+          <h3 class="text-3xl font-bold">ตอนที่ 2 Chapter 1</h3>
+        </div>
+
+        <article class="space-y-10 main-container-xs">
+          <img
+            src="https://s3-alpha-sig.figma.com/img/4f45/42df/d02ead4fe59d0a52d68667e0c2a1757a?Expires=1696809600&Signature=h~8eYMPehxDJTphzCUU3mUTxqysxBuU5ApEKfISq-iOPjoOPBJ-XICbEwV1UodbgSHcxAuHrSNBs1wC~zANxj4lmDkpP6nSIBXuSIu~wR7yW7c8uPEVezXJZJbgZ7vtWG5~gdpNszib15bxEhZvwawynXUbG9oga7~H4CDtiYusniLD9r4ZZQoDDXk-NpWnHK-cHRi~aBIpFUm-nl7r3aniwHpi5WvaJReEz5VYN1iZDEcp-mWWcvFTMg2rsyaf6y0pOcegIuWUM2nOIkO7btfgQHhaeg3cGOvap72YtgvJ6znelsB6x3bmWwoXxJtHrgjMqPyy69JYzXPOQd1xLag__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt=""
+            class="w-full"
+          />
+
+          <p>
+            ‘การออกไปเที่ยวไม่ใช่การออกไปเพื่อตามหาเส้นทาง แต่คือการคว้าตัวเราเองกลับมาครู่หนึ่งจากที่กำลังไปผิดเส้นทาง’ประโยค หนึ่งที่ พัศชนันท์ เจียจิรโชติ หรือ อร BNK48
+            ได้หยิบยกมาจากหนังสือเล่มโปรด Blonote (เขียนโดย ทาโบล นักร้อง, นักแต่งเพลง, โปรดิวเซอร์เพลง และสมาชิกวง Epik High) เพื่ออธิบายถึงสิ่งที่เธอ ได้รับจากการเดินทางไปยังประเทศอิตาลี
+            ดินแดนแห่งศิลปะและแฟชั่นที่เธอหลงใหล บันทึกความทรงจำลงในหัวใจและแปลงทุกช่วงเวลาที่น่าจดจำลงใน Orn The Way หนังสือเล่มแรกในชีวิตของเธอ
+          </p>
+
+          <img
+            src="https://s3-alpha-sig.figma.com/img/0de4/d186/b56af9f1d9b211a2ced21c56000692d4?Expires=1696809600&Signature=Vt-U48rrRFagcpN8QOM8Oo8c1hBnEoXZsYedTJP1ut5HJqdHtwt7oOIGQ~3OZo88jhgvRRwoGICRROdH3OCmLaE8An3t~Dk1mhTc8pXEhbvupe0xT0qwsrG6rzzNq-T2vmzDIkCTbtz8mwgceHo741~mM8zyEmVGZ1Raw~hMbp0l22NEVlD9shqXXlbqLX4WFC0-g7BKDzLz3XdZv8mhm6MYrbDhWAzzcJn6MQzie8P2lgJNeshQqjCoFY4xPdo6TAf3FBbJyt6uU1CcBulhbVX-lEOYm15ChgRedEIRVUXaS1evaK1-8SXd6yE9c2VLkij2uybZtYo5rcUPUyTBmA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt=""
+            class="w-full"
+          />
+
+          <p>
+            สิ่งที่เราได้พบตลอดการเดินทางบนหนังสือ 206 หน้า กับตัวอักษรหลายพันตัวที่ร้อยเรียงไปกับภาพถ่ายที่อรบอกเล่าเหตุการณ์ ต่างๆ ที่เธอได้พบในทริปนี้ ตามปกติของหนังสือบันทึกการเดินทางทั่วไป
+            เนื่องจากประสบการณ์บนโลกแห่งตัวอักษรยังมีน้อย
+            ทำให้ทักษะด้านการเขียนและการถ่ายภาพของอรอาจจะยังอยู่ห่างจากนักเดินทางรุ่นพี่อยู่บ้างแต่อรก็สามารถชดเชยสิ่งเหล่านั้นด้วยความตั้งใจในการเล่าเรื่อง ที่เราสัมผัสได้ในทุกๆ
+            ภาพถ่ายและเรื่องราวในนั้นจริงๆ เราเห็นความพยายามย่อยข้อมูลที่น่าสนใจของ สถานที่ต่างๆ ให้เข้าใจง่ายที่สุด พยายามบรรยายภาพเหตุการณ์วุ่นๆ ระหว่างหลงทางอย่างละเอียด ไปจนถึงรายละเอียดเล็กที่สุด
+            อย่างบรรยากาศการเดินช้อปปิ้งไปพลางกินเจลาโตไปพลาง ที่ตั้งใจเล่าเรื่องให้คนอ่านรู้สึกราวกับว่าได้เดินทางไปกับเธอด้วยจริงๆ
+            รวมทั้งตะกอนความรู้สึกและเรื่องราวในอดีตที่บังเอิญลอยขึ้นมาพร้อมกับความสวยงามของสถาปัตยกรรม เมืองแฟชั่นสุดหรู และ สถานที่ที่ไม่คุ้นเคย ซึ่งบางเรื่องหลายคนอาจไม่เคยรู้มาก่อน
+            จากภาพที่เห็นเธอผ่านบทเพลง โฆษณา และหน้าสื่อต่างๆ ในฐานะ ‘ไอดอล’
+          </p>
+        </article>
+      </section>
+
+      <section class="sticky bottom-0 py-4 bg-white reader-menu">
+        <div class="flex items-center justify-between md:justify-evenly main-container">
+          <a href="" class="flex items-center gap-x-2">
+            <img class="icon-img" src="./icons/arrow-left-black.svg" alt="" />
+            <span class="hidden md:inline">ก่อนหน้า</span>
+          </a>
+          <div class="font-bold">ตอนที่ 2</div>
+          <a href="" class="flex items-center gap-x-2">
+            <span class="hidden md:inline">ถัดไป</span>
+            <img class="icon-img" src="./icons/arrow-right-black.svg" alt="" />
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>

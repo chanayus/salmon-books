@@ -278,6 +278,14 @@ html {
 
 body {
   background: #f1f1f1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.075s;
+}
+body:has(main.dark-mode) {
+  background: #222;
+  color: white;
 }
 
 .main-container, .filter-options .filter-options-content {
@@ -292,6 +300,36 @@ body {
 @media (max-width: 1480px) {
   .main-container, .filter-options .filter-options-content {
     max-width: 1182px;
+  }
+}
+
+.main-container-sm {
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  position: relative;
+  padding-right: 1rem;
+}
+@media (max-width: 980px) {
+  .main-container-sm {
+    max-width: 768px;
+  }
+}
+
+.main-container-xs {
+  width: 100%;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  position: relative;
+  padding-right: 1rem;
+}
+@media (max-width: 0px) {
+  .main-container-xs {
+    max-width: 768px;
   }
 }
 
@@ -344,15 +382,27 @@ button:disabled {
 }
 
 main#main-content {
+  flex: 1 1 0;
   padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
   animation: fade-in 0.5s forwards;
 }
 @media (max-width: 1023px) {
   main#main-content {
-    padding-top: 4.5rem;
-    padding-bottom: 4.5rem;
+    padding-top: 5rem;
   }
+}
+main#main-content.dark-mode {
+  color: #fff;
+}
+main#main-content.dark-mode .reader-menu .icon-img {
+  filter: invert(1);
+}
+main#main-content.dark-mode .reader-menu, main#main-content.dark-mode #text-adjust {
+  background: #000;
+}
+main#main-content.dark-mode #text-adjust button div {
+  background: #fff;
 }
 
 .heading-text {
@@ -362,6 +412,9 @@ main#main-content {
   margin-bottom: 2.5rem;
   text-align: center;
   text-transform: uppercase;
+}
+.heading-text span {
+  letter-spacing: -0.4ch;
 }
 
 .filter-toggle {

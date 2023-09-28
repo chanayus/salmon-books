@@ -6,7 +6,7 @@ class Footer extends HTMLElement {
         <div class="flex flex-col items-center justify-between gap-y-8 lg:flex-row main-container">
           <img src="./images/salmon-logo.svg" alt="" width="140" height="50" />
           <div class="space-x-5">
-            <a href="2.html">ABOUT US</a>
+            <a href="../about.html">ABOUT US</a>
             <a href="../contact.html">CONTACT</a>
           </div>
           <div class="flex items-center gap-x-5">

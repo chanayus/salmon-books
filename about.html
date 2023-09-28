@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>SALMON.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/about.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content">
+      <section class="main-container">
+        <h1 class="heading-text">About</h1>
+        <p class="text-lg text-center max-w-[110ch] mx-auto">
+          สำนักพิมพ์แซลมอน (Salmon Books) คือสำนักพิมพ์ในเครือบริษัท บันลือ พับลิเคชั่นส์ จำกัดเป็นชื่อของสำนักหนังสือหน้าใหม่ที่ตั้งใจ
+          สร้างสรรค์สิ่งใหม่ให้แก่วงการหนังสือไทยบ้างไม่มากก็น้อยตามแต่กำลังวังชา ทำงานโดยแนวคิดตามชื่อแซลมอน ที่เป็นปลาจอมขยัน ว่ายทวนกระแสน้ำเพื่อวางไข่
+          ตรงกับสำนักพิมพ์ที่เฟ้นหาสิ่งที่อยู่นอกกระแสหลักแต่น่าสนใจ และคิดว่าหนังสือเหล่านั้นจะมีประโยชน์ต่อ ผู้อ่านตามประสาปลาที่ขึ้นชื่อเรื่องสารอาหาร ที่สำคัญคือมีเนื้อหาที่รสชาติเอร็ดอร่อย
+          อ่านแล้วติดใจจนหยุดไม่ได้ดังเนื้อปลาแซลมอน สารพัดสูตรที่ถูกนิยมกันระดับโลก
+          <br /><br />
+        </p>
+        <p class="text-lg text-center max-w-[110ch] mx-auto">
+          สำนักพิมพ์แซลมอนถูกก่อตั้งเมื่อปี 2011 ก่อนจะขยายตัวไปสู่<span class="text-orange">สำนักพิมพ์บัน</span> (Bunbooks) ที่ตีพิมพ์หนังสือแนวไลฟ์สไตล์และสิ่งที่
+          กำลังอยู่ในความสนใจของกลุ่มผู้หญิงวัยรุ่น <span class="text-orange">เว็บไซต์มินิมอร์</span> (Minimore) ร้านหนังสือออนไลน์และชุมชนสำหรับคนที่ต้องการผลิตคอน
+          เทนต์และสร้างกลุ่มคนอ่านรวมถึงทำการตลาดได้เองตั้งแต่ต้นสายยันปลายธาร และ <span class="text-orange">แซลมอนเฮ้าส์</span> (Salmon House) โปรดัคชั่นเฮ้าส์
+          ที่มุ่งผลิตงานที่มีสาระความรู้คู่ไปความสนุกสนานและสร้างความสุขให้แก่ผู้ชมทั้งทางจอโทรทัศน์ คอมพิวเตอร์ กระทั่งจอโทรศัพท์มือถือ โดยต่อยอดจากเนื้อหาของหนังสือสำนักพิมพ์แซลมอน
+          เป็นการขยายเนื้อหาจากหน้าหนังสือไปสู่สื่ออื่นได้เป็นอย่างดี
+        </p>
+      </section>
+
+      <section class="my-16 overflow-hidden max-w-[120rem] mx-auto" id="text-srcolling-container">
+        <div id="salmon-text-orange" class="text-[6.25rem] flex items-center whitespace-nowrap gap-x-8 text-orange font-semibold">
+          <div>SALMON BOOKS</div>
+          <div>SALMON BOOKS</div>
+          <div>SALMON BOOKS</div>
+          <div>SALMON BOOKS</div>
+        </div>
+        <div id="salmon-text-yellow" class="text-[6.25rem] -rotate-2 -translate-y-10 flex items-center whitespace-nowrap gap-x-8 text-yellow font-semibold">
+          <div>SALMON BOOKS</div>
+          <div>SALMON BOOKS</div>
+          <div>SALMON BOOKS</div>
+          <div>SALMON BOOKS</div>
+        </div>
+      </section>
+
+      <section id="about-gallery-container" class="flex pb-8 main-container-sm gap-x-4 h-[67.5rem] md:max-h-full max-h-[60vh] overflow-hidden">
+        <div class="flex-1 gallery-col">
+          <div class="img-col-odd [&>*]:mb-4 border border-transparent">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/cd19/cca9/55ee65099383bd3bfa72384bb1655761?Expires=1696809600&Signature=TrG~QQpQPrFkSOk026KcwtIN5dqmWqfasz4tgvIj8Oiyvcco3RWlOOKnSzBMvAckDZc~xiXLIyo8CTFgcRl1Sulfb8bVtf7JoKFi4XkwGqFfJ4KIZLuzdp4Pc16hOWjZZfWs7noOwt2V0z-RLaMxXFA2b8d5j14Vsc~CF1kZhyFSZiWYZtxvABANI5Zhwa0Jup7CE1gRpBTTdFfstFv~HoSXwHDJCBwEPFswXpwyVh5yvmSqScrmxe-eQId3Tx6uMSfuQXK-5mEgADhINrIo2veVJ06-3ig5s4ENvorI99tYVBzd8ddhVgYEQiuTD5pIJ3fz8OodqpCFr7xtRQx-ow__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/6cf4/6499/57330789df7232f90d4c12c021a40ee4?Expires=1696809600&Signature=Py9kjCfUpvN00gh4I4~AqKbeJjnFMbLdzGxllSd7vbmfA3VtCMMgpJaAv-H8X9CPbi8muXXo3Qv6gFnY97Enzvd-MIPgG-UDZkWte8GFS0-zVhlGvtSNiQKd-O6eXUATD0eHFpiLzhHidG5-SwpKLvfcFOMreewtAae~jd5GYXdvPG7T~3ZQRZrzyjg1b8gVOP~wP-lVAYOHNnXKkezM~kncHn433Ytc2DRK2ZoJa6451FLI-Rgacsjol3YTXBXAByp7FSRElQd-CkkZOyGPmUMlxPxtxa5uOqeHfZNjw61-vJws5G9q9C56v-bAQ606OUIbd18Hl~s3uvUJtIL67Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/5b5d/12f4/e4eb38c618f0740d3c71f5cd68af4345?Expires=1696809600&Signature=cxLicyr5aN5rFPk48bQVD3Hp0-4uOGISeYDs2zeXEK0Sba42eljbtS~f7xNtL0Tah1dSqHo2771HIf711LkUuvXBhAro5TWwqChjbQ7vSiFk2haOmQwwU~1r-vffJTmSLTZuGfEqeTfsE-KnkTy1JTb3fan~cPdenWwj7SCYKtMjTo6OxAc8HyjaRDXh4Q0ZRS9XTVWFWe2ERESHb7OMPo0psLRVUnusI74RpK9ItfpCeSZ3NkZobIShAssasJNnxrnluvmMf8T3rcdKU~PEB5cJAfeBw3xxXp~4E5t5v9WN21SOKZsTABINi~2uDcGhteJWzS0YpgEX~o47zb91Pg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/2815/d734/d3a6bc4ae51460885bd03b6eefbdf1d4?Expires=1696809600&Signature=m7zzeAg96uGA~ymuHPBpwMw4mfv0LGUOYcm2EslCkjGiUNo~6U4LcX1Pb1iYI-ZQgIqylSqFDL4di3I6Q95o07ri84UcJsVUzd1saFGZJkyYeMvNLi31kTI9r0wGVqQga3AWm8Hl24T4rN~4UWz0~99XR8W2RMXWJTl5WLbIDwwOg1f7~qNw8KAIBra1prxRlaXGAZQwVmR4lKbwtxaYJ7UDlzB-JuDc9yfh58W9p-pSruK~uCto8y3iIeYIFNaY69srY0IewthK6eTGsKI4eQa9fiCmi4HuLRaPv~9Tb0EWlKcodSLUEO28~mxqmlmf3NZVzWK09uILM5Ivq4dwGQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+          </div>
+        </div>
+        <div class="flex-1 gallery-col">
+          <div class="img-col-even [&>*]:mb-4 border border-transparent">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/d4f6/9086/b3d25eb44e70ecc27ede41e9414e46d9?Expires=1696809600&Signature=IsyoQqVcrHguDUEih2s~CDTts4pkImc8Y~1NvuqBhbZXVrDIztV5Px9545j2YYLFHyeY3NCDQF7tNiAEdrG540GMSChv6HS7BCQeQ3CqgQzJOhIUR2ZuEdsI8qam7PcneLy3uCvlBHdoEa3J-l5Ot9dusDiU~ECFa7f-bOzgKiwkfiUnjho5mFZzpBVL6DffEmItr1rucOr9PhTKtCFvpidNl1lCpTaA1U5mR9nf9U7M-AEd~p971~wf4Zdnx0xuRWZ7Z0i-G~zCo6hk4YUTRKctkzocDBEU1Ls6ZpYVozA4dRU2MCLBOhdkoKG0ewzkR0vl2kz7QbAKKksFDtAdtw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/8307/d0ba/d56662a42b12332cfa6ab4f6abe9d243?Expires=1696809600&Signature=nTubjWeqzEHm4kkKlJBZkGUxqVMltlqQbqtZmrCMSLHKkjvFq5Y9qK6o4vlxd1-p0mnLdw2Ac3MA8gcdLoG~hAva9p5R6vsvUEuGaDLoQwSCESKvxVpnYqjnRXXERMlUItPsCWrIi4bvl702OxaeUTe2BhNtcWHUNGPFCJxv1UuphAOzqNxGqny8qYn7kLb9DnhrkFVFdWRHdXBoip2XjO9u3xAvUosx~u-z~YL~tAEcjZJdLBsJji4jeGqVnNj9AtSx~BnFhAIyuw3p4qMBxMRZI764WsTgOiVYUf-ZgMZ4vayGBmhn051XTJivS90ZvWddORX3ugAC20ZKfnaRDg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/cc33/93be/1808748497b12034c7d2e3ed9ec9f813?Expires=1696809600&Signature=QiETu6VoRzzprqlL~Qq4QPLK9ZPIh0xEUUMPQ415zTzFCiHjsEXsupkXBpcGPJgjEqud5hsAga~6iD4s-BSOrXeyRhpDf82A41S8Sa~gD3dDM~TGjX9uB3Xm~k2lDXL3VHlSW2HiHE1c0Ehy4kIWm3YVGOG7zMaMa5qP2oBnZPdY9ZmiHCMegQq2NJURzfbYfEp-EfgT30wc9U8lqKgp9ZZBxFiaj-knaT2yOIoBt7XGOWscTpAWcjDbmcvvtq-NHuMpasx2Aq-FbT~pYcDGS565SVyBqf1LWF4N3LH3JUcTCHyKvCaqqxruoj0Khty~YmN~MT-l61r~yUD1XH1GlA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/afb5/fa24/5192c37890b6945002af031807c8f41a?Expires=1696809600&Signature=D0GAY~45dSdYBg8X-A7YEO~z1tj11aNqrDdoogSMY~hmttic7IsCWp0BbUVIEBi4hXqQzkm5~H9nvZMeEEiwM9q17bo7Q01Apt658U9Fs4vOJHHaE6eqcgLoiEcyL5dMuCh4TwKNKG6Hj2HQDlhFDstP3dg6~B244l4pteZaaED07kIk1cw0rKj5EyXAoByTUKlsJT8QPDQKVCqd7AJBD7YGtxNkUAzKLcQDSEmUZOJ3dFhgD7zJkzxBtaHl~fImzOwBuKNaqzBq62bIH8-w9h-d9ph5h9yRL-piLpvxGv7lvpRo1DOofMqS0nlKI~PMgI8pLLN5Z9TGJKjM8EKxTw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+          </div>
+        </div>
+        <div class="flex-1 gallery-col">
+          <div class="img-col-odd [&>*]:mb-4 border border-transparent">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/4b12/fa66/267f285bec6a878e1303ffc10e24b94e?Expires=1696809600&Signature=V1knpTu5oclWesGtIGYmnSlYwuEdUk36kvJE9WqB9-rbUUokXWQw~7Vy2rTpsyy9Uprba6z24niVS14GhfJ3XW0wWl086M96id~G52d8t0OdPQrZ6pq6hAFAu7qsF0uwhpFfoIzezY9pXuisp-D9g64xblp6e1hRifij7Gk0LfLK3nyR9ktGP0DfWpbDqiesNSTGa2fC1qmTpqtChTTzauTplIu7BSJB3uMoeSm5C8bwo7NKX-QssD~xXbzV3dzK4GdGdrPp47qRL9f9WtaU-Tyq7xNmp6o86OfEA-Pk52EYpIP-iZMtR3YwFfQ4bXa1Juha6FW19Y1zRa996AU5FQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/f5b7/1b89/86ca49ae08770af1e78dee2873e45c34?Expires=1696809600&Signature=ow4FCQWOeMMgqGh2AuBH4g7c46c9Qs7Q8inGd~pSD3B3olxDLzu8tJ54~Sjl~eYhzOlSzaHPGqFK9w0BvbHGdCV1Qqew4jSvOCPjQFdtCypKcOmWsL29r87Ec6p4Dx7wm3Do8s9BPpzwFWHGNWYMUYF7UoG3bPlPD5wQ3sT~R6bz1KEgTocx6yRi1jFp2S1hMOWLKb0IR0yhGSBRMmbx7phVxyOaNNz8IhaKVT3DbOC0PML2tu3dScrVFEVhxclUaFmbLKZVEfdcBm8hFHYplxdeqJrDNoI0SepU9TKde9LWLMDcwEWa8MORLqGN4uaT8aGQvq7tbY7aYwhNZGDL2A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/6595/72eb/2c5ec0276fcbae629523910a0dbbab08?Expires=1696809600&Signature=a281JQTCJ9v81gRQlWKTTEvk0GoHFr9-MBoOFAccoW7kH6JfgW41Pug9CGKdVYTBogwu70~wqF-imvPYe8wDllCrkp46W~OyqTJj7zGgIVO9ExsfFz~maKUOiF5arYRElIkVz4Xgj34PX1Gxlp0gp6JJKJnq-IvT~vQuDHtEAEanMA~789qjDPMOUjqaQLs3xLcTDwj-8TWumx-2qeE4G3gtmY-Gn-GO231RBC7AEgEeTrDlO7GjfyrV0iJW77VgFD9hAJAUZnQ4acJMr6z2XbZgJfNmg~2amLIQZuLLN5Gbq5NaT0JxVxYGmArrFhke66aBDljIfETqpTRcFbanHA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/a170/d363/a55f1ae59de0961d721823eb5c1afa84?Expires=1696809600&Signature=HRTYsX15DMtT122z-GIQQOUeXo5EeqMEq34Pz4fHN2auzgPMW~mIjgPEWFZ-0dfYBRdc36WAn3FeReUdKwID54KEmYa0nnY9uXMqDNetegvOCSpin7XnSrkFVNhm44PUW~ulLcLu2bAKoGkgl4Nc4doXMsZ~VGStop7QRJwt1Kxq-GpcHO5FOKEy18LrWpu99WRKBt4xfC9y90hH4LWJBSJgLZ3DBK9SRDmx6VtJiv64h1TvUdfjC7eYWZy~TnYyadaPWhUgYhFJx7nYJpY15KKY9c06VeeCUdqMbu0Rkyl5qQsNE7FiIdPCAd8sCRZy8HtcxDckDkDvi0KWk94Qhw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+          </div>
+        </div>
+        <div class="flex-1 hidden gallery-col lg:block">
+          <div class="img-col-even [&>*]:mb-4 border border-transparent">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/25af/3eb9/16c50d2538b2bf41de96c1fedc646219?Expires=1696809600&Signature=Ped21QTf0hKzdU0sD603Oa9RVd8VOKjZGe9xBLGCQiOLTc059KrOKdkcJYaa8ioIZxa4J1GAuwG319oXvK8FM93gj8sSiDtLHmC75fHWGbHJfBjDcEXbpuk2VukZhbnqHyIip1nFuCaQq9IZ3Ex1kPNwL1PxQqgD4eLhK7T8hLGjRKxqsfon-DkJsSuhNMHiKs9~TQRfnHr-cWqDncQJmvDm1fGBEVDyaMvNb6YMzp2PNS7do5z26PdoLc4JGNH7Pgufb~SHWTt4XLHguqUE8NYDWPeY6Y8Hi444pgVuQqgNg9SElPvLBBuUL9qylkapKF05Zm9HoB1N-8jVGX4WKA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/b8d4/7690/a1d2e32672f16276473d4872d8860859?Expires=1696809600&Signature=fH25yXuNmXxaDm4se3DjFoS5t2-xDOpcTCDEaJrf2sQYf4vJOIOqIsZLbb00Up~8n26CxMAtkZrNPMigfehCuqinsBCk1oUDBQGbcPZ5THJvtOm2Zkpt6W-LUUFNMazrNNGfwipN0fzhxOZ8RPB8PoBNq1AuyObsRNRF92s~dffjQaY441~WFHRn59HGU2crIUsEgDp39ksa1js30~r2zn52rB7Khwa-V1beUlp43bKDtfpKjjNZVUQiMfjFeRvyNfB8E~ACkwJZd8tzcb0gCvp6eji0Cp0nuGv-huRnXWY7HNjnzO6I-QWrrGmde4Se3Ed7KhpB450KT0PRt5IggQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/cb0f/1e08/db36c41e45012c445ef907314e2b9d94?Expires=1696809600&Signature=qiu4O2MlltbxuKC5otR1XHlwwnZHuEpHr2fbkLE3bstZF4Sbf8vRUW~7HUlxl4TPMltnJ9LmzK5YUkLycXAwRgQMcuH8zpD4~hmIs~7nrFkJgRlXOuBJhIzxG1CoVAUf~~PwZqrUmQsvBxBlQL4kLuiuV3xM3E5RR2fDskfsNd98cn~PUDeM1kV1oJen7ecYl3~of6EEJoWj3KH0reijSuIw6penpvbpIXOXdXvLuNm1ybjdJ80Ki~oKMiLw5FA6qrTSGP18x32U08zz2jabOajPTNaFYwCtXQZ~SfZXjYDjPRcxI-banyyOAFU9AHqFPcLtoG894WMIaUMnrU4ZMA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/2f16/1728/3c193e748138ba28fa7699982dc8a683?Expires=1696809600&Signature=dzTcj5wE02sZ8EMdEjsE43ZMyxcw-crbaicp3zMq2l0-z2uwuxx7xtRF7Ti35d2uEtoTqiocVDU2Agdh4lf5tfq1ZpCWKFJqEz8S2w5QEMN8Dc7SsvLdqMq3Hd8TOSGVlAirNcloDekhL9J8SwslmJ~-T~5UU-6k~~BIr2QclNwNwntu5CyObUkfb2iQLe57cDEfFjQbN6sYOupBdpOAIkaYwTr8ckrzhEjYWxyCUgDxdcj3YxG5icubnU~g9e6U9uUOydhUlPsPaIjfN6bwcZgJyL0G1Hq19BUB0bxi0c3MPQ9y0mwI1~xHQvhV6gC6lhm3s13OZq4TOiJ1kmQcww__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="w-full rounded-lg aspect-[0.96] object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="absolute -bottom-2 w-full bg-gradient-to-t from-[#f1f1f1] h-1/3"></div>
+      </section>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>

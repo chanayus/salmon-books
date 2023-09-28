@@ -13,7 +13,7 @@ class Navbar extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = /*html*/ `
-    <nav class="fixed top-0 z-40 flex items-center w-full lg:h-24 h-20 text-white bg-orange">
+    <nav id="navbar" class="fixed top-0 z-40 flex items-center w-full lg:h-24 h-20 text-white bg-orange">
       <div class="flex items-center justify-between w-full main-container">
         <button id="mobile-nav-menu-button" class="block lg:hidden active">
           <span></span>

@@ -23,11 +23,4 @@ optionsButton?.forEach((button) => {
   });
 });
 
-infiniteScroll("#product-content", () => {
-  const container = document.querySelector("#product-content");
-  const contents = document.querySelectorAll(".product-card");
-
-  [...contents]?.slice(0, 6)?.forEach((content) => {
-    container.innerHTML += content.outerHTML;
-  });
-});
+infiniteScroll("#product-content", { showPerItem: 20, totalItem: document.querySelectorAll("#product-content .product-card").length });

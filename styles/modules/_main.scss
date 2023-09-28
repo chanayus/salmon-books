@@ -18,21 +18,42 @@ html {
 
 body {
     background: $body-white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.075s;
+    &:has(main.dark-mode) {
+        background: #222;
+        color: white;
+    }
 }
 
-.main-container {
+@mixin container($maxWidth, $breakpoint, $breakpointMaxWidth) {
     width: 100%;
-    max-width: 1440px;
+    max-width: $maxWidth;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
     position: relative;
     padding-right: 1rem;
-    @media (max-width: 1480px) {
+
+    @media (max-width: #{$breakpoint}) {
         & {
-            max-width: 1182px;
+            max-width: $breakpointMaxWidth;
         }
     }
+}
+
+.main-container {
+    @include container(1440px, 1480px, 1182px);
+}
+
+.main-container-sm {
+    @include container(960px, 980px, 768px);
+}
+
+.main-container-xs {
+    @include container(768px, 0px, 768px);
 }
 
 button:disabled {
@@ -86,11 +107,25 @@ button:disabled {
 }
 
 main#main-content {
+    flex: 1 1 0;
     padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
     animation: fade-in 0.5s forwards;
     @media (max-width: 1023px) {
-        padding-top: 4.5rem;
-        padding-bottom: 4.5rem;
+        padding-top: 5rem;
+    }
+
+    &.dark-mode {
+        color: #fff;
+        & .reader-menu .icon-img {
+            filter: invert(1);
+        }
+        & .reader-menu,
+        & #text-adjust {
+            background: #000;
+        }
+        & #text-adjust button div {
+            background: #fff;
+        }
     }
 }
