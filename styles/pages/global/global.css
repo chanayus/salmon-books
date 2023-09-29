@@ -309,6 +309,8 @@ body {
 }
 body:has(main.dark-mode) {
   background: #222;
+}
+body:has(main.dark-mode) footer {
   color: white;
 }
 
