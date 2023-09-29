@@ -3,13 +3,15 @@ $yellow: #f8c520;
 $sky-blue: #66bdd8;
 $body-white: #f1f1f1;
 $gray: #8a8a8a;
+$light-gray: #e6e6e6;
 
 $colors: (
     "orange": $orange,
     "yellow": $yellow,
     "sky-blue": $sky-blue,
     "body-white": $body-white,
-    "gray": $gray
+    "gray": $gray,
+    "light-gray": $light-gray
 );
 
 @each $key, $value in $colors {

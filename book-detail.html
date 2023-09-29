@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>SALMON.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/bookDetail.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content">
+      <!-- Breadcrumb -->
+      <section class="breadcrumb">
+        <a href="">BOOKS</a>
+        /
+        <a href="">ORN THE WAY</a>
+      </section>
+
+      <section class="flex flex-col gap-8 lg:flex-row main-container">
+        <div class="flex flex-col flex-1 mx-auto max-w-[35rem] w-full">
+          <!-- Current Image Preview -->
+          <figure class="relative flex-[0.8] aspect-[0.95]">
+            <img
+              id="current-img-preview"
+              src="https://s3-alpha-sig.figma.com/img/ef91/4d16/059d318bddcc02ae37efa9b6f20ca795?Expires=1696809600&Signature=F6fXN7p-KMZ7dQI82lnEU5XWQKBL99oxGtcg-WJN88kGXdTO7Nq2yq5EjyDPRXBawb2p7sO8cDSrbQrlbfX~KQUAKgqaX5KVKOzmj8sR6IFL0Eyt3zZoRT-EDi9Y5yjhRD18rVPShuSCA5eKJxJhKjo6IejlML9RsUYXFadxnesaZlbs0J6BfoAcopqIDpxxJhwlMI05quv-OcirKsJfWVEt~ZgYQeCVha96kV75m8Zf5TreXy1khgM5XzYWidRPpp4eub~GlJ8TwBirsdZ2i0XbD59d5wB2adO4cNbiQbKEMNzHsoIpinNVX4FEOtc2i3ZaQhj9kBQvWQAKNJpYqg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              class="absolute object-contain w-full h-full"
+            />
+          </figure>
+          <!-- Button Change Image Preview -->
+          <div class="flex flex-[0.15] shrink-0 overflow-x-auto">
+            <button class="btn-img-preview relative max-w-[6.7rem] w-full shrink-0">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/ef91/4d16/059d318bddcc02ae37efa9b6f20ca795?Expires=1696809600&Signature=F6fXN7p-KMZ7dQI82lnEU5XWQKBL99oxGtcg-WJN88kGXdTO7Nq2yq5EjyDPRXBawb2p7sO8cDSrbQrlbfX~KQUAKgqaX5KVKOzmj8sR6IFL0Eyt3zZoRT-EDi9Y5yjhRD18rVPShuSCA5eKJxJhKjo6IejlML9RsUYXFadxnesaZlbs0J6BfoAcopqIDpxxJhwlMI05quv-OcirKsJfWVEt~ZgYQeCVha96kV75m8Zf5TreXy1khgM5XzYWidRPpp4eub~GlJ8TwBirsdZ2i0XbD59d5wB2adO4cNbiQbKEMNzHsoIpinNVX4FEOtc2i3ZaQhj9kBQvWQAKNJpYqg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                class="top-0 left-0 object-contain w-full h-full"
+              />
+            </button>
+            <button class="btn-img-preview relative max-w-[6.7rem] w-full shrink-0">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1696809600&Signature=moRZ-Rnu6EtWcxU-jGePyl2fesrE9byYVwZWWYCdniRFhkXtTcRlxMdLrvqxeGHzlnaTjMsVLJ2MpTvHgYZPIJM5QJs87bNftsEh0iz3VJ7AWGDHAOgvZUZuQCZScksRYQOYQDbzzDLV94WUs09bdM-PaRjL8VJJpe3MJNa7K0CnaKEmJQFiZNUeVBgsJ~BQDlV0UtUKTq0HOeVRor1BU5ez4MErQ93eFf8b7AHIexzrT1ba0dtRIlzaLYBOHilDShuuzU~nulM4CGldDsZ7CSIzYlInxkl3wUAo07eUsOHEsqCrJoNMX~3FXproULhxN8XGvCycx2AMGUPMeEyrZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                class="top-0 left-0 object-contain w-full h-full"
+              />
+            </button>
+            <button class="btn-img-preview relative max-w-[6.7rem] w-full shrink-0">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/f37b/c1a1/4f52e83b1295dbc2b25d478aabe712fd?Expires=1696809600&Signature=fGN43iClDjbdjl9qdjVwTkru3s7BYki5yRkD8DkfUkvOMPw9pr~24N86Am6PoLt3-SyaUvjBPHvt2mmn21PJT5s2NKjyCGmylKvgNXRI63RHRyhDBNE7hhh23ieM9SLVkOt-ajALLMDzdEdZUg1UoVhB22ex4YDGQlu9slqrAaOYi9b74ZyUY2GBXhF32jKe8N9Z5NKYz9oohVRGzC6C67MHQQsEnFhZH6Bn02F3hrZ9Axj~J3hKLxZRjMWEUQIgn8eVt~IJh9dReaffz8LtXTDyn2m0mqN906PkbPc82W90D6-I~u7wLQIpDTkoZEW5L0ZFZXRSIKvblugRudVW2w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                class="top-0 left-0 object-contain w-full h-full"
+              />
+            </button>
+            <button class="btn-img-preview relative max-w-[6.7rem] w-full shrink-0">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/d395/c753/96a53f81ac090eaa0b1a4e233048c1d5?Expires=1696809600&Signature=S6gt-TOfwkRVOIgUXTV4wpAV~ttCGI-ubN5msxFzq1iZMa0SQjoePzkVTTOrS7ikctNBnsBLFEVrt1kBiWBYJ5ghuWFS0-lXp7Mc4r3Cib5M3og36KHj8e0eLyqk-P-Q5-IBZLUUNXBD0UgEKPL3nDHlz4WoxmI2n1O4VlJcPdBo42LTgxR7Ow-7HEWEaAAJcgO1rLtDJDaOGEhQtMmOpgaGeF31Vq-kENIpk5a9A-m8t27dnyWKrHTqYQvdlP7ASxrm7NRtSh-0yGnyM1XYhuXx1QMCW2W3rrGaUcp28uVgMGnO1qbMBpqQp~ampO4-ticyNwC9gNoo~owBT5tmRQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                class="top-0 left-0 object-contain w-full h-full"
+              />
+            </button>
+            <button class="btn-img-preview relative max-w-[6.7rem] w-full shrink-0">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/faca/cbe8/95a103f57058487a8fd1a4ea1c273f5b?Expires=1696809600&Signature=Q8qzWPzUdHeQbBGAMd75IY0WcBf4LLsfPzpcGhuzjetcAsS7QKkDq-oo8X0QDvosV~TTRjwutAEE4d8wvszkLQqyfbhrCnCVRGU-EuBnHlZQkn~cB9WAazebWD452RQwhAMTjmuj8OPYVwvHMPFsapuJQCi35-vjixRy2yo0lr0v8iqIvBRsDlV0GrjFLftly7ffbhic3KXlpE3U~P~6Pev-mha8mhUXdAVw5xJ0TpDazdNNKl6irNVl6G6yWxdKGfQsFZhpOJ5owJp3qFYOkYosoubZ2WhHrdH1S9ZJflOXS8JwAsi-utXKlBcaT-PPYMl7037qZi5UzILRdLNf9g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                class="top-0 left-0 object-contain w-full h-full"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="flex-[1.2] space-y-5">
+          <h2 class="text-3xl font-bold">ORN THE WAY</h2>
+          <h4>ผู้แต่ง <span class="font-bold">พัศชนันท์ เจียจิรโชต</span></h4>
+          <p>
+            เรื่องเล่าระหว่างทางของ ‘พัศชนันท์ เจียจิรโชติ’ หรือ ‘อร’ หนึ่งในสมาชิกประจำวง BNK48 ที่แอบโดดงาน 7 วัน ชวนมิตรสหายไปสูดหายใจใน 4 มุมเมืองของอิตาลี แวะช้อปปิ้งที่มิลาน
+            ตามรอยโรมิโอกับจูเลียตที่เวโรนา ท่องเที่ยวแบบคึกคักที่ฟลอ เรนซ์ ชมความยิ่งใหญ่ของกรุงโรม พร้อมใช้เวลาส่วนหนึ่งทบทวนถึงเรื่องที่ผ่านมา และอนาคตที่รออยู่ตรงหน้า ผลงานประเดิมการเขียนของ Orn
+            BNK48 กับเรื่อง ที่พบเจอตามรายทาง ทั้งจากการท่องเที่ยวในประเทศที่เคยใฝ่ฝันว่าจะได้มาสักวัน และจากการใช้ชีวิตที่เต็มไปด้วยความทรงจำมากมา
+          </p>
+          <h2 class="text-3xl font-bold text-orange">฿300.00</h2>
+
+          <div class="flex items-center gap-x-4">
+            <div class="product-increment" data-max="50">
+              <button class="decrease">-</button>
+              <input type="number" id="input-value" value="1" />
+              <button class="increase">+</button>
+            </div>
+
+            <button class="flex items-center px-8 py-2.5 font-bold text-white rounded-full bg-orange gap-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                <path
+                  d="M15.165 2.33015C15.3428 2.24123 15.5487 2.22658 15.7373 2.28939C15.9259 2.35221 16.0819 2.48737 16.1709 2.66515L18.372 7.06715C19.725 7.17115 20.5739 7.43715 21.122 8.11415C21.558 8.65315 21.698 9.32315 21.6469 10.2501H3.35295C3.30195 9.32315 3.44295 8.65315 3.87795 8.11415C4.42595 7.43615 5.27495 7.17115 6.62795 7.06715L8.82895 2.66515C8.91872 2.48878 9.07457 2.35504 9.26252 2.29307C9.45047 2.23111 9.65529 2.24594 9.83236 2.33434C10.0094 2.42274 10.1444 2.57754 10.2078 2.76501C10.2712 2.95247 10.258 3.1574 10.171 3.33515L8.33595 7.00515C8.81895 7.00015 9.34595 7.00015 9.92195 7.00015H15.078C15.654 7.00015 16.181 7.00015 16.6639 7.00515L14.829 3.33515C14.7401 3.15719 14.7256 2.95122 14.7886 2.76256C14.8516 2.5739 14.987 2.419 15.165 2.33015Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.05492 14.257C3.87046 13.4243 3.70043 12.5885 3.54492 11.75H21.4549C21.2993 12.5885 21.1293 13.4243 20.9449 14.257L20.5159 16.257C20.0289 18.53 19.7859 19.666 18.9609 20.333C18.1359 21 16.9739 21 14.6499 21H10.3499C8.02592 21 6.86392 21 6.03992 20.333C5.21392 19.666 4.96992 18.53 4.48392 16.257L4.05492 14.257ZM10.4999 13.25C10.301 13.25 10.1102 13.329 9.96959 13.4697C9.82894 13.6103 9.74992 13.8011 9.74992 14C9.74992 14.1989 9.82894 14.3897 9.96959 14.5303C10.1102 14.671 10.301 14.75 10.4999 14.75H14.4999C14.6988 14.75 14.8896 14.671 15.0303 14.5303C15.1709 14.3897 15.2499 14.1989 15.2499 14C15.2499 13.8011 15.1709 13.6103 15.0303 13.4697C14.8896 13.329 14.6988 13.25 14.4999 13.25H10.4999Z"
+                  fill="white"
+                />
+              </svg>
+              เพิ่มลงตะกร้า
+            </button>
+          </div>
+
+          <div class="grid grid-cols-2 gap-5 py-5 border-y border-gray">
+            <div class="flex flex-col sm:flex-row">
+              <p class="flex-1">หมวดหมู่</p>
+              <p class="flex-1 font-bold">JOURNEY</p>
+            </div>
+            <div class="flex flex-col sm:flex-row">
+              <p class="flex-1">จำนวนหน้า</p>
+              <p class="flex-1 font-bold">240</p>
+            </div>
+            <div class="flex flex-col sm:flex-row">
+              <p class="flex-1">ขนาดหนังสือ</p>
+              <p class="flex-1 font-bold">5x7.2</p>
+            </div>
+            <div class="flex flex-col sm:flex-row">
+              <p class="flex-1">วันที่อัปเดตล่าสุด</p>
+              <p class="flex-1 font-bold">พ. 15 มี.ค. 2566</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-x-14">
+            <button class="flex gap-x-4">
+              <img src="./icons/love-black.svg" alt="" width="24" height="24" />
+              ชื่นชอบ
+            </button>
+            <div class="flex items-center gap-x-6">
+              แชร์
+              <a href="">
+                <img src="./icons/facebook-orange.svg" alt="" />
+              </a>
+              <a href="">
+                <img src="./icons/instagram-orange.svg" alt="" />
+              </a>
+              <a href="">
+                <img src="./icons/x-orange.svg" alt="" />
+              </a>
+              <a href="">
+                <img src="./icons/line-orange.svg" alt="" />
+              </a>
+              <a href="">
+                <img src="./icons/share-orange.svg" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-center pt-5 gap-x-4">
+            <div class="px-8 py-2 rounded-full bg-light-gray text-gray w-fit">BNK48</div>
+            <div class="px-8 py-2 rounded-full bg-light-gray text-gray w-fit">Italy</div>
+            <div class="px-8 py-2 rounded-full bg-light-gray text-gray w-fit">journey</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-container whitespace-nowrap my-14">
+        <div class="grid grid-cols-[5fr_1.35fr] items-center w-full py-5 gap-x-8 border-b border-light-gray">
+          <div class="flex justify-between">
+            <h4 class="text-xl font-bold">ตอนทั้งหมด (3 ตอน)</h4>
+            <p class="hidden md:block">วันที่อัปเดตล่าสุด</p>
+          </div>
+          <p class="flex items-center justify-end gap-x-1">
+            ตอนล่าสุด
+            <img src="./icons/arrow-up-black.svg" alt="" />
+          </p>
+        </div>
+
+        <!-- EP Item -->
+        <div class="grid grid-cols-[5fr_1.35fr] items-center w-full py-5 gap-x-8 border-b border-light-gray">
+          <div class="flex flex-col justify-between truncate md:flex-row gap-y-2">
+            <h4 class="truncate lg:max-w-[80%]">ตอนที่ 3 Chapter 2</h4>
+            <p class="opacity-60">พ. 15 มี.ค. 2566</p>
+          </div>
+
+          <div class="flex justify-end">
+            <a href="" class="flex items-center w-fit justify-center border rounded-full gap-x-1 text-orange border-orange px-4 py-1.5">
+              <img src="./icons/book-orange.svg" alt="" />
+              ทดลองอ่าน
+            </a>
+          </div>
+        </div>
+        <!-- EP Item -->
+        <div class="grid grid-cols-[5fr_1.35fr] items-center w-full py-5 gap-x-8 border-b border-light-gray">
+          <div class="flex flex-col justify-between truncate md:flex-row gap-y-2">
+            <h4 class="truncate lg:max-w-[80%]">ตอนที่ 2 Chapter 1</h4>
+            <p class="opacity-60">พ. 10 มี.ค. 2566</p>
+          </div>
+
+          <div class="flex justify-end">
+            <a href="" class="flex items-center w-fit justify-center border rounded-full gap-x-1 text-orange border-orange px-4 py-1.5">
+              <img src="./icons/book-orange.svg" alt="" />
+              ทดลองอ่าน
+            </a>
+          </div>
+        </div>
+        <!-- EP Item -->
+        <div class="grid grid-cols-[5fr_1.35fr] items-center w-full py-5 gap-x-8 border-b border-light-gray">
+          <div class="flex flex-col justify-between truncate md:flex-row gap-y-2">
+            <h4 class="truncate lg:max-w-[80%]">ตอนที่ 1 คำนำ</h4>
+            <p class="opacity-60">พ. 05 มี.ค. 2566</p>
+          </div>
+
+          <div class="flex justify-end">
+            <a href="" class="flex items-center w-fit justify-center border rounded-full gap-x-1 text-orange border-orange px-4 py-1.5">
+              <img src="./icons/book-orange.svg" alt="" />
+              ทดลองอ่าน
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-28 main-container space-y-14">
+        <div class="flex justify-between">
+          <h3 class="text-2xl font-bold">หนังสือที่คุณน่าจะสนใจ</h3>
+          <a href="./shop.html">ดูทั้งหมด</a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-10 pb-24 main-container md:grid-cols-3 sm:grid-cols-2 justify-items-center">
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/6615/e6b5/69202bac6a7ec881fe035d71252f2583?Expires=1696809600&Signature=XloeYHhe4k90uidwZ2mBF9NG6G~EUJvwmUa~gp2PQrUhtBxJ-7GgkLzqXcWfikMT-mYwuKiNRA1WgrEktQgrI1UJKfTSMAEy0IHGezMIo3qP1qkmSSzQuKig3U1PIGEAflWas6o9UP0KQa~R1jrCnrIvAz5abmDl~Sen~F~Bg42lO6yvi4ig4gAZHfyWa9i2-7cTvY3OvU4xzkPS9f8TL9d9YAwZlc-JBsL1WhB6j6zpJUCy-m4rEfv41~PkHrf6~61M2gZ05xgjYhu~43-oL0JjoH3zM6KWJf2dTZDO5BQKBHovrfWKVjpjAfSPwzgRwa5rjZ4s3uNJLgH~4qyzHg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">ON EARTH WE'RE BRIEFLY GORGEOUS</h4>
+            <p>SALMONBOOKS</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/f37b/c1a1/4f52e83b1295dbc2b25d478aabe712fd?Expires=1696809600&Signature=fGN43iClDjbdjl9qdjVwTkru3s7BYki5yRkD8DkfUkvOMPw9pr~24N86Am6PoLt3-SyaUvjBPHvt2mmn21PJT5s2NKjyCGmylKvgNXRI63RHRyhDBNE7hhh23ieM9SLVkOt-ajALLMDzdEdZUg1UoVhB22ex4YDGQlu9slqrAaOYi9b74ZyUY2GBXhF32jKe8N9Z5NKYz9oohVRGzC6C67MHQQsEnFhZH6Bn02F3hrZ9Axj~J3hKLxZRjMWEUQIgn8eVt~IJh9dReaffz8LtXTDyn2m0mqN906PkbPc82W90D6-I~u7wLQIpDTkoZEW5L0ZFZXRSIKvblugRudVW2w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">CHECK YOUR BALANCE ยอดคนเงินเหลือ</h4>
+            <p>SALMONBOOKS</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/8460/d36a/ba986a2949ea2c71debca559ad060649?Expires=1696809600&Signature=LO7XOjA-9hoIa~E1DRQafToQIIwcPV6-lWQqzhaL7BzY4W~OyNwKUThV9Yj3YRGlYNAPJFNLKzWWjdYbf0zWp49dNlfsRY3GuODoOObkeY3pAYwDhit1VWNvbaklEjhdSK~shfPeeV9C~ythREq2AhI6Upcncv1WKfhN4iRmoXiYB8fxrbGddD7XFY87J4WgtkMVbGFyXijhpb~RaEfRWDj9uPBwD52o57aKbvESnQ9y3Qpoiyx4xMihVGT6AlLtoZVbQYmwPESxIy0Okkxo7YWgB~KjD118-WQoYlaQTSb5uUalFUZQXI7HMHFRI3bVi~Dk7XiuwQtoaj49KSvmeg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">KITCHEN คิตเช่น</h4>
+            <p>SALMONBOOKS</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>

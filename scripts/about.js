@@ -14,7 +14,7 @@ gsap.fromTo(
       trigger: "body",
       scrub: 1,
       start: "22% center",
-      end: "55% center",
+      end: "75% center",
       ease: "expo",
     },
   }
@@ -29,7 +29,7 @@ gsap.fromTo(
       trigger: "body",
       scrub: 1,
       start: "22% center",
-      end: "55% center",
+      end: "75% center",
       ease: "expo",
     },
   }

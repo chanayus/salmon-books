@@ -45,7 +45,7 @@ body {
 }
 
 .main-container {
-    @include container(1440px, 1480px, 1182px);
+    @include container(1280px, 1366px, 1182px);
 }
 
 .main-container-sm {
@@ -64,7 +64,7 @@ button:disabled {
 
 ::-webkit-scrollbar {
     width: 14px;
-    height: 4px;
+    height: 3px;
 }
 
 ::-webkit-scrollbar-track {
