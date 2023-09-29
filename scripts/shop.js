@@ -23,4 +23,4 @@ optionsButton?.forEach((button) => {
   });
 });
 
-infiniteScroll("#product-content", { showPerItem: 20, totalItem: document.querySelectorAll("#product-content .product-card").length });
+infiniteScroll("#product-content", { showPerItem: 12, totalItem: document.querySelectorAll("#product-content .product-card").length });
