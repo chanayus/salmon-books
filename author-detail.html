@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>SALMON.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/authorDetail.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content">
+      <!-- Breadcrumb -->
+      <section class="breadcrumb">
+        <a href="./authors.html">Authors</a>
+        /
+        <a href="">ART JEENO</a>
+      </section>
+
+      <header class="flex flex-col justify-between gap-8 opacity-0 main-container-sm md:flex-row">
+        <figure id="author-image" class="flex-1 mx-auto bg-light-gray rounded-full overflow-hidden w-full aspect-square sm:max-w-[18.75rem] max-w-[15rem]">
+          <img
+            src="https://s3-alpha-sig.figma.com/img/2d25/f126/7594159bace457183504773059310d8b?Expires=1696809600&Signature=G-olJ0Ubc7RFzu9kTAqgWGFGcppG51716pgAMbbnXyodeBKm5tpQwd~AjgsrahtEfkMr7oqD6IWwLf~UJFNK4FJN9WqDpPCh~6XjMitK9ZKaGP2rTzjk9bCtsdaoZClAoIdwmP35W0zBbS4Ks5TmpFw~T-TzRdXk08408~Bypex4N0c~0fvHJt58Y4Izg-XuAgKIpd2ojXTwTRxPLQlDjKnXbxNKN4Xb-Buk6WWrtJw~bQjJmbde24-luEBKvGyseL64MbopudEVk5qMIBnbqxPyfNtWfpz~UueUHJ9Oi~67VGSVWR7iVA6qakUWjGxqpDRrSP4m6pnphWDciNsVaQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt=""
+            width="300"
+            height="300"
+            class="object-cover w-full h-full"
+          />
+        </figure>
+        <div class="flex-[1.75]">
+          <h2 id="author-name" class="mb-6 text-3xl font-bold">ART JEENO</h2>
+
+          <ul id="author-info" class="mb-10 list-disc pl-7">
+            <li>ART JEENO คือมนุษย์เพศชาย ร่างสูง คนเดียวกันกับ ‘ปิยพัชร์ จีโน’</li>
+            <li>เกิดวันที่ 9 เมษายน 2530 เป็นคนเชียงใหม่โดยกำเนิด และเดินทางมาเติบโตที่กรุงเทพฯ บ้างเป็นครั้งคราว</li>
+            <li>ปัจจุบันทำงานศิลปะ เล่นดนตรี เป็นนักเขียน และวาดการ์ตูน</li>
+          </ul>
+
+          <div id="author-social" class="flex items-center gap-x-4">
+            <a href="">
+              <img src="./icons/facebook-orange.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="./icons/instagram-orange.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="./icons/x-orange.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="./icons/tiktok-orange.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="./icons/mail-orange.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="./icons/web-orange.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <section class="opacity-0 author-books mt-28 main-container space-y-14">
+        <h3 class="text-2xl font-bold">หนังสือที่เกี่ยวข้องทั้งหมด (18)</h3>
+
+        <div id="author-books-grid" class="grid grid-cols-2 gap-10 pb-24 main-container md:grid-cols-3 justify-items-center">
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/19f3/1b1f/f6be164839fb7b5b000bc19b3012ff17?Expires=1696809600&Signature=gdMizxN-B2lOl9FXVtgpQEydlu8uJ2S4htjBGUjWMrSC4lZA-pEknq9YxckDZhiIRp44is6pGytjUJgt~M3nMrqKgdR~vZwVhHYWNfn~4tMx4O-zzTs5Mfv09KM7F2R6NI~i3cEBHeKRpSS48kg39DJv68iq5MVpxAiJKA3iKb9JkN-NVHAFTEtr5eUGxJB4JozyzULDKVgthVmdZsP8yIhQH5MA1Bms5cR1-5HJNcCnkoxlZOhRBOdazKH-cpSwhJYuuN3MJnB0MMD20NedOENG1wV2azUVwSA6WyxLHoZAdL560n4ShXyuj7xWW6ARGHVPXObThLVRu8zG~pj8sQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">JUICE: ARRIVALS</h4>
+            <p>ART JEENO</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/f16d/9dad/a23cd9239ad7953d15ea00b9000ccf4e?Expires=1696809600&Signature=F9QKh8Vt2ukkzbYDdT4babrkfmY4XwRALnwQT7I24yAJnRS0OUmCgrOsqnTglhWxIqjoC2TRIDQhnxvNopYP09JV5z2a8v9BGgkD9eqIrfqF9eNhk7DV4GonCcoK6DGcUEkOwLVEqSao-6l1k75O0IU6iu4PrYYzLHCvSwJQ916QldcImWUFf1OI4CckNGcb46eUWWjzdZ-rKJLZtFUwxznpNZD~qaaQVt-N1-IIypDPN3BZOETp8AWi-hyBQFVN1J81IVAUuJXTrtwgVyYdX~b89VCwun7f12X~G~YPT1br9lh2rgq0T~vq-Blrdn4dkvAnqPGgVo4oxAdETfwkeQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">กลับหลังหัน</h4>
+            <p>ART JEENO</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/7ad2/8d97/8f01d6b550d3bf89bf233658b252feef?Expires=1696809600&Signature=BoMv6qXHnL-0-cYaVyqWwDeNXYwdDnn8Tv2dz0jBi09A1aTSuK3I3h~XOeQewQ9H0pcGZt1ArjWTbwQxquHfKl7z~kkkDRg003G44XlTyZHVWcf-e6kAFJKQ4TUMuUo2uie1grPsxHGPwWzqefozkykvTPKxSkib0cT3K1yjJyQJddxbj7zT1OjMuWWbGDcaocvvIXQBnQ7nYkhPEPRRd~JJQhidcmisECi5hk8Pv~sM~Jqvk8C0kMytaieQI7gXcCh9qoymgGrZ0i89qRi11GC~m1ME7V7934bJRMh0usR19TYCQ-uYzkxMmURCGtw8pTP4mDow3hFu82TyIM-3Fw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">กลับหลังหัน ๒</h4>
+            <p>ART JEENO</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/9b2b/5346/d81aeb0254d872c2005fc19f18b2559d?Expires=1696809600&Signature=NNphypBrwOBsl5tGzMr0KCsRsRNbuQvo3QB0t7A78-yJqMs8BPHtQhNDcghGPcrttv~~~oMgW~4juJF1MM6cx8D6FHOygV7g94by0d-QhRjs5uJUWtdRNhOAfleXK4pfHxMyPuWiqtjBuHN9n7RGOLJ0Dx7n-Wg7RWUz8gSaU~7z0udvNe1okEJyCH1ieah7HuJQfD18wIklpdV2bg~8NhZTUm7dAUyo35XR-PUo63bRrYxtzCE3ZW5UHy406HuGelsqXei0mND~ueZYyYbPUlMZjbfRZ-~Ao~SGpDeMotko41suk~OOVIAyOFYsFgQY2lnYQikCrNA9WC4xoZBjew__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">D DAY</h4>
+            <p>ART JEENO</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/5eb4/5358/170a2d2a261ede2d36321cc53e159cb4?Expires=1696809600&Signature=JNU6T~3Tg-~AIzOtl-Xbwrys848sUo1X0BlBVb2WNYtta-SQKR4PXVUQP0GbbNyF4yjATRGnXczJgRK5gY35Iv7asT5rfAXII-KxoK6GREJScSnSKu9LGx16g~tsd5GbBVntzyXfKaW~Yueo3X6kuRfgSNqSMCzLi2A4uA~Cte0acbjC4UNr0RVELw~vSeeQViHEv0iEta~J2ck81adORnB2nyfERqMEYHju74o09bzcY7aYwFm4rCFC30maGPoc7jPydAf-9woubRQQaEFBCDCSVVSKRHzgBHzpBR-zt2ye3sHpIp8gfM4APkrZy~9UbnBWZHg~BWzSevvCGa1GbA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">JUICE #1</h4>
+            <p>ART JEENO</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/805d/00de/dcd1e113ebc3bb9614c680a769c4e3f5?Expires=1696809600&Signature=bzgpUNXW8h4JVoIT9S~O7HhCAhJqsXhCtMydM-6GhxzwlLWokb2qenG6PwZIelMaH3IgngyZswObh4oOhib9WGEHByuTMHB34e5sHNvZdI8GJbtVBCsx9FSqyrlQB1hVL9gOSKUoxuF-ALzFWkDKOGZDhXSLeSyX-L1FNkhNsGCu5-jKr3tnOMViXHDE9dVT6rHezVeOtRa4EjJDUMVI2tUaivUHjUSMp3p8CAzThflWX3lb4J1ZzYEM~s2rVC4~PShx8Zp-tFTDNfU~sC68I98yS6yY091OSYLWuTCOxmnkzB8GBJzcjS5foa4GW~gtvuaoudvn0fVizrSQ7DgTCw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">HORMONES THE SERIES ฉบับ ACT-ART</h4>
+            <p>ART JEENO</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/6615/e6b5/69202bac6a7ec881fe035d71252f2583?Expires=1696809600&Signature=XloeYHhe4k90uidwZ2mBF9NG6G~EUJvwmUa~gp2PQrUhtBxJ-7GgkLzqXcWfikMT-mYwuKiNRA1WgrEktQgrI1UJKfTSMAEy0IHGezMIo3qP1qkmSSzQuKig3U1PIGEAflWas6o9UP0KQa~R1jrCnrIvAz5abmDl~Sen~F~Bg42lO6yvi4ig4gAZHfyWa9i2-7cTvY3OvU4xzkPS9f8TL9d9YAwZlc-JBsL1WhB6j6zpJUCy-m4rEfv41~PkHrf6~61M2gZ05xgjYhu~43-oL0JjoH3zM6KWJf2dTZDO5BQKBHovrfWKVjpjAfSPwzgRwa5rjZ4s3uNJLgH~4qyzHg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">ON EARTH WE'RE BRIEFLY GORGEOUS</h4>
+            <p>SALMONBOOKS</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/f37b/c1a1/4f52e83b1295dbc2b25d478aabe712fd?Expires=1696809600&Signature=fGN43iClDjbdjl9qdjVwTkru3s7BYki5yRkD8DkfUkvOMPw9pr~24N86Am6PoLt3-SyaUvjBPHvt2mmn21PJT5s2NKjyCGmylKvgNXRI63RHRyhDBNE7hhh23ieM9SLVkOt-ajALLMDzdEdZUg1UoVhB22ex4YDGQlu9slqrAaOYi9b74ZyUY2GBXhF32jKe8N9Z5NKYz9oohVRGzC6C67MHQQsEnFhZH6Bn02F3hrZ9Axj~J3hKLxZRjMWEUQIgn8eVt~IJh9dReaffz8LtXTDyn2m0mqN906PkbPc82W90D6-I~u7wLQIpDTkoZEW5L0ZFZXRSIKvblugRudVW2w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">CHECK YOUR BALANCE ยอดคนเงินเหลือ</h4>
+            <p>SALMONBOOKS</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/8460/d36a/ba986a2949ea2c71debca559ad060649?Expires=1696809600&Signature=LO7XOjA-9hoIa~E1DRQafToQIIwcPV6-lWQqzhaL7BzY4W~OyNwKUThV9Yj3YRGlYNAPJFNLKzWWjdYbf0zWp49dNlfsRY3GuODoOObkeY3pAYwDhit1VWNvbaklEjhdSK~shfPeeV9C~ythREq2AhI6Upcncv1WKfhN4iRmoXiYB8fxrbGddD7XFY87J4WgtkMVbGFyXijhpb~RaEfRWDj9uPBwD52o57aKbvESnQ9y3Qpoiyx4xMihVGT6AlLtoZVbQYmwPESxIy0Okkxo7YWgB~KjD118-WQoYlaQTSb5uUalFUZQXI7HMHFRI3bVi~Dk7XiuwQtoaj49KSvmeg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">KITCHEN คิตเช่น</h4>
+            <p>SALMONBOOKS</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>
