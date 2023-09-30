@@ -23,8 +23,8 @@ productIncrement?.forEach((ele) => {
   decreaseBtn?.addEventListener("click", () => {
     inputValue.value = `${Number(inputValue.value) - 1}`;
 
-    if (Number(inputValue.value) === 1) {
-      decreaseBtn.disabled = Number(inputValue.value) === 1;
+    if (Number(inputValue.value) <= 1) {
+      decreaseBtn.disabled = true;
     }
     if (Number(inputValue.value) < maximumValue) {
       increaseBtn.disabled = false;
@@ -40,6 +40,13 @@ productIncrement?.forEach((ele) => {
   inputValue?.addEventListener("input", (e) => {
     if (Number(e.target.value) >= maximumValue) {
       e.target.value = maximumValue;
+      increaseBtn.disabled = true;
+      decreaseBtn.disabled = false;
+    }
+    if (Number(e.target.value) <= 1) {
+      e.target.value = 1;
+      decreaseBtn.disabled = true;
+      increaseBtn.disabled = false;
     }
   });
 });
