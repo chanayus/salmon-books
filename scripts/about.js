@@ -1,20 +1,20 @@
 gsap
   .timeline()
-  .fromTo(".heading-text ", { y: 50, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.1, duration: 1, ease: "expo.inOut" })
-  .fromTo("p", { autoAlpha: 0 }, { autoAlpha: 1, stagger: 0.1, duration: 1, ease: "expo.inOut" }, "-=0.5")
-  .fromTo(["#salmon-text-orange", "#salmon-text-yellow"], { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, ease: "expo.inOut" }, "-=1")
-  .fromTo(".gallery-col", { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, ease: "expo.inOut" }, "-=1.25");
+  .fromTo(".heading-text ", { y: 25, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.1, duration: 1, ease: "expo" }, "+=0.2")
+  .fromTo("p", { autoAlpha: 0, y: 25 }, { autoAlpha: 1, y: 0, stagger: 0.25, duration: 1, ease: "expo" }, "-=0.5")
+  .fromTo(["#salmon-text-orange", "#salmon-text-yellow"], { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, stagger: 0.1, ease: "expo" }, "-=0.75")
+  .fromTo(".gallery-col", { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, ease: "expo" }, "-=1.25");
 
 gsap.fromTo(
   "#salmon-text-orange",
-  { xPercent: -25 },
+  { xPercent: -50 },
   {
     xPercent: 0,
     scrollTrigger: {
       trigger: "body",
       scrub: 1,
       start: "22% center",
-      end: "75% center",
+      end: "72.5% center",
       ease: "expo",
     },
   }
@@ -24,12 +24,12 @@ gsap.fromTo(
   "#salmon-text-yellow",
   { xPercent: 0 },
   {
-    xPercent: -25,
+    xPercent: -50,
     scrollTrigger: {
       trigger: "body",
       scrub: 1,
       start: "22% center",
-      end: "75% center",
+      end: "72.5% center",
       ease: "expo",
     },
   }
