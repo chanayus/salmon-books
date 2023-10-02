@@ -23,16 +23,18 @@ export const infiniteScroll = (selector, options, callback = () => {}) => {
   const { showPerItem, totalItem } = options;
   const container = document.querySelector(selector);
 
-  currentTotalShowing === 0 && initialRender(container.children, showPerItem, totalItem);
+  if (currentTotalShowing === 0 && container.children.length > 0) {
+    initialRender(container.children, showPerItem, totalItem);
+  }
 
   const addLoader = () => {
     const loader = document.createElement("div");
-    loader.className = "loader";
+    loader.className = "infinite-scroll-loader";
     container.append(loader);
   };
 
   const removeLoader = () => {
-    const loader = container?.querySelector(".loader");
+    const loader = container?.querySelector(".infinite-scroll-loader");
     loader?.remove();
   };
 
@@ -47,12 +49,13 @@ export const infiniteScroll = (selector, options, callback = () => {}) => {
 
           setTimeout(() => {
             if (currentTotalShowing + showPerItem < totalItem) {
-              showMore(container.children, currentTotalShowing, currentTotalShowing);
+              showMore(container.children, currentTotalShowing, showPerItem);
               currentTotalShowing += showPerItem;
             } else if (currentTotalShowing + showPerItem > totalItem && currentTotalShowing < totalItem) {
               showMore(container.children, currentTotalShowing, totalItem - currentTotalShowing);
               currentTotalShowing += totalItem - currentTotalShowing;
             }
+
             callback && callback(currentTotalShowing, totalItem);
           }, 1000);
 
