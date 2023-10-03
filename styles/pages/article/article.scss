@@ -1,0 +1,8 @@
+@import "../../modules/colors";
+
+article.block-editor {
+    & a {
+        color: $orange;
+        text-decoration: underline;
+    }
+}
