@@ -211,18 +211,24 @@
 }
 
 .product-increment {
+    height: 2.75rem;
     display: flex;
     align-items: center;
     padding: 0.5rem 1.5rem;
     font-size: 1.125rem;
-    font-weight: bold;
+
     border-radius: 9999px;
-    border: 1px solid $gray;
+    border: 1px solid $smoke;
     width: fit-content;
     column-gap: 0.5rem;
+    & input,
+    & button {
+        font-weight: 700;
+    }
     & input {
         width: 5ch;
         text-align: center;
+
         background: transparent;
     }
 
