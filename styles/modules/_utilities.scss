@@ -54,12 +54,24 @@ $colors: (
     @extend .btn-base;
     background-color: $orange;
     color: #fff;
+
+    &:hover {
+        background-color: rgba(darken($orange, 17%), 80%);
+    }
 }
 
 .btn-stroke-orange {
     @extend .btn-base;
     border: 1px solid $orange;
     color: $orange;
+
+    &:hover {
+        background-color: $orange;
+        color: #fff;
+        & img {
+            filter: brightness(100);
+        }
+    }
 }
 
 .btn-light-gray {

@@ -14,10 +14,14 @@ const submitHandle = (e) => {
   const inputValues = [emailInput.value, phoneInput.value, memberIdInput.value];
   const emptyValueInput = inputValues.filter((value) => !value).length;
 
-  if (emptyValueInput >= 2) {}
+  if (emptyValueInput >= 2) {
+  }
 };
 
 phoneInput?.addEventListener("input", numberOnlyHandle);
 loginForm?.addEventListener("submit", submitHandle);
 
-gsap.fromTo("#login-form", { rotateY: 45, autoAlpha: 0 }, { rotateY: 0, autoAlpha: 1, ease: "expo", delay: 0.25, duration: 1 });
+gsap
+  .timeline()
+  .fromTo("header", { autoAlpha: 0 }, { autoAlpha: 1, ease: "expo", duration: 1 })
+  .fromTo("#login-form", { y: 50, rotateY: 45, autoAlpha: 0 }, { y:0, rotateY: 0, autoAlpha: 1, ease: "expo", duration: 1 }, "-=0.7");

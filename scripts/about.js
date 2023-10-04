@@ -15,7 +15,7 @@ gsap.fromTo(
       scrub: 1,
       start: "22% center",
       end: "72.5% center",
-      ease: "expo",
+      ease: "none",
     },
   }
 );
@@ -30,7 +30,7 @@ gsap.fromTo(
       scrub: 1,
       start: "22% center",
       end: "72.5% center",
-      ease: "expo",
+      ease: "none",
     },
   }
 );
