@@ -1,15 +1,16 @@
-const productIncrement = document.querySelectorAll(".product-increment");
+const productQuantity = document.querySelectorAll(".product-increment");
 
-productIncrement?.forEach((ele) => {
-  const increaseBtn = ele?.querySelector(".increase");
-  const decreaseBtn = ele?.querySelector(".decrease");
-  const inputValue = ele?.querySelector("#input-value");
+productQuantity?.forEach((element) => {
+  const increaseBtn = element.querySelector(".increase");
+  const decreaseBtn = element.querySelector(".decrease");
+  const inputValue = element.querySelector("input");
 
-  const maximumValue = Number(ele.dataset.max);
+  const maximumValue = Number(inputValue.max) || undefined;
 
   decreaseBtn.disabled = Number(inputValue.value) === 1;
 
-  increaseBtn?.addEventListener("click", () => {
+  increaseBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
     inputValue.value = `${Number(inputValue.value) + 1}`;
 
     if (decreaseBtn.disabled) {
@@ -20,7 +21,8 @@ productIncrement?.forEach((ele) => {
     }
   });
 
-  decreaseBtn?.addEventListener("click", () => {
+  decreaseBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
     inputValue.value = `${Number(inputValue.value) - 1}`;
 
     if (Number(inputValue.value) <= 1) {
