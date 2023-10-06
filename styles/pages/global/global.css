@@ -1,25 +1,25 @@
 .text-orange {
-  color: #fc744a;
+  color: rgb(252, 116, 74);
 }
 
 .bg-orange {
-  background: #fc744a;
+  background: rgb(252, 116, 74);
 }
 
 .accent-orange {
-  accent-color: #fc744a;
+  accent-color: rgb(252, 116, 74);
 }
 
 .border-orange {
-  border-color: #fc744a;
+  border-color: rgb(252, 116, 74);
 }
 
 .hover-bg-orange:hover {
-  background: #fc744a;
+  background: rgb(252, 116, 74);
 }
 
 .hover-text-orange:hover {
-  color: #fc744a;
+  color: rgb(252, 116, 74);
 }
 
 .text-yellow {
@@ -213,13 +213,23 @@
 }
 
 .btn-orange {
-  background-color: #fc744a;
+  background-color: rgb(252, 116, 74);
   color: #fff;
+}
+.btn-orange:hover {
+  background-color: rgba(235, 59, 4, 0.8);
 }
 
 .btn-stroke-orange {
-  border: 1px solid #fc744a;
-  color: #fc744a;
+  border: 1px solid rgb(252, 116, 74);
+  color: rgb(252, 116, 74);
+}
+.btn-stroke-orange:hover {
+  background-color: rgb(252, 116, 74);
+  color: #fff;
+}
+.btn-stroke-orange:hover img {
+  filter: brightness(100);
 }
 
 .btn-light-gray {
@@ -289,7 +299,7 @@ nav #mobile-nav-menu-button.active span {
   padding: 0.5rem 2.25rem;
 }
 #search-popup .nav-search-category button.active {
-  background: #fc744a;
+  background: rgb(252, 116, 74);
   color: #fff;
 }
 #search-popup .nav-search-category button.active::after {
@@ -303,11 +313,13 @@ nav #mobile-nav-menu-button.active span {
   outline: none;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  font-smooth: always;
+  text-rendering: optimizeLegibility;
 }
 
 html {
   font-size: clamp(14px, 1vw, 16px);
-  scroll-padding-top: 12rem;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -421,7 +433,7 @@ main#main-content {
   flex: 1 1 0;
   padding-top: 6rem;
   padding-bottom: 3rem;
-  animation: fade-in 0.5s forwards;
+  animation: fade-in 0.35s forwards;
 }
 @media (max-width: 1023px) {
   main#main-content {
@@ -483,7 +495,7 @@ ol li {
 }
 .filter-toggle.active {
   font-weight: 600;
-  color: #fc744a;
+  color: rgb(252, 116, 74);
 }
 .filter-toggle.active::after {
   top: -5px;
@@ -519,10 +531,10 @@ ol li {
   position: relative;
 }
 .filter-options .filter-options-content > *:hover {
-  color: #fc744a;
+  color: rgb(252, 116, 74);
 }
 .filter-options .filter-options-content .active {
-  color: #fc744a;
+  color: rgb(252, 116, 74);
   font-weight: bold;
 }
 .filter-options .filter-options-content * {
@@ -549,7 +561,7 @@ ol li {
   display: block;
 }
 .product-card:hover .product-name {
-  color: #fc744a;
+  color: rgb(252, 116, 74);
 }
 .product-card figure {
   width: 100%;
@@ -648,7 +660,7 @@ ol li {
   text-transform: uppercase;
 }
 .breadcrumb a:first-of-type {
-  color: #fc744a;
+  color: rgb(252, 116, 74);
 }
 @media (max-width: 1024px) {
   .breadcrumb {
@@ -692,7 +704,7 @@ ol li {
   transform: scale(1.15);
 }
 .article-card:hover .article-name {
-  color: #fc744a;
+  color: rgb(252, 116, 74);
 }
 .article-card figure {
   width: 100%;

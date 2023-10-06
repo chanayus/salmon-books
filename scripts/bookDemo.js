@@ -1,9 +1,15 @@
 // Navbar Sticky
 
 let prevScrollY = window.scrollY;
+let currentFontSize = 1;
 
 const navbar = document.querySelector("#navbar");
 const topReaderMenu = document.querySelector("#reader-top-menu");
+const bookContent = document.querySelector("#book-content");
+const lineHeightButtons = document.querySelectorAll(".line-height-button");
+
+const decreaseFontButton = document.querySelector("#decrease-font-button");
+const increaseFontButton = document.querySelector("#increase-font-button");
 
 const showNavbar = () => {
   navbar.style.pointerEvents = "auto";
@@ -68,4 +74,33 @@ textAdjustButton?.addEventListener("click", () => {
     },
     { capture: true }
   );
+});
+
+lineHeightButtons?.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    bookContent.style.lineHeight = button.dataset.value;
+  });
+});
+
+decreaseFontButton?.addEventListener("click", () => {
+  currentFontSize -= currentFontSize - 0.2 < 0.8 ? 0 : 0.2;
+  bookContent.style.fontSize = `${currentFontSize}rem`;
+  console.log(currentFontSize);
+
+  decreaseFontButton.disabled = currentFontSize - 0.2 < 0.8;
+
+  if (increaseFontButton.disabled) {
+    increaseFontButton.disabled = false;
+  }
+});
+
+increaseFontButton?.addEventListener("click", () => {
+  currentFontSize += currentFontSize + 0.2 > 1.6 ? 0 : 0.2;
+  bookContent.style.fontSize = `${currentFontSize}rem`;
+
+  increaseFontButton.disabled = currentFontSize + 0.2 > 1.6;
+
+  if (decreaseFontButton.disabled) {
+    decreaseFontButton.disabled = false;
+  }
 });
