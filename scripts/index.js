@@ -18,8 +18,8 @@ const playSlideAnimation = (currentIndex, nextIndex) => {
     .to(textSlide[currentIndex], { autoAlpha: 0, duration: 0.5 }, 0)
     .set([textSlide[currentIndex], imageSlide[currentIndex]], { display: "none" })
     .set([textSlide[nextIndex], imageSlide[nextIndex]], { display: "block", autoAlpha: 1 })
-    .fromTo(imageSlide[nextIndex], { autoAlpha: 0, scale: 1.1 }, { autoAlpha: 1, scale: 1, ease: "expo", duration: 1.5 })
-    .fromTo(textSlide[nextIndex].children, { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, ease: "expo", stagger: 0.15, duration: 0.5 }, "-=1");
+    .fromTo(imageSlide[nextIndex], { autoAlpha: 0, scale: 1.1 }, { autoAlpha: 1, scale: 1, ease: "expo", duration: 1.25 })
+    .fromTo(textSlide[nextIndex].children, { autoAlpha: 0, x: -40 }, { autoAlpha: 1, x: 0, ease: "expo", stagger: 0.15, duration: 1.25 }, "-=1");
 };
 
 const initSlide = () => {
@@ -59,8 +59,8 @@ if (imageSlide[0] && textSlide[0]) {
   gsap
     .timeline()
     .fromTo("#hero-section", { autoAlpha: 0 }, { autoAlpha: 1, ease: "expo", duration: 0.25 })
-    .fromTo(imageSlide[0], { autoAlpha: 0, scale: 1.1 }, { autoAlpha: 1, scale: 1, ease: "expo", duration: 1.5 }, "+=0.25")
-    .fromTo(textSlide[0].children, { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, ease: "expo", stagger: 0.15, duration: 0.5 }, "-=1");
+    .fromTo(imageSlide[0], { autoAlpha: 0, scale: 1.1 }, { autoAlpha: 1, scale: 1, ease: "expo", duration: 1.25 }, "+=0.25")
+    .fromTo(textSlide[0].children, { autoAlpha: 0, x: -40 }, { autoAlpha: 1, x: 0, ease: "expo", stagger: 0.15, duration: 1.25 }, "-=1");
 }
 
 // Marquee Text Animate
