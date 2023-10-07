@@ -19,6 +19,8 @@
     column-gap: 4px;
     position: relative;
     text-transform: uppercase;
+    animation: 0.25s ease-in-out 0.1s fade-in forwards;
+    opacity: 0;
     &::after {
         position: relative;
         top: 2.5px;
