@@ -1,3 +1,5 @@
+import { gravityHover } from "./modules/gravityHover.js";
+
 let currentSlidePage = 0;
 let paginationDot;
 
@@ -109,3 +111,8 @@ if (articleItems.length <= 0) {
 if (newReleaseItems.length <= 0) {
   newReleaseSection.classList.add("!hidden");
 }
+
+
+
+gravityHover(".article-card");
+

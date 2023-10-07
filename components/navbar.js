@@ -4,7 +4,6 @@ class Navbar extends HTMLElement {
   activeStyleMobile = "text-orange font-semibold";
 
   getLinkStyle(path) {
-    console.log(path, this.pathname, path.includes(this.pathname));
     return path.includes(this.pathname) ? this.activeStyle : "";
   }
 
