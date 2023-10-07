@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>SALMON.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/books.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content">
+      <h1 class="heading-text">BOOKS</h1>
+
+      <section id="filter-section" class="relative flex justify-center mb-20">
+        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
+          <button data-for="book-category" class="filter-toggle">Category</button>
+          <button data-for="book-year" class="filter-toggle">Year</button>
+          <button data-for="book-author" class="filter-toggle">Author</button>
+        </div>
+
+        <!-- book category options -->
+        <section data-for="book-category" class="filter-options">
+          <div class="filter-options-content">
+            <button data-value="All">All</button>
+            <button data-value="Comic">Comic</button>
+            <button data-value="Comic Essay">Comic Essay</button>
+            <button data-value="Comic Parody">Comic Parody</button>
+            <button data-value="Culture">Culture</button>
+            <button data-value="Graphic Novel">Graphic Novel</button>
+            <button data-value="Journey">Journey</button>
+            <button data-value="Lifestyle">Lifestyle</button>
+            <button data-value="Memoir">Memoir</button>
+            <button data-value="Non-Fiction">Non-Fiction</button>
+            <button data-value="Novel">Novel</button>
+            <button data-value="Perspective">Perspective</button>
+            <button data-value="Pop Science">Pop Science</button>
+            <button data-value="Retrospective">Retrospective</button>
+          </div>
+        </section>
+
+        <!-- year options -->
+        <section data-for="book-year" class="filter-options">
+          <div class="filter-options-content">
+            <button data-value="2023">2023</button>
+            <button data-value="2022">2022</button>
+            <button data-value="2021">2021</button>
+            <button data-value="2020">2020</button>
+          </div>
+        </section>
+
+        <!-- author options -->
+        <section data-for="book-author" class="filter-options">
+          <div class="filter-options-content">
+            <button data-value="A GIRL LIKE YOU">A GIRL LIKE YOU</button>
+            <button data-value="Art Jeeno">Art Jeeno</button>
+            <button data-value="Banana Blah Blah">Banana Blah Blah</button>
+            <button data-value="Banana Yoshimoto">Banana Yoshimoto</button>
+            <button data-value="Beth O'Leary">Beth O'Leary</button>
+            <button data-value="C.S.">C.S.</button>
+          </div>
+        </section>
+      </section>
+
+      <section id="product-content" class="grid grid-cols-2 gap-10 pb-24 main-container sm:grid-cols-3 justify-items-center">
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/7890/aac1/3970139289071e0f4661f5466db108b9?Expires=1697414400&Signature=YDbdDtrzeDD0Pb42ZbtdtItcCqiIOxyRqJ6C2fYyyWTgHbtt30OPh1IjZigRkJctk~GC1O-dM01DYw~LkRzOFc9BMOrkoOj2UvIeZvskgeQZ484vG-AXYGHCEu4Y~5ltr-Mr~x4l-yj3l5mltyYcGA6kzvE-c8setFW9lC79xEQKe~enyAolExGpPGS6EicE8PGkr92aqLdfhYUl~Eru3KJlh4ucq-lPIPIFYzwdss2Vybcv55mYeUA6-rT2gcGb05j4EfZ~U6A20R6SZvjucwAhmMqM1TG~iG89SBOrP0I5V3ydr5D2DGTgDkmTJTCC18Adw~uxCctAJ~AzqXVykg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Vid regnbågens slut finns en katt</h4>
+          <p>Niklas Strömstedt</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/0e7e/5a24/92be4d5474e0482d288edd3428f3106f?Expires=1697414400&Signature=FYMIKXhK~NwwgFhqEKRPhvwY0Q9Z-2LSOfdeP1VrrV21Dw8E6OShXpz8q6HYXCni4x22ty0buq~OBYbr6WWAvjvTtz9Bd9CXOYhGRslH8Gz2R0Bidv8tNnnl9Lrc1QX69JbCeD5CZ1dFw9b21rHMdBJbODT9bP-BvGjluP2igy5RcXGk0eo6p7mg1S7iDSj8FJw3AA9K4ch2bKKHzZIiMxfYySvFk~EE3M6ZoGFkwKapBxdUcF10mTeoKVf9mF-~BADb9EqNXC~oue-77PEEWICQt0mTmj1tkegYzmBqBPQQ3o~uqv5wAnhErBiL~koGr-lnk97LSep02haLMxS~RA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Kroppen</h4>
+          <p>Bill Bryson</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/0c3b/f95b/9e52b0607843d09871c79d5915cc62a0?Expires=1697414400&Signature=UonQQTklRwzreVdPohlpTlC6-D6JCxL1a5Fa7z~Q~LxXFsZ4xevndfjw4uiM3GSFxYRGuOoCiF0MGeWun6ojqoOXEJobSKO-prqD1Xk0FXD-Nxjae7IEnMV80Ja9ROZBJvA-7kOQBIWfZ9zemE45B~R55ZrfKykeHQneWD~oknm-a5mA1mfhpNSSZsM0AEU2JTMhuhXyDwevPc-uOrDct9a6~Ac2GCL9uc0ZRzFsCrZ91qpq9b3tWDbScFFg8MEibymkQEO~B5jLMJ-B-7VyTmdJ2FDUwdZYFPcIcaTmvrbWWOTBtKSY2WIML0nb1Y8iQEfvszfeFpUuW7SqPlZmCA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Våga våga</h4>
+          <p>Frida Boisen & Kristina</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/cfe7/caba/26a018fb8c6fce11b965974243f82e51?Expires=1697414400&Signature=m3HJG5B3oz-JkKuJEynRQfSJqi~-7xRBDoMqI6BYqN1CZ-fylikT8RTP3xSdjRQXFmNJ7cIAdeFoCxwVASfQ8AVccvSwdsqdNV1RANhiggiaUbAiwEBoUuZVtEFPCnbDviylHi9WKv4g4NeP70uw1Uf8fjbBJMdZ~LhVp8WoMm33n4Zw7cXYU5dzJJQ~Q1fZyfFWx65HbHGVpJB6e3U8~P0mA5R~C78w2Y2WyVVKkQr37rAx9fSXYm-MCW24UPyhv9lwgyuh~O4jxbzFtgfCiaJLjtGy5RlnspUEYPLNsHR0AJ1kUkUMiaElAbxhY60KVNLYoDFw7ITdS5vVrDG0uQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Närmare</h4>
+          <p>Helena Backlund Wasling</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/06c4/f255/d396ab9aca5ca5465f3cdb3a3b0272c9?Expires=1697414400&Signature=nQuqFkDs8Efala6iAYrWAUdCuLBYoY2DTZJ-e-2wcr24uV12G~tyKztudl02UNKbwyv~k9WA4f~ekAccgEf0jV6oKLo2ghZTCuqsC~Tuq4aBEwwpw1-0s-GUOHcQbE2zqINgsFq4g34VWoJELh9s8lH0aVzPgR0j1SzrntQ0f8VPp53CNqWRAe60pQUKUfSeAEHm4pZ0LwirfAiSZXX9Efwyv-OVt1pL2S01JZvud4qZbr0c~aB9p88WndvIt3tAR0DvI4d4lUjRE~b1RBpzIfey0YJWDeOuOwfF9dzo5Sm8xJrQzbii-SW2LwPqq1HoO8DKpq6h-3z8ucyyiaZZXA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Tribunalen</h4>
+          <p>Nina Åkestam Wikner</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/9e67/83c9/1546b0fbe19c0563e5876e76407b9238?Expires=1697414400&Signature=ZVaNrA6-J3tEY4ebTq3wzC0WvE9msOEohEJhMNxcIPqCzginSM-0vvZD6E375G0hi7CJfrCl~oE5D770X-NbBdeL-Xl14t3xRWeOjw7oux7i2Da157IGDF4EiU3YZAUFqpT1F5POXAcXtWbPTJC~wvzUXbeY4zNsvXEs6gDdaFLVE31IIqsTiVy~SgS80yD3dAJ~~98atOO8Qd2Cf5HsPMLRICYksUAKFM0ghRIN9yRyobdWo9Xt9beL7kSlGDc57YAGrxgBuo7NvEInrkq7UOkIeWNwM036htdwUgeuPI3KcAcg2Ku4FsHgeO7OUZR9VSbBm5~9rmAhR5SeoA~A~A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Skit på dej!</h4>
+          <p>Clark Olofsson</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/c63c/1d6f/1f062ea309b72a7deb3e87f3db996fb2?Expires=1697414400&Signature=oco17uyL6EsvTZ8wTDIYXGX61dZYIpAE-DAMEWW-RjQFLCnGmzRAQUwkvL0zC~t5cYwPHtIBNaWrkhxw7Pig5JPyMeTZlD1L~j1fgY7lLYQ98K7zdU0TXqou3opWum3hhsYS8GaYAN~7IDsOfTIyLjZH4xIEAc2mT7KfCrJbzfhL2o9mfM8KWVoMwRG5Cd5Lgul59eazxwbpVavlAKWQLAw1LLW99pbmShg9h2iPa7CaZjP5y3FK-QXLbfomHKMT0xsqUFtCzo70Pqo9ucAASmJGRQGDYEkUinKNPv90mW~U51YnoNebNskUeIBPoT4lW5VWoORVlsAJnhaxdXzxpQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Relationskompassen</h4>
+          <p>Annika R Malmberg</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/aa92/e0a6/6131f78aa19a40da902d39886e646599?Expires=1697414400&Signature=VGbMNs-oCJZ79WJNMQrk2SVvuB2q5baRaLE9PLx5yHtdfKzvMIQZANH5YYwVYJIpabMxK7hsCIsl2WkwT70uYlB2-TbncWkK~ZBL2ryZrqaxZD6LdsPsc8ZAYR5eAVnhAtBRqtbxrBw2TDAoGWsnBn47rJPxXmGGOihK66NzM2vQzS487s6RgtBHYvvxesrrHPLM5EDRdZikE68CuYI1LTRXCYADjX128NFBTbNsB1GzRb~1oR8YJQxbxQUxV18wRUdxHWaTd-HpBhgt8cztN4U1-rbsf7DeEl9uJ1pqJWrili25ZnhOP6nN~RIQGzcFRv6okjyJNnji1KvfHd1DgQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Ni måste flytta på er</h4>
+          <p>Annah Björk</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/2ac7/9be2/be77af457e09cc0d538ee399fb3b00e5?Expires=1697414400&Signature=BuTyiT2QzdldXgoKmh3exTBBxCaaHOA-VyxwoLkngkRasrveL03sCusNrApbjXilupQ03ehq5cdIU4xm1s-Z6kb~9P97Oo2N~l8N4rPmr6WbfGGYxa~BeTMy309k66zgEHuafL5bjx1MHUpNm4KoUKXsXk55vH31lvi9f~4WE4MMRbFzncwa4rOCahwoP1avG0n0ZmRlppCSeVIK5jrMttjsC3ALrw09nJAQ9PWMWe8OfUB0Af9WbsSHW6lQylItHeRjSH9JYGbK1MMDFSm1~~tM-BeK-fmJ6LRz1qUrKmlD-q77NkxwJv2cSsEs~JUpZHyYJFB2g8OSSLn9MOWB0A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Närmare</h4>
+          <p>Helena Backlund Wasling</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/9d42/7282/bea6c1b1744609fac24af49d832f7573?Expires=1697414400&Signature=dG542~ntwKfeNfep6pZBZa8MQ~8ASvTaqbxWvsm2qKqdAAA3kkIwrYFjCGxN9qZTIS0CphxAZlKE9CxGkwUONaadfMLCU5HjA2iFhMR7lrNgKraZfuJx30xm~FF8QeEQ4qYs30-6u0Joubh7bk~1nLHvkQb9cilctGvlLXi60~xYUh10bdQk0Y4Skym-rS5apOFySVdXY48x9-oy0g78xRHo73ZCQkxJI755Xl1DYVN2KJC3~OFBc-LAL3IhvNy4Z0mIt0s-ucJG-1Kqs5l5202i8IPfawTFhHwU0st1d0sIi5-0Vh8mX0IDUHQiZHYf6ZwtGifilY9rH~hmIFBBhg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Tribunalen</h4>
+          <p>Nina Åkestam Wikner</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/f935/03b3/2a2a46e5a56635007c9980935521b651?Expires=1697414400&Signature=kZwPiqsomcvpzaO0wxbZe2e5rcdkNEKF~35OqxG~CBCHZs-lZ1Dt9ObLQ1nIrE3Qi4yGY6svgEIN1UQfB3z0E0Q3gdm-0fxVLKNkztcSRy7YTEhSfRrl5KCiiCY3ErTIQaB6CCl2w~vqm9isnh2L5J9AO03C140JMeNrntprfKrUjLO8SbPlcvHUxh4j6nCV6lpuwCZoxS111JuQNHuP6A5aKCMo0ZIyyjhe-B6lxRHBv5pvXaXAim6k6AkgSxKU6W5WHiO6rS8Sj71pbPzGv27LnEz8L~qk2PYFLThi1aoPaSEW6Hh1Fba~2wUwa47kEzbNTW87xwLvMGBklimaPg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Skit på dej!</h4>
+          <p>Clark Olofsson</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/69cc/a6b4/e78bd87e94c6f8bdffe6824e43519590?Expires=1697414400&Signature=nJnR2c2WhhbgsqoHquJuHXIKdNUrvrGGoS1nnwVCTeZ24C3JTYHZfEsxy9sfqmUL0yWEyiFUUA3Mpl3IFVTClhKhN7zboQ1yEIvZHWMl4n-q8KPNz92TTCt2YfcFpRjv6aKE-VwJi5lTdH~rawDevkXo-qzpdqbd-wIN6PkPxsRy3q5EKaXnXLUsUtqJETzH1tMbz4Fkta-CZGYsAXtzWgCAQARlMeit-J~Mpz-~5xQGrrn5gNDVQ3KnQ1PaEYVsEc8iuX1yn19O1XFf2hD95zQdY0J6G1yAbWRA4xTPEUs~Tbo4MRkC7QQM54cl8EPSRl44rQw4jz5iplmYkMEr4A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Närmare</h4>
+          <p>Helena Backlund Wasling</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3063/24ff/682fe6aa2e93533b8d78dd0ff0e1a551?Expires=1697414400&Signature=hnBbgzjLOqjEhm2d8m93dtt8Jw99qP22vmsuobamZ7L3D38SYPg1TPN86GPsusUaMwpu3TrjrUa7AVDReWSLseM42Qd2aaeHmy0eM1gex8OU2XdXONUDf1ggu8twJ9tFIX3adQVm~4dtXQeLkIPEKsLS2Ae2bEh7y8qq7H-u3iOWkGIxezcCVqPfz~Iczlc8tok~XD6WQbLrc7jt8ntmfoj94hif4rkEMmcDoDzW5-8CUKHa0nDoHPQ4tBJZbQIuCClGiLPKsXv~ykbyq~IS6P2UxwEusB9TxTcOzfQbjlm3q6KJEB5kJa4t3OfyxfGqhnK6dAUkv8wLd77P6lBeAw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Skit på dej!</h4>
+          <p>Clark Olofsson</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/5d1e/5255/08b026d4618fd22bf73728750886a2e1?Expires=1697414400&Signature=RWCJKkcYBahcInDSl637w3uYT0Vr~ka0CFRxK-KY-VQXH-IhZet~iaoovk79QXpBymXNqcn7InleFTG6dKhau2NKzz-JWgn-8u37t8BJaK972oQmoaw4FLyuXxa0FIWz3CFUGuRsL8OYc4xV5IfvGwKh8L0Ytl95Q5PcGL03-t3OMgp5mI0y7ZxK26msVvdVVlHmJO9Oxz15ofgac7lw04ELX4a~1vC0g3AR9Sfrz7LhJ2YBMhIINatRC1znRhgRa6i7D6vBukaw2SuHLA0DXOAnEAxNRMi9PdQ5CW8QH0jLSwOO9u7Z2kI-ZZGOUV4~KMUDdIW-S-wPzvhOUG1Uig__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Närmare</h4>
+          <p>Helena Backlund Wasling</p>
+        </a>
+
+        <a href="./book-detail.html" class="product-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/e996/d184/a9aa47a2d30974da4cdf2c7f0e2422f8?Expires=1697414400&Signature=CjeOTm8MHNwV05acjbqfBK61WLLj5G7Tnkun72ClhA2p4yikfJoETmtS0ZwU1n~ksrORvi6QVzDoTHqKbEsxkOPr1uR7vkjZhAdOhtwMMtYRTaYCbZAtNWGlYHQycxqviwGYfPS6jyyVqetWMyX7Uetk15cGOpDLcvTEgH886lYxciqepn-Ib49sswhqALDEZpbZFqToOCUYNn5wxoi7HkEiw2p7hkJZyUhFVrpA9OJBehe1bvpJGWugYpeaNk~dNEuSd4sQ7bvtKYWxTHWFknHeNIoDCQtvttkD3WLrzYNotiSFmUJJ9V9iBF~yvewCu7lzvvMFJRFhHEsg852X1w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+            <img
+              class="hover-image"
+              src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+              width="235"
+              height="235"
+            />
+          </figure>
+
+          <h4 class="product-name">Närmare</h4>
+          <p>Helena Backlund Wasling</p>
+        </a>
+      </section>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>SALMON.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content">
+      <header id="hero-section" class="opacity-0 invisible flex lg:flex-row flex-col items-center h-[80vh] lg:h-[37.5rem] gap-10 justify-between max-lg:mt-14 main-container">
+        <section class="lg:flex-1">
+          <!--  hero-slide-text item -->
+          <div class="space-y-6 hero-slide-text">
+            <h2 class="text-[clamp(2.5rem,5vw,3rem)] font-bold leading-tight">Everything Everywhere All At Once: Collector's Edition</h2>
+            <a href="" class="px-8 btn-orange max-w-fit">
+              READ MORE
+              <img src="./icons/arrow-right-white.png" alt="" />
+            </a>
+          </div>
+
+          <!--  hero-slide-text item -->
+          <div class="space-y-6 hero-slide-text">
+            <h2 class="text-[clamp(2.5rem,5vw,3rem)] font-bold leading-tight">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, omnis.</h2>
+            <a href="" class="px-8 btn-orange max-w-fit">
+              READ MORE
+              <img src="./icons/arrow-right-white.png" alt="" />
+            </a>
+          </div>
+        </section>
+        <figure class="relative flex-1 w-full h-[90%]">
+          <!-- hero-slide-image -->
+          <img
+            src="https://s3-alpha-sig.figma.com/img/c723/7694/442c49ec496988a32e2e5cce5fed077f?Expires=1697414400&Signature=PuT4cPLEYqCbM-~pp~AsGHY4YpLGJLpk0OIxZ8oDlqVxPffJSZUqeFsozAG5H-GcUm6Fzpn71sIp25sthOWMwv207BsVtgKE8Ev4PHjENyffU5yVQFtUjksBwN3r0xBiHgsiydDkVgxquBdtBNu-cTco5VFB02bWW79AadsDIcxiEm-Pw4WJR5oV7Q2uJa2ytub01UoCEIH4iZPP-0gJFhFFQnt8ElPfHtiUa7g~NRtNTmXDYXldP8InxoduK7AbE-Xl2Vxeve4tSBn2~5tg1W9nktgu08-yQKwnynInJur3ur4E~s8a~T0MSjDHhW6Own6aamml-O4hcepimqXSsA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt=""
+            class="absolute object-contain w-full h-full hero-slide-image"
+          />
+
+          <!-- hero-slide-image -->
+          <img
+            src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1697414400&Signature=b98nloJ-JMlr2d5EruLaDLds6RSx9jLO7pKKhUiZ3x3xvRiq0gpiSKFugeQniAM10ASIfpOB8UBNeTn9nsEP9GPMGAyEgNzvhWOxxbetlxo4-Wha2ma6LVjnz1867bW7Ltzs650eDtr6vX3HzlmS2AJQYZ4sFQSM~U3p8lQBcuHGYn8aC5qboxwdD48ujNr6tnmRW49SpsnaoDQ3Gjd66cJo8jlrhDDEBs4Yl5H9IqJnxdKyD5ntuAWOKq7MxdAWjFyMoufKeSMpIlWI7QayGLHw9b9V8G9JEquD4mgTEG-8Fi36ZK7JeWHOHKDEclC-XPDCwZP9QAoR8tQH3hsASw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt=""
+            class="absolute object-contain w-full h-full hero-slide-image"
+          />
+        </figure>
+
+        <div id="hero-slide-pagination" class="absolute left-0 z-10 flex justify-center w-full lg:bottom-0 -bottom-2 gap-x-2 h-fit"></div>
+      </header>
+
+      <!-- new release books section -->
+      <section id="new-release-section" class="space-y-8 mt-14 main-container">
+        <div class="flex justify-center lg:justify-between">
+          <h3 class="text-3xl font-bold">NEW RE-LEASE</h3>
+          <a class="hidden lg:block" href="./books.html">VIEW ALL</a>
+        </div>
+        <div id="new-release-list-container" class="grid grid-cols-2 gap-10 pb-24 main-container sm:grid-cols-3 justify-items-center">
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/7890/aac1/3970139289071e0f4661f5466db108b9?Expires=1697414400&Signature=YDbdDtrzeDD0Pb42ZbtdtItcCqiIOxyRqJ6C2fYyyWTgHbtt30OPh1IjZigRkJctk~GC1O-dM01DYw~LkRzOFc9BMOrkoOj2UvIeZvskgeQZ484vG-AXYGHCEu4Y~5ltr-Mr~x4l-yj3l5mltyYcGA6kzvE-c8setFW9lC79xEQKe~enyAolExGpPGS6EicE8PGkr92aqLdfhYUl~Eru3KJlh4ucq-lPIPIFYzwdss2Vybcv55mYeUA6-rT2gcGb05j4EfZ~U6A20R6SZvjucwAhmMqM1TG~iG89SBOrP0I5V3ydr5D2DGTgDkmTJTCC18Adw~uxCctAJ~AzqXVykg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">Vid regnbågens slut finns en katt</h4>
+            <p>Niklas Strömstedt</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/0e7e/5a24/92be4d5474e0482d288edd3428f3106f?Expires=1697414400&Signature=FYMIKXhK~NwwgFhqEKRPhvwY0Q9Z-2LSOfdeP1VrrV21Dw8E6OShXpz8q6HYXCni4x22ty0buq~OBYbr6WWAvjvTtz9Bd9CXOYhGRslH8Gz2R0Bidv8tNnnl9Lrc1QX69JbCeD5CZ1dFw9b21rHMdBJbODT9bP-BvGjluP2igy5RcXGk0eo6p7mg1S7iDSj8FJw3AA9K4ch2bKKHzZIiMxfYySvFk~EE3M6ZoGFkwKapBxdUcF10mTeoKVf9mF-~BADb9EqNXC~oue-77PEEWICQt0mTmj1tkegYzmBqBPQQ3o~uqv5wAnhErBiL~koGr-lnk97LSep02haLMxS~RA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">Kroppen</h4>
+            <p>Bill Bryson</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/0c3b/f95b/9e52b0607843d09871c79d5915cc62a0?Expires=1697414400&Signature=UonQQTklRwzreVdPohlpTlC6-D6JCxL1a5Fa7z~Q~LxXFsZ4xevndfjw4uiM3GSFxYRGuOoCiF0MGeWun6ojqoOXEJobSKO-prqD1Xk0FXD-Nxjae7IEnMV80Ja9ROZBJvA-7kOQBIWfZ9zemE45B~R55ZrfKykeHQneWD~oknm-a5mA1mfhpNSSZsM0AEU2JTMhuhXyDwevPc-uOrDct9a6~Ac2GCL9uc0ZRzFsCrZ91qpq9b3tWDbScFFg8MEibymkQEO~B5jLMJ-B-7VyTmdJ2FDUwdZYFPcIcaTmvrbWWOTBtKSY2WIML0nb1Y8iQEfvszfeFpUuW7SqPlZmCA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">Våga våga</h4>
+            <p>Frida Boisen & Kristina</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/cfe7/caba/26a018fb8c6fce11b965974243f82e51?Expires=1697414400&Signature=m3HJG5B3oz-JkKuJEynRQfSJqi~-7xRBDoMqI6BYqN1CZ-fylikT8RTP3xSdjRQXFmNJ7cIAdeFoCxwVASfQ8AVccvSwdsqdNV1RANhiggiaUbAiwEBoUuZVtEFPCnbDviylHi9WKv4g4NeP70uw1Uf8fjbBJMdZ~LhVp8WoMm33n4Zw7cXYU5dzJJQ~Q1fZyfFWx65HbHGVpJB6e3U8~P0mA5R~C78w2Y2WyVVKkQr37rAx9fSXYm-MCW24UPyhv9lwgyuh~O4jxbzFtgfCiaJLjtGy5RlnspUEYPLNsHR0AJ1kUkUMiaElAbxhY60KVNLYoDFw7ITdS5vVrDG0uQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">Närmare</h4>
+            <p>Helena Backlund Wasling</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/06c4/f255/d396ab9aca5ca5465f3cdb3a3b0272c9?Expires=1697414400&Signature=nQuqFkDs8Efala6iAYrWAUdCuLBYoY2DTZJ-e-2wcr24uV12G~tyKztudl02UNKbwyv~k9WA4f~ekAccgEf0jV6oKLo2ghZTCuqsC~Tuq4aBEwwpw1-0s-GUOHcQbE2zqINgsFq4g34VWoJELh9s8lH0aVzPgR0j1SzrntQ0f8VPp53CNqWRAe60pQUKUfSeAEHm4pZ0LwirfAiSZXX9Efwyv-OVt1pL2S01JZvud4qZbr0c~aB9p88WndvIt3tAR0DvI4d4lUjRE~b1RBpzIfey0YJWDeOuOwfF9dzo5Sm8xJrQzbii-SW2LwPqq1HoO8DKpq6h-3z8ucyyiaZZXA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">Tribunalen</h4>
+            <p>Nina Åkestam Wikner</p>
+          </a>
+
+          <a href="./book-detail.html" class="product-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/9e67/83c9/1546b0fbe19c0563e5876e76407b9238?Expires=1697414400&Signature=ZVaNrA6-J3tEY4ebTq3wzC0WvE9msOEohEJhMNxcIPqCzginSM-0vvZD6E375G0hi7CJfrCl~oE5D770X-NbBdeL-Xl14t3xRWeOjw7oux7i2Da157IGDF4EiU3YZAUFqpT1F5POXAcXtWbPTJC~wvzUXbeY4zNsvXEs6gDdaFLVE31IIqsTiVy~SgS80yD3dAJ~~98atOO8Qd2Cf5HsPMLRICYksUAKFM0ghRIN9yRyobdWo9Xt9beL7kSlGDc57YAGrxgBuo7NvEInrkq7UOkIeWNwM036htdwUgeuPI3KcAcg2Ku4FsHgeO7OUZR9VSbBm5~9rmAhR5SeoA~A~A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+              <img
+                class="hover-image"
+                src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+                width="235"
+                height="235"
+              />
+            </figure>
+
+            <h4 class="product-name">Skit på dej!</h4>
+            <p>Clark Olofsson</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- marquee section -->
+      <section class="my-16 overflow-hidden max-w-[120rem] mx-auto" id="text-srcolling-container">
+        <div id="salmon-text-blue" class="text-[6.25rem] rotate-2 flex items-center whitespace-nowrap gap-x-8 text-sky-blue font-semibold">
+          <div>SALMON BOOKS</div>
+          <div>SALMON BOOKS</div>
+          <div>SALMON BOOKS</div>
+          <div>SALMON BOOKS</div>
+        </div>
+        <div id="salmon-text-yellow" class="text-[6.25rem] -translate-y-10 flex items-center whitespace-nowrap gap-x-8 text-yellow font-semibold">
+          <div>SALMON BOOKS</div>
+          <div>SALMON BOOKS</div>
+          <div>SALMON BOOKS</div>
+          <div>SALMON BOOKS</div>
+        </div>
+      </section>
+
+      <!-- article section -->
+      <section id="article-section" class="space-y-8 main-container">
+        <div class="flex justify-center lg:justify-between">
+          <h3 class="text-3xl font-bold">ARTICLES</h3>
+          <a class="hidden lg:block" href="">VIEW ALL</a>
+        </div>
+        <div class="grid justify-center gap-8 lg:grid-cols-2">
+          <a href="" class="min-w-full article-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3140/5abf/a5cbd2988efca1fcace713bb188c6081?Expires=1697414400&Signature=Jy~aONWAHWWq6wmsn9aJm5a758FKX9jIwC2H~0D1XSH88pRKn46fRaPV06z4KG20FeKvdePmkCgW9bOEvvC4e6s4ns1oZBhu7p50gJlCQCmRS4DJCkZ9MEQCQPonjgCxFKCC7xen2iiIp9~mV5RPHHxt0wBAcph4~ufGsu4SObbvICfjw3a16Me-ewIo4xMmHKLMgfzVLsVV3EbCMOhm1SLFd-IpTp8OTfmGyI0FFaUA7bK2THzDbqF0og3OVa8j0cQBxHB~kU39IzjVK2YnHekC2-191f32AsoDcSXdB8U8oDMVWtTAZEbhTs9m7onvQQcZC2woVlQ20BQpsJosfg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+              />
+            </figure>
+            <h4 class="article-name">SALMON PICK UP SALMON PICK UP SALMON PICK UP SALMON PICK UP SALMON PICK UP SALMON PICK UP</h4>
+            <p class="article-desc">การออกค่ายอาสาในต่างแดนหน้าตาเป็นเช่นไร ยิ่งการออก ตรวจนั้นมาควบคู่กับการเดินขึ้นเขาหิมาลัยรวมกันแล้วจะออกกก</p>
+          </a>
+
+          <a href="" class="min-w-full article-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/1d9b/b7a9/628ff23320c423382329d307329e49d7?Expires=1697414400&Signature=MDzeiTXz1NgNsxkZrmBjAa0IbhivmI9LQmB2iITIDWIneVsJEsYuvNtCpV4COdRO6iZNNoV2ailXczsGGg~FMUtfzuGB-oKKCZusTYaGIM5r7jX8iTPN7vdHdPtVtWkTAZ66A7x2p4lytZSyuNCyOQwnue4ed7s5ln7bNenDAEtS0UMCWfqHMmS8nVhm-~4~08KNpxxYXcBaafUQcERSOgEmU-1al4qms9x7cJ4I-WGWS6GBn4dypC5GJ3eBaG5AGYAnPqWNtt3SOCaTLG4YBDkoPutOnuBPDwyD-NBIAZ8yEmrPocsTqzFOByLt4hr~sdIHJhP5T9p2dRBE~aZoCw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+              />
+            </figure>
+            <h4 class="article-name">SALMON PICK UP แนะนำหนังสือเล่มบาง สำหรับคนมีเวลาน้อย</h4>
+            <p class="article-desc">การออกค่ายอาสาในต่างแดนหน้าตาเป็นเช่นไร ยิ่งการออก ตรวจนั้นมาควบคู่กับการเดินขึ้นเขาหิมาลัยรวมกันแล้วจะออกกก</p>
+          </a>
+        </div>
+        <div class="grid justify-center gap-8 lg:grid-cols-3">
+          <a href="" class="article-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3140/5abf/a5cbd2988efca1fcace713bb188c6081?Expires=1697414400&Signature=Jy~aONWAHWWq6wmsn9aJm5a758FKX9jIwC2H~0D1XSH88pRKn46fRaPV06z4KG20FeKvdePmkCgW9bOEvvC4e6s4ns1oZBhu7p50gJlCQCmRS4DJCkZ9MEQCQPonjgCxFKCC7xen2iiIp9~mV5RPHHxt0wBAcph4~ufGsu4SObbvICfjw3a16Me-ewIo4xMmHKLMgfzVLsVV3EbCMOhm1SLFd-IpTp8OTfmGyI0FFaUA7bK2THzDbqF0og3OVa8j0cQBxHB~kU39IzjVK2YnHekC2-191f32AsoDcSXdB8U8oDMVWtTAZEbhTs9m7onvQQcZC2woVlQ20BQpsJosfg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+              />
+            </figure>
+            <h4 class="article-name">SALMON PICK UP SALMON PICK UP SALMON PICK UP SALMON PICK UP SALMON PICK UP SALMON PICK UP</h4>
+            <p class="article-desc">การออกค่ายอาสาในต่างแดนหน้าตาเป็นเช่นไร ยิ่งการออก ตรวจนั้นมาควบคู่กับการเดินขึ้นเขาหิมาลัยรวมกันแล้วจะออกกก</p>
+          </a>
+
+          <a href="" class="article-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/1d9b/b7a9/628ff23320c423382329d307329e49d7?Expires=1697414400&Signature=MDzeiTXz1NgNsxkZrmBjAa0IbhivmI9LQmB2iITIDWIneVsJEsYuvNtCpV4COdRO6iZNNoV2ailXczsGGg~FMUtfzuGB-oKKCZusTYaGIM5r7jX8iTPN7vdHdPtVtWkTAZ66A7x2p4lytZSyuNCyOQwnue4ed7s5ln7bNenDAEtS0UMCWfqHMmS8nVhm-~4~08KNpxxYXcBaafUQcERSOgEmU-1al4qms9x7cJ4I-WGWS6GBn4dypC5GJ3eBaG5AGYAnPqWNtt3SOCaTLG4YBDkoPutOnuBPDwyD-NBIAZ8yEmrPocsTqzFOByLt4hr~sdIHJhP5T9p2dRBE~aZoCw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+              />
+            </figure>
+            <h4 class="article-name">SALMON PICK UP แนะนำหนังสือเล่มบาง สำหรับคนมีเวลาน้อย</h4>
+            <p class="article-desc">การออกค่ายอาสาในต่างแดนหน้าตาเป็นเช่นไร ยิ่งการออก ตรวจนั้นมาควบคู่กับการเดินขึ้นเขาหิมาลัยรวมกันแล้วจะออกกก</p>
+          </a>
+
+          <a href="" class="article-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/cb25/2320/27cb63793df346e2732b8930f5e70969?Expires=1697414400&Signature=VWIWR9NWoM42Qz93EmCQ1QHaDamLidfMrD2TNTDumTFVPf8PnkgbQPODWyfMnfFrH8bkFILAqt6SbX0cUE30YISOYX67wjvmk9stwBtfR1pJP5oKVJehoWchl4LEjjkr1feOH2veg4f-6Rh87-3zgWmbbwfG6~S2tsLy9WmsprOUTfCOZuKK5EAzg6XHiYBx8ZekE3NsjoB8JJH31HdmzWUroyf0c~H0iCCuwHDWqeSJWN45XLiHS~nZHfX5Wgqb2tb8Y1Rn~X~tH5t90~gOrymHvC-YprLJiawwamA0~-o0PSIvqRroLjzVloz41pWt4KaXisTdNoyVgW~RxhwgWw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+              />
+            </figure>
+            <h4 class="article-name">PEOPLE IN THE HIT-STORY เรื่องจริง จากคนบนหน้าหนังสือ</h4>
+            <p class="article-desc">การออกค่ายอาสาในต่างแดนหน้าตาเป็นเช่นไร</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>
