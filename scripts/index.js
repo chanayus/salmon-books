@@ -2,6 +2,7 @@ import { gravityHover } from "./modules/gravityHover.js";
 
 let currentSlidePage = 0;
 let paginationDot;
+let slideInterval;
 
 const imageSlide = document.querySelectorAll(".hero-slide-image");
 const textSlide = document.querySelectorAll(".hero-slide-text");
@@ -22,6 +23,9 @@ const playSlideAnimation = (currentIndex, nextIndex) => {
     .set([textSlide[nextIndex], imageSlide[nextIndex]], { display: "block", autoAlpha: 1 })
     .fromTo(imageSlide[nextIndex], { autoAlpha: 0, scale: 1.1 }, { autoAlpha: 1, scale: 1, ease: "expo", duration: 1.25 })
     .fromTo(textSlide[nextIndex].children, { autoAlpha: 0, x: -40 }, { autoAlpha: 1, x: 0, ease: "expo", stagger: 0.15, duration: 1.25 }, "-=1");
+
+  currentSlidePage = nextIndex;
+  updatePagination();
 };
 
 const initSlide = () => {
@@ -42,9 +46,9 @@ const initSlide = () => {
   paginationDot?.forEach((button, index) => {
     button.addEventListener("click", () => {
       if (currentSlidePage !== index) {
+        clearInterval(slideInterval);
         playSlideAnimation(currentSlidePage, index);
-        currentSlidePage = index;
-        updatePagination();
+        slideInterval = setInterval(() => playSlideAnimation(currentSlidePage, currentSlidePage + 1 > textSlide.length - 1 ? 0 : currentSlidePage + 1), 5000);
       }
     });
   });
@@ -52,9 +56,11 @@ const initSlide = () => {
 
 if (textSlide.length > 0) {
   initSlide();
-}
-if (textSlide.length <= 1) {
-  paginationContainer.classList.add("!hidden");
+  if (textSlide.length <= 1) {
+    paginationContainer.classList.add("!hidden");
+  } else if (textSlide.length > 1) {
+    slideInterval = setInterval(() => playSlideAnimation(currentSlidePage, currentSlidePage + 1 > textSlide.length - 1 ? 0 : currentSlidePage + 1), 5000);
+  }
 }
 
 if (imageSlide[0] && textSlide[0]) {
@@ -112,7 +118,4 @@ if (newReleaseItems.length <= 0) {
   newReleaseSection.classList.add("!hidden");
 }
 
-
-
 gravityHover(".article-card");
-
