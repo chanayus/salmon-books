@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>SALMON.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/articles.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content">
+      <h1 class="heading-text">Articles</h1>
+
+      <section id="filter-section" class="relative flex justify-center mb-20">
+        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
+          <button data-for="sort-by" class="filter-toggle">Newest</button>
+        </div>
+
+        <!-- sort by options -->
+        <section data-for="sort-by" class="filter-options">
+          <div class="filter-options-content">
+            <button data-value="newest">Newest</button>
+            <button data-value="oldest">Oldest</button>
+            <button data-value="alphabet">Alphabet (A-Z)</button>
+          </div>
+        </section>
+      </section>
+
+      <!-- article section -->
+      <section id="article-section" class="space-y-8 main-container">
+        <div class="grid justify-center gap-8 lg:grid-cols-2">
+          <a href="" class="min-w-full article-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3140/5abf/a5cbd2988efca1fcace713bb188c6081?Expires=1697414400&Signature=Jy~aONWAHWWq6wmsn9aJm5a758FKX9jIwC2H~0D1XSH88pRKn46fRaPV06z4KG20FeKvdePmkCgW9bOEvvC4e6s4ns1oZBhu7p50gJlCQCmRS4DJCkZ9MEQCQPonjgCxFKCC7xen2iiIp9~mV5RPHHxt0wBAcph4~ufGsu4SObbvICfjw3a16Me-ewIo4xMmHKLMgfzVLsVV3EbCMOhm1SLFd-IpTp8OTfmGyI0FFaUA7bK2THzDbqF0og3OVa8j0cQBxHB~kU39IzjVK2YnHekC2-191f32AsoDcSXdB8U8oDMVWtTAZEbhTs9m7onvQQcZC2woVlQ20BQpsJosfg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+              />
+            </figure>
+            <h4 class="article-name">SALMON PICK UP SALMON PICK UP SALMON PICK UP SALMON PICK UP SALMON PICK UP SALMON PICK UP</h4>
+            <p class="article-desc">การออกค่ายอาสาในต่างแดนหน้าตาเป็นเช่นไร ยิ่งการออก ตรวจนั้นมาควบคู่กับการเดินขึ้นเขาหิมาลัยรวมกันแล้วจะออกกก</p>
+          </a>
+
+          <a href="" class="min-w-full article-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/1d9b/b7a9/628ff23320c423382329d307329e49d7?Expires=1697414400&Signature=MDzeiTXz1NgNsxkZrmBjAa0IbhivmI9LQmB2iITIDWIneVsJEsYuvNtCpV4COdRO6iZNNoV2ailXczsGGg~FMUtfzuGB-oKKCZusTYaGIM5r7jX8iTPN7vdHdPtVtWkTAZ66A7x2p4lytZSyuNCyOQwnue4ed7s5ln7bNenDAEtS0UMCWfqHMmS8nVhm-~4~08KNpxxYXcBaafUQcERSOgEmU-1al4qms9x7cJ4I-WGWS6GBn4dypC5GJ3eBaG5AGYAnPqWNtt3SOCaTLG4YBDkoPutOnuBPDwyD-NBIAZ8yEmrPocsTqzFOByLt4hr~sdIHJhP5T9p2dRBE~aZoCw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+              />
+            </figure>
+            <h4 class="article-name">SALMON PICK UP แนะนำหนังสือเล่มบาง สำหรับคนมีเวลาน้อย</h4>
+            <p class="article-desc">การออกค่ายอาสาในต่างแดนหน้าตาเป็นเช่นไร ยิ่งการออก ตรวจนั้นมาควบคู่กับการเดินขึ้นเขาหิมาลัยรวมกันแล้วจะออกกก</p>
+          </a>
+        </div>
+        <div class="grid justify-center gap-8 lg:grid-cols-3">
+          <a href="" class="article-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3140/5abf/a5cbd2988efca1fcace713bb188c6081?Expires=1697414400&Signature=Jy~aONWAHWWq6wmsn9aJm5a758FKX9jIwC2H~0D1XSH88pRKn46fRaPV06z4KG20FeKvdePmkCgW9bOEvvC4e6s4ns1oZBhu7p50gJlCQCmRS4DJCkZ9MEQCQPonjgCxFKCC7xen2iiIp9~mV5RPHHxt0wBAcph4~ufGsu4SObbvICfjw3a16Me-ewIo4xMmHKLMgfzVLsVV3EbCMOhm1SLFd-IpTp8OTfmGyI0FFaUA7bK2THzDbqF0og3OVa8j0cQBxHB~kU39IzjVK2YnHekC2-191f32AsoDcSXdB8U8oDMVWtTAZEbhTs9m7onvQQcZC2woVlQ20BQpsJosfg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+              />
+            </figure>
+            <h4 class="article-name">SALMON PICK UP SALMON PICK UP SALMON PICK UP SALMON PICK UP SALMON PICK UP SALMON PICK UP</h4>
+            <p class="article-desc">การออกค่ายอาสาในต่างแดนหน้าตาเป็นเช่นไร ยิ่งการออก ตรวจนั้นมาควบคู่กับการเดินขึ้นเขาหิมาลัยรวมกันแล้วจะออกกก</p>
+          </a>
+
+          <a href="" class="article-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/1d9b/b7a9/628ff23320c423382329d307329e49d7?Expires=1697414400&Signature=MDzeiTXz1NgNsxkZrmBjAa0IbhivmI9LQmB2iITIDWIneVsJEsYuvNtCpV4COdRO6iZNNoV2ailXczsGGg~FMUtfzuGB-oKKCZusTYaGIM5r7jX8iTPN7vdHdPtVtWkTAZ66A7x2p4lytZSyuNCyOQwnue4ed7s5ln7bNenDAEtS0UMCWfqHMmS8nVhm-~4~08KNpxxYXcBaafUQcERSOgEmU-1al4qms9x7cJ4I-WGWS6GBn4dypC5GJ3eBaG5AGYAnPqWNtt3SOCaTLG4YBDkoPutOnuBPDwyD-NBIAZ8yEmrPocsTqzFOByLt4hr~sdIHJhP5T9p2dRBE~aZoCw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+              />
+            </figure>
+            <h4 class="article-name">SALMON PICK UP แนะนำหนังสือเล่มบาง สำหรับคนมีเวลาน้อย</h4>
+            <p class="article-desc">การออกค่ายอาสาในต่างแดนหน้าตาเป็นเช่นไร ยิ่งการออก ตรวจนั้นมาควบคู่กับการเดินขึ้นเขาหิมาลัยรวมกันแล้วจะออกกก</p>
+          </a>
+
+          <a href="" class="article-card">
+            <figure>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/cb25/2320/27cb63793df346e2732b8930f5e70969?Expires=1697414400&Signature=VWIWR9NWoM42Qz93EmCQ1QHaDamLidfMrD2TNTDumTFVPf8PnkgbQPODWyfMnfFrH8bkFILAqt6SbX0cUE30YISOYX67wjvmk9stwBtfR1pJP5oKVJehoWchl4LEjjkr1feOH2veg4f-6Rh87-3zgWmbbwfG6~S2tsLy9WmsprOUTfCOZuKK5EAzg6XHiYBx8ZekE3NsjoB8JJH31HdmzWUroyf0c~H0iCCuwHDWqeSJWN45XLiHS~nZHfX5Wgqb2tb8Y1Rn~X~tH5t90~gOrymHvC-YprLJiawwamA0~-o0PSIvqRroLjzVloz41pWt4KaXisTdNoyVgW~RxhwgWw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+              />
+            </figure>
+            <h4 class="article-name">PEOPLE IN THE HIT-STORY เรื่องจริง จากคนบนหน้าหนังสือ</h4>
+            <p class="article-desc">การออกค่ายอาสาในต่างแดนหน้าตาเป็นเช่นไร</p>
+          </a>
+        </div>
+      </section>
+
+      <div class="mt-10 pagination-container">
+        <ul class="pagination" id="pagination" data-total-data="500" data-current-page="5" data-per-page="10"></ul>
+      </div>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>

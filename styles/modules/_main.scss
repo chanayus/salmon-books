@@ -146,3 +146,10 @@ ol {
         list-style-type: decimal;
     }
 }
+
+input[type="checkbox"] {
+    accent-color: black;
+    width: 0.875rem;
+    height: 0.875rem;
+    margin-bottom: 1px;
+}

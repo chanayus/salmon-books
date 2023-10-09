@@ -205,6 +205,7 @@
   width: 100%;
   height: 2.75rem;
   border-radius: 9999px;
+  padding: 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -465,6 +466,13 @@ ol {
 }
 ol li {
   list-style-type: decimal;
+}
+
+input[type=checkbox] {
+  accent-color: black;
+  width: 0.875rem;
+  height: 0.875rem;
+  margin-bottom: 1px;
 }
 
 .heading-text {
@@ -760,4 +768,70 @@ ol li {
   left: 0;
   border-radius: 9999px;
   background: rgb(252, 116, 74);
+}
+
+.pagination-container {
+  text-align: center;
+}
+.pagination-container .pagination {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 0.4rem;
+       column-gap: 0.4rem;
+  padding: 0;
+  margin: 0;
+}
+.pagination-container .pagination button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #a6a6a6;
+  font-weight: 400;
+  margin-top: 2.5px;
+}
+.pagination-container .pagination button.active {
+  background-color: rgb(252, 116, 74);
+  color: #fff;
+}
+.pagination-container .pagination button img {
+  margin-bottom: 2.5px;
+}
+
+.theme-input {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  transition: 0.25s;
+}
+.theme-input:hover {
+  border-color: rgb(252, 116, 74);
+}
+.theme-input:focus {
+  border-color: rgb(252, 116, 74);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  row-gap: 0.25rem;
+}
+.input-wrapper label {
+  font-size: 0.875rem;
+}
+.input-wrapper .show-password-button {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.75rem;
+}
+.input-wrapper:has(input:required) label {
+  position: relative;
+}
+.input-wrapper:has(input:required) label::after {
+  content: " *";
 }/*# sourceMappingURL=global.css.map */

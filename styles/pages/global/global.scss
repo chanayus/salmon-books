@@ -308,3 +308,71 @@
         }
     }
 }
+
+.pagination-container {
+    text-align: center;
+    .pagination {
+        display: flex;
+        justify-content: center;
+        column-gap: 0.4rem;
+        padding: 0;
+        margin: 0;
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 999px;
+            cursor: pointer;
+            color: #a6a6a6;
+            font-weight: 400;
+            margin-top: 2.5px;
+
+            &.active {
+                background-color: $orange;
+                color: #fff;
+            }
+            & img {
+                margin-bottom: 2.5px;
+            }
+        }
+    }
+}
+
+.theme-input {
+    border: 1px solid rgba(#000, 0.25);
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    transition: 0.25s;
+    &:hover {
+        border-color: $orange;
+    }
+    &:focus {
+        border-color: $orange;
+        box-shadow:
+            rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    row-gap: 0.25rem;
+    & label {
+        font-size: 0.875rem;
+    }
+    & .show-password-button {
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.75rem;
+    }
+    &:has(input:required) label {
+        position: relative;
+        &::after{
+            content: " *";
+        }
+    }
+}
