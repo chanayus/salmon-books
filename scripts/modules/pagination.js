@@ -4,7 +4,7 @@ const pagination = document.getElementById("pagination");
 const itemsPerPage = Number(pagination.dataset.perPage);
 const totalPages = Math.ceil(pagination.dataset.totalData / itemsPerPage);
 
-const pageParams = Number(new URLSearchParams(window.location.search).get("page")) ?? 1;
+const pageParams = Number(new URLSearchParams(window.location.search).get("page")) || 1;
 
 let currentPage = pageParams > totalPages ? 1 : pageParams;
 

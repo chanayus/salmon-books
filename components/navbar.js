@@ -25,7 +25,7 @@ class Navbar extends HTMLElement {
           <div class="hidden space-x-6 lg:block">
             <a href="../books.html" class="hover-text-yellow ${this.getLinkStyle(["/books.html"])}">BOOKS</a>
             <a href="../authors.html" class="hover-text-yellow ${this.getLinkStyle(["/authors.html", "/author-detail.html"])}">AUTHORS</a>
-            <a href="" class="hover-text-yellow ${this.getLinkStyle([""])}">ARTICLES</a>
+            <a href="../articles.html" class="hover-text-yellow ${this.getLinkStyle(["/articles.html", "/article-detail.html"])}">ARTICLES</a>
             <a href="../shop.html" class="hover-text-yellow ${this.getLinkStyle(["/shop.html", "/book-detail.html"])}">SHOP</a>
             <a href="../readership.html" class="hover-text-yellow ${this.getLinkStyle(["/readership.html"])}">READERSHIP</a>
           </div>
@@ -41,7 +41,7 @@ class Navbar extends HTMLElement {
       <div class="flex flex-col pt-32 space-y-6 text-xl uppercase main-container">
         <a href="../books.html" class="hover-text-orange ${this.getLinkStyleMobile(["/books.html"])}">Books</a>
         <a href="../authors.html" class="hover-text-orange ${this.getLinkStyleMobile(["/authors.html"])}">Authors</a>
-        <a href="" class="hover-text-orange ${this.getLinkStyleMobile([""])}">Articles</a>
+        <a href="../articles.html" class="hover-text-orange ${this.getLinkStyleMobile(["/articles.html", "/article-detail.html"])}">Articles</a>
         <a href="../shop.html" class="hover-text-orange ${this.getLinkStyleMobile(["/shop.html"])}">Shop</a>
         <a href="../readership.html" class="hover-text-orange ${this.getLinkStyleMobile(["/readership.html"])}">Readership</a>
       </div>
