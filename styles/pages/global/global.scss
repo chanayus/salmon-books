@@ -344,7 +344,9 @@
     border: 1px solid rgba(#000, 0.25);
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
-    transition: border-color 0.25s;
+    transition:
+        border-color 0.25s,
+        box-shadow 0.25s;
     &:hover {
         border-color: $orange;
     }
