@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>SALMON.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/media.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content">
+      <h1 class="heading-text">Media</h1>
+
+      <section id="filter-section" class="relative flex justify-center mb-20">
+        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
+          <button data-for="sort-by" class="filter-toggle">Newest</button>
+        </div>
+
+        <!-- sort by options -->
+        <section data-for="sort-by" class="filter-options">
+          <div class="filter-options-content">
+            <button data-value="newest">Newest</button>
+            <button data-value="oldest">Oldest</button>
+            <button data-value="alphabet">Alphabet (A-Z)</button>
+          </div>
+        </section>
+      </section>
+
+      <!-- article section -->
+      <section id="article-section" class="grid gap-8 justify-items-center main-container lg:grid-cols-3 sm:grid-cols-2">
+        <a href="" class="media-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/596d/73dc/46fc7b0dfd6df70733dc9cdd092db10b?Expires=1698019200&Signature=pBiuw8I9o7SX88Ib~YsVNkxY3v~dChqyO~ehhGy94afCA~TwwdA0TzeFG4NuvrXAybKgem2OgWbxI6BLtTuJS6LiAMAEDZNaywM64~1zHms7ri8antPrl0GnyeS2HyLNHpF0NGMJYRkbNf1phaiuXj8aat9mRivvmLrcguCrYWVgAfP6e3fou5iXcu9UiHfiuZTNmbseT8FHDDHFSGZey0TYkmzlwhMjT3DL8VxrPklALVXULi-ycaaJa9LLIRd~XGLWwK-hDuo-fAzRM6KV3VD5YUAla6CRkVZkv-LGYJlxUGsUgKvclbFqBOnr8xD~~SjREpNXPjNcQsXGXgeFcw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+            />
+          </figure>
+          <h4 class="media-name">Why it MATTER คุยข่าวให้เกี่ยวกับคุณ</h4>
+          <p class="media-desc">Host : หวี—พงศ์พิพัฒน์ บัญชานนท์ / ธัญ—ธัญวัฒน์ อิพภูดม</p>
+        </a>
+
+        <a href="" class="media-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3f10/b86d/111075baea1cde9fd6c4917acd5e2a69?Expires=1698019200&Signature=YICS05kqxu74VaQA2IVerX4WZHLWArx2IK7-yZS~ughgP3TsFK94EbyIvlcWLoP02UbcCqHtLhv3h6MHxHJtZXSHPsCrCRPRFbOlKOI1XEkpU~K7pEOVtwUS2R5JL~Ed28hqWS9I4k4RZ~FvyWCcyyyFfRqqlf3UU8FCqMgmpIUXBDyV3WSQhP59PQPPS6RZ3U8hPRKx-QX2C6H5iZ2QCBSKpPEPfoQ5G26L3S-zQK0MRr3N~4dpTVhjPL85MNrHT5iYobuSLBic6CkTIXv5vTHKv~asUjIlEcRcTXO0Iu89Ties4DWQrbKef3xhpWqHMeDUMOdeQZQCqBwGubaXdQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+            />
+          </figure>
+          <h4 class="media-name">The Rookie Mom คุณแม่มือสมัครเลี้ยง</h4>
+          <p class="media-desc">Host : นิดนก—พนิตชนก ดำเนินธรรม</p>
+        </a>
+
+        <a href="" class="media-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/a8fb/cb35/42ee792d98f1f4bd351e85e3f1420bd2?Expires=1698019200&Signature=EN7fSET2ZxTHLGTYiQVWtriisT4cuPym-tBgNLqX5-eTDtLLmcCwGVec5BJ7t-AQ2R~NHyZMzsYQxiOPUqdZgwt5GkHHYeNWdySXCEBDlVxPfGZLzlLbyMuNrPhigS9XWiZJelDLjOVOkcq8m5ofXBvomykAvq5GftZ3AehB43fB4pRv3WhiESXiAsX~2E03DXUbY3RScCN0sRuJe7PMFD6h0xswDY~gl4tqRwPVxNrYQa0KmTUYahCBbZIDiiWWCgnqXrQmbfQORSAfGiOO4xIWUt5Gr~9mlW16yH8df9~n7w6TPbZgMRr~YA8Mp7FnV-7zSMernkaIkf63NTlsdw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+            />
+          </figure>
+          <h4 class="media-name">I'm ทราย, Thank You.</h4>
+          <p class="media-desc">Host : ทราย เจริญปุระ</p>
+        </a>
+
+        <a href="" class="media-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/596d/73dc/46fc7b0dfd6df70733dc9cdd092db10b?Expires=1698019200&Signature=pBiuw8I9o7SX88Ib~YsVNkxY3v~dChqyO~ehhGy94afCA~TwwdA0TzeFG4NuvrXAybKgem2OgWbxI6BLtTuJS6LiAMAEDZNaywM64~1zHms7ri8antPrl0GnyeS2HyLNHpF0NGMJYRkbNf1phaiuXj8aat9mRivvmLrcguCrYWVgAfP6e3fou5iXcu9UiHfiuZTNmbseT8FHDDHFSGZey0TYkmzlwhMjT3DL8VxrPklALVXULi-ycaaJa9LLIRd~XGLWwK-hDuo-fAzRM6KV3VD5YUAla6CRkVZkv-LGYJlxUGsUgKvclbFqBOnr8xD~~SjREpNXPjNcQsXGXgeFcw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+            />
+          </figure>
+          <h4 class="media-name">Why it MATTER คุยข่าวให้เกี่ยวกับคุณ</h4>
+          <p class="media-desc">Host : หวี—พงศ์พิพัฒน์ บัญชานนท์ / ธัญ—ธัญวัฒน์ อิพภูดม</p>
+        </a>
+
+        <a href="" class="media-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/596d/73dc/46fc7b0dfd6df70733dc9cdd092db10b?Expires=1698019200&Signature=pBiuw8I9o7SX88Ib~YsVNkxY3v~dChqyO~ehhGy94afCA~TwwdA0TzeFG4NuvrXAybKgem2OgWbxI6BLtTuJS6LiAMAEDZNaywM64~1zHms7ri8antPrl0GnyeS2HyLNHpF0NGMJYRkbNf1phaiuXj8aat9mRivvmLrcguCrYWVgAfP6e3fou5iXcu9UiHfiuZTNmbseT8FHDDHFSGZey0TYkmzlwhMjT3DL8VxrPklALVXULi-ycaaJa9LLIRd~XGLWwK-hDuo-fAzRM6KV3VD5YUAla6CRkVZkv-LGYJlxUGsUgKvclbFqBOnr8xD~~SjREpNXPjNcQsXGXgeFcw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+            />
+          </figure>
+          <h4 class="media-name">Why it MATTER คุยข่าวให้เกี่ยวกับคุณ</h4>
+          <p class="media-desc">Host : หวี—พงศ์พิพัฒน์ บัญชานนท์ / ธัญ—ธัญวัฒน์ อิพภูดม</p>
+        </a>
+
+        <a href="" class="media-card">
+          <figure>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/596d/73dc/46fc7b0dfd6df70733dc9cdd092db10b?Expires=1698019200&Signature=pBiuw8I9o7SX88Ib~YsVNkxY3v~dChqyO~ehhGy94afCA~TwwdA0TzeFG4NuvrXAybKgem2OgWbxI6BLtTuJS6LiAMAEDZNaywM64~1zHms7ri8antPrl0GnyeS2HyLNHpF0NGMJYRkbNf1phaiuXj8aat9mRivvmLrcguCrYWVgAfP6e3fou5iXcu9UiHfiuZTNmbseT8FHDDHFSGZey0TYkmzlwhMjT3DL8VxrPklALVXULi-ycaaJa9LLIRd~XGLWwK-hDuo-fAzRM6KV3VD5YUAla6CRkVZkv-LGYJlxUGsUgKvclbFqBOnr8xD~~SjREpNXPjNcQsXGXgeFcw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              alt=""
+            />
+          </figure>
+          <h4 class="media-name">Why it MATTER คุยข่าวให้เกี่ยวกับคุณ</h4>
+          <p class="media-desc">Host : หวี—พงศ์พิพัฒน์ บัญชานนท์ / ธัญ—ธัญวัฒน์ อิพภูดม</p>
+        </a>
+      </section>
+
+      <div class="mt-14 pagination-container">
+        <ul class="pagination" id="pagination" data-total-data="500" data-current-page="5" data-per-page="10">
+          <button>
+            <img src="./icons/double-arrow-left-gray.svg" alt="<<" />
+          </button>
+          <button>
+            <img src="./icons/arrow-left-gray.svg" alt="<" />
+          </button>
+
+          <a href="" class="active">1</a>
+          <a href="">2</a>
+          <a href="">3</a>
+          <a href="">4</a>
+
+          <button>
+            <img src="./icons/arrow-right-gray.svg" alt=">" />
+          </button>
+          <button>
+            <img src="./icons/double-arrow-right-gray.svg" alt=">>" />
+          </button>
+        </ul>
+      </div>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>

@@ -751,6 +751,56 @@ input[type=checkbox] {
   }
 }
 
+.media-card {
+  width: 100%;
+  max-width: 25rem;
+}
+.media-card * {
+  pointer-events: none;
+}
+.media-card:hover img {
+  transform: scale(1.1) rotate(-5deg);
+}
+.media-card:hover .media-name {
+  color: rgb(252, 116, 74);
+}
+.media-card figure {
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+.media-card figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.media-card .media-name, .media-card .media-desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.media-card .media-desc {
+  -webkit-line-clamp: 2;
+}
+.media-card .media-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  -webkit-line-clamp: 1;
+  margin-bottom: 0.7rem;
+  line-height: 1.4;
+}
+@media (max-width: 1023px) {
+  .media-card .media-name {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
 .pagination-dot {
   width: 1.625rem;
   height: 0.5rem;
