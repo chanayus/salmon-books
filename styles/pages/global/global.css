@@ -781,7 +781,8 @@ input[type=checkbox] {
   padding: 0;
   margin: 0;
 }
-.pagination-container .pagination button {
+.pagination-container .pagination button,
+.pagination-container .pagination a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -793,11 +794,13 @@ input[type=checkbox] {
   font-weight: 400;
   margin-top: 2.5px;
 }
-.pagination-container .pagination button.active {
+.pagination-container .pagination button.active,
+.pagination-container .pagination a.active {
   background-color: rgb(252, 116, 74);
   color: #fff;
 }
-.pagination-container .pagination button img {
+.pagination-container .pagination button img,
+.pagination-container .pagination a img {
   margin-bottom: 2.5px;
 }
 
