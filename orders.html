@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>SALMON.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/login.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content" class="flex flex-col gap-8 mt-8 lg:mt-14 lg:flex-row main-container">
+      <aside class="flex-[0.35] flex flex-col font-medium bg-white h-fit p-4 rounded-lg">
+        <a href="./orders.html" class="w-full p-2.5 flex gap-x-2 bg-orange rounded text-white items-center">
+          <img src="./icons/cart-white.svg" alt="" class="mb-0.5" width="18" height="18" />
+          Orders
+        </a>
+        <a href="./addresses.html" class="w-full p-2.5 flex gap-x-2">
+          <img src="./icons/home-black.svg" alt="" class="mb-0.5" width="18" height="18" />
+          Addresses
+        </a>
+        <a href="./account-detail.html" class="w-full p-2.5 flex items-center gap-x-2">
+          <img src="./icons/user-black.svg" alt="" class="mb-0.5" width="18" height="18" />
+          Account details
+        </a>
+      </aside>
+
+      <div class="flex-1 rounded h-fit">
+        <header class="md:grid hidden sticky top-[6rem] bg-white overflow-hidden [&>*]:p-3 border-y border-r [&>*]:border-l grid-cols-[1fr_2fr_1fr_2fr_1fr] font-bold">
+          <p>Order</p>
+          <p>Date</p>
+          <p>Status</p>
+          <p>Total</p>
+          <p>Actions</p>
+        </header>
+
+        <section class="max-md:space-y-2">
+          <div class="md:grid bg-white [&>*]:p-3 z-10 grid-cols-[1fr_2fr_1fr_2fr_1fr] max-md:rounded-md md:border-b md:border-r md:[&>*]:border-l">
+            <div class="flex items-center justify-between truncate md:block max-md:my-1">
+              <b class="md:hidden">Order</b>
+              <p>#1647</p>
+            </div>
+            <div class="flex items-center justify-between truncate md:block max-md:my-1">
+              <b class="md:hidden">Date</b>
+              <p>October 3, 1013</p>
+            </div>
+            <div class="flex items-center justify-between truncate md:block max-md:my-1">
+              <b class="md:hidden">Status</b>
+              <p>On hold</p>
+            </div>
+            <div class="flex items-center justify-between truncate md:block max-md:my-1">
+              <b class="md:hidden">Total</b>
+              <p>฿159.95 for 4 items</p>
+            </div>
+            <div class="flex items-center justify-between truncate md:block max-md:my-1">
+              <b class="md:hidden">Actions</b>
+              <a href="" class="px-4 py-1 text-sm text-white rounded bg-orange max-w-fit">View</a>
+            </div>
+          </div>
+
+          <div class="md:grid bg-white [&>*]:p-3 z-10 grid-cols-[1fr_2fr_1fr_2fr_1fr] max-md:rounded-md md:border-b md:border-r md:[&>*]:border-l">
+            <div class="flex items-center justify-between truncate md:block max-md:my-1">
+              <b class="md:hidden">Order</b>
+              <p>#1647</p>
+            </div>
+            <div class="flex items-center justify-between truncate md:block max-md:my-1">
+              <b class="md:hidden">Date</b>
+              <p>October 3, 1013</p>
+            </div>
+            <div class="flex items-center justify-between truncate md:block max-md:my-1">
+              <b class="md:hidden">Status</b>
+              <p>On hold</p>
+            </div>
+            <div class="flex items-center justify-between truncate md:block max-md:my-1">
+              <b class="md:hidden">Total</b>
+              <p>฿159.95 for 4 items</p>
+            </div>
+            <div class="flex items-center justify-between truncate md:block max-md:my-1">
+              <b class="md:hidden">Actions</b>
+              <a href="" class="px-4 py-1 text-sm text-white rounded bg-orange max-w-fit">View</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>
