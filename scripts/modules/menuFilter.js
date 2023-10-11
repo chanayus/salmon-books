@@ -57,6 +57,8 @@ const onValueChange = (element) => {
   filterButton.dataset.value = value;
   filterButton.innerText = value;
   filterButton.classList.add("active");
+
+  hideOptions();
 };
 
 filterToggleButtons?.forEach((button) => {

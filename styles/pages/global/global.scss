@@ -49,10 +49,9 @@
     background: $body-white;
     display: flex;
     flex-direction: column;
-    height: 28rem;
+    height: fit-content;
     opacity: 0;
     visibility: hidden;
-
     .filter-options-content {
         @extend .main-container;
         display: grid;
@@ -60,8 +59,9 @@
         align-content: start;
         overflow-y: auto;
         gap: 2rem;
-        max-height: 26rem;
-        flex: 1 1 0;
+        max-height: 20rem;
+        min-height: 5rem;
+        flex: 1 1 fit-content;
         padding-top: 1.5rem;
         position: relative;
         & > *:hover {
