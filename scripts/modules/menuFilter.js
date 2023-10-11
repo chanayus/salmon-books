@@ -58,7 +58,7 @@ const onValueChange = (element) => {
   filterButton.innerText = value;
   filterButton.classList.add("active");
 
-  hideOptions();
+  currentFilterShow && hideOptions();
 };
 
 filterToggleButtons?.forEach((button) => {
