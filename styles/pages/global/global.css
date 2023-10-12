@@ -811,9 +811,8 @@ input[type=checkbox] {
   position: relative;
   overflow: hidden;
 }
-.pagination-dot.active::before {
+.pagination-dot.active .active-interval {
   position: absolute;
-  content: "";
   width: 50%;
   height: 100%;
   top: 0;

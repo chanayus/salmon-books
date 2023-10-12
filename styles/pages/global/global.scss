@@ -345,17 +345,14 @@
     background: #d9d9d9;
     position: relative;
     overflow: hidden;
-    &.active {
-        &::before {
-            position: absolute;
-            content: "";
-            width: 50%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            border-radius: 9999px;
-            background: $orange;
-        }
+    &.active .active-interval {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 9999px;
+        background: $orange;
     }
 }
 

@@ -14,6 +14,18 @@ const updatePagination = () => {
   });
 };
 
+const activeDotStyle = () => {
+  const activeDot = paginationContainer.querySelector(`.pagination-dot.active`);
+  const dots = paginationContainer.querySelectorAll(`.pagination-dot`);
+  const div = document.createElement("div");
+  div.className = "active-interval";
+
+  dots.forEach((dot) => (dot.innerHTML = ""));
+  activeDot.appendChild(div);
+
+  gsap.fromTo(div, { width: "0%" }, { width: "100%", duration: 5, ease: "linear" });
+};
+
 const playSlideAnimation = (currentIndex, nextIndex) => {
   gsap
     .timeline()
@@ -26,6 +38,7 @@ const playSlideAnimation = (currentIndex, nextIndex) => {
 
   currentSlidePage = nextIndex;
   updatePagination();
+  activeDotStyle();
 };
 
 const initSlide = () => {
@@ -59,6 +72,7 @@ if (textSlide.length > 0) {
   if (textSlide.length <= 1) {
     paginationContainer.classList.add("!hidden");
   } else if (textSlide.length > 1) {
+    activeDotStyle();
     slideInterval = setInterval(() => playSlideAnimation(currentSlidePage, currentSlidePage + 1 > textSlide.length - 1 ? 0 : currentSlidePage + 1), 5000);
   }
 }
