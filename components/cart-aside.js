@@ -48,7 +48,7 @@ class Cart extends HTMLElement {
                 <p>฿150.00</p>
               </div>
               <div class="flex gap-4">
-                <a href="" class="btn-orange">View Cart</a>
+                <a href="../cart.html" class="btn-orange">View Cart</a>
                 <a href="" class="btn-orange">Checkout</a>
               </div>
             </section>
