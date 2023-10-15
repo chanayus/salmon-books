@@ -85,3 +85,7 @@ $colors: (
     width: fit-content;
     column-gap: 0.5rem;
 }
+
+.sm-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}

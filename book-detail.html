@@ -23,6 +23,7 @@
     <!-- Components -->
     <script src="./components/navbar.js"></script>
     <script src="./components/footer.js"></script>
+    <script src="./components/cart-aside.js"></script>
 
     <!-- JS -->
     <script
@@ -37,6 +38,7 @@
   </head>
   <body>
     <navbar-component></navbar-component>
+    <cart-aside-component></cart-aside-component>
 
     <main id="main-content">
       <!-- Breadcrumb -->
@@ -109,7 +111,7 @@
               <button class="increase">+</button>
             </div>
 
-            <button class="btn-orange max-w-[11.5rem]">
+            <button id="add-to-cart-button" class="btn-orange max-w-[11.5rem]">
               <img src="./icons/cart-white.svg" alt="" width="18" />
               <b>เพิ่มลงตะกร้า</b>
             </button>
