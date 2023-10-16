@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>SALMON.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <script src="./styles/twind.js"></script>
+    <script>
+      twind.install({
+        hash: false,
+      });
+    </script>
+    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+    <link rel="stylesheet" href="./styles/pages/auth/auth.css" />
+
+    <!-- Components -->
+    <script src="./components/navbar.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./scripts/main.js"></script>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+
+    <main id="main-content" class="mt-8 space-y-6 main-container lg:mt-12">
+      <section class="px-4 py-3 text-white bg-orange">Have a coupon? <a href="">Click here to enter your code</a></section>
+
+      <form action="" class="flex gap-8 max-lg:flex-col">
+        <div class="flex-1 space-y-4">
+          <h3 class="text-2xl font-bold">Billing detail</h3>
+          <section class="flex items-center gap-4">
+            <div class="flex-1 input-wrapper">
+              <label for="firstname" class="text-sm">First name</label>
+              <input type="text" class="theme-input" required id="firstname" />
+            </div>
+
+            <div class="flex-1 input-wrapper">
+              <label for="lastname" class="text-sm">Last name</label>
+              <input type="text" class="theme-input" required id="lastname" />
+            </div>
+          </section>
+
+          <section class="input-wrapper">
+            <label for="display-name" class="text-sm">Company name (optional)</label>
+            <input type="text" class="theme-input" id="display-name" />
+          </section>
+
+          <section class="input-wrapper">
+            <label for="country-region" class="text-sm">Country / Region</label>
+            <select class="theme-input" required id="country-region">
+              <option value="thailand">Thailand</option>
+              <option value="england">England</option>
+            </select>
+          </section>
+
+          <section class="input-wrapper">
+            <label for="street" class="text-sm">Street address</label>
+            <input type="text" class="theme-input" required id="street" placeholder="House number and street name" />
+            <input type="text" class="mt-2 theme-input" id="street-optional" placeholder="Apartment, suite, unit, etc. (optional)" />
+          </section>
+
+          <section class="input-wrapper">
+            <label for="town-city" class="text-sm">Town / City</label>
+            <input type="text" class="theme-input" required id="town-city" />
+          </section>
+
+          <section class="input-wrapper">
+            <label for="state" class="text-sm">State</label>
+            <select class="theme-input" required id="state">
+              <option value="thailand">Bangkok</option>
+              <option value="england">Samutpakarn</option>
+            </select>
+          </section>
+
+          <section class="input-wrapper">
+            <label for="zip-code" class="text-sm">Zip Code</label>
+            <input type="number" class="theme-input" required id="zip-code" />
+          </section>
+
+          <section class="input-wrapper">
+            <label for="phone" class="text-sm">Phone</label>
+            <input type="tel" class="theme-input" required id="phone" />
+          </section>
+
+          <section class="input-wrapper">
+            <label for="email" class="text-sm">Email address</label>
+            <input type="email" class="theme-input" required id="email" />
+          </section>
+
+          <h3 class="text-2xl font-bold">Additional information</h3>
+
+          <section class="input-wrapper">
+            <label for="email" class="text-sm">Order note (optional)</label>
+            <textarea type="email" class="theme-input" id="email" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+          </section>
+        </div>
+        <div class="flex-[0.75] space-y-4">
+          <h3 class="text-2xl font-bold">Your Order</h3>
+
+          <section class="p-4 space-y-4 bg-white rounded max-h-[24rem] overflow-y-auto sm-scrollbar">
+            <div class="flex items-center sm:gap-x-8 gap-x-4">
+              <a href="./book-detail.html" target="_blank" class="flex items-center gap-x-4">
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  alt=""
+                  width="300"
+                  height="300"
+                  class="object-contain w-16 mt-0 sm:w-20 aspect-square"
+                />
+
+                <div class="space-y-1 text-sm">
+                  <p class="max-w-[35ch] font-semibold line-clamp-3">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย</p>
+                  <p>Quantity: 1</p>
+                </div>
+              </a>
+              <div class="flex justify-end flex-1 max-lg:items-end max-lg:flex-col-reverse gap-x-10 gap-y-2">
+                <b>฿150.00</b>
+              </div>
+            </div>
+
+            <div class="flex items-center sm:gap-x-8 gap-x-4">
+              <a href="./book-detail.html" target="_blank" class="flex items-center gap-x-4">
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  alt=""
+                  width="300"
+                  height="300"
+                  class="object-contain w-16 mt-0 sm:w-20 aspect-square"
+                />
+
+                <div class="space-y-1 text-sm">
+                  <p class="max-w-[35ch] font-semibold line-clamp-3">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย</p>
+                  <p>Quantity: 1</p>
+                </div>
+              </a>
+              <div class="flex justify-end flex-1 max-lg:items-end max-lg:flex-col-reverse gap-x-10 gap-y-2">
+                <b>฿150.00</b>
+              </div>
+            </div>
+
+            <div class="flex items-center sm:gap-x-8 gap-x-4">
+              <a href="./book-detail.html" target="_blank" class="flex items-center gap-x-4">
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  alt=""
+                  width="300"
+                  height="300"
+                  class="object-contain w-16 mt-0 sm:w-20 aspect-square"
+                />
+
+                <div class="space-y-1 text-sm">
+                  <p class="max-w-[35ch] font-semibold line-clamp-3">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย</p>
+                  <p>Quantity: 1</p>
+                </div>
+              </a>
+              <div class="flex justify-end flex-1 max-lg:items-end max-lg:flex-col-reverse gap-x-10 gap-y-2">
+                <b>฿150.00</b>
+              </div>
+            </div>
+
+            <div class="flex items-center sm:gap-x-8 gap-x-4">
+              <a href="./book-detail.html" target="_blank" class="flex items-center gap-x-4">
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  alt=""
+                  width="300"
+                  height="300"
+                  class="object-contain w-16 mt-0 sm:w-20 aspect-square"
+                />
+
+                <div class="space-y-1 text-sm">
+                  <p class="max-w-[35ch] font-semibold line-clamp-3">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย</p>
+                  <p>Quantity: 1</p>
+                </div>
+              </a>
+              <div class="flex justify-end flex-1 max-lg:items-end max-lg:flex-col-reverse gap-x-10 gap-y-2">
+                <b>฿150.00</b>
+              </div>
+            </div>
+
+            <div class="flex items-center sm:gap-x-8 gap-x-4">
+              <a href="./book-detail.html" target="_blank" class="flex items-center gap-x-4">
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                  alt=""
+                  width="300"
+                  height="300"
+                  class="object-contain w-16 mt-0 sm:w-20 aspect-square"
+                />
+
+                <div class="space-y-1 text-sm">
+                  <p class="max-w-[35ch] font-semibold line-clamp-3">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย</p>
+                  <p>Quantity: 1</p>
+                </div>
+              </a>
+              <div class="flex justify-end flex-1 max-lg:items-end max-lg:flex-col-reverse gap-x-10 gap-y-2">
+                <b>฿150.00</b>
+              </div>
+            </div>
+          </section>
+
+          <section class="py-4 space-y-2 border-y border-black/10">
+            <div class="flex items-center justify-between text-sm">
+              <p>Subtotal</p>
+              <p>฿699.96</p>
+            </div>
+            <div class="flex items-center justify-between text-lg font-bold">
+              <p>Total</p>
+              <p>฿699.96</p>
+            </div>
+          </section>
+
+          <section class="space-y-4">
+            <div class="[&>input:checked~.desc]:grid-rows-[1fr]">
+              <input type="radio" name="payment-method" id="d-b-t" />
+              <label for="d-b-t" class="ml-1">Direct bank transfer</label>
+              <p class="h-0 mt-2 ml-5 overflow-hidden opacity-75"></p>
+              <div class="desc grid grid-rows-[0fr] duration-200 mt-1 ml-5">
+                <p class="overflow-hidden opacity-75">
+                  Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+                </p>
+              </div>
+            </div>
+
+            <div class="[&>input:checked~.desc]:grid-rows-[1fr]">
+              <input type="radio" name="payment-method" id="c-o-d" />
+              <label for="c-o-d" class="ml-1">Cash on delivery</label>
+              <div class="desc grid grid-rows-[0fr] duration-200 mt-1 ml-5">
+                <p class="overflow-hidden opacity-75">Pay with cash upon delivery.</p>
+              </div>
+            </div>
+          </section>
+
+          <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+
+          <button type="submit" class="text-lg btn-orange">
+            <b>Place Order</b>
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
+</html>

@@ -38,7 +38,6 @@ class Cart extends HTMLElement {
                 </div>
               </div>
   
-              <!-- Repeat this section for other items as needed -->
   
             </section>
   
