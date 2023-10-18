@@ -1,18 +1,25 @@
 let currentSearchVisible = false;
-let currentCategory = "all";
+
+const navSearchButton = document.querySelector("#nav-search-button");
+const closeSearchButton = document.querySelector("#close-search-popup");
+
+const searchPopup = document.querySelector("#search-popup");
+const searchPopupContent = document.querySelector("#search-popup-content");
+
+const input = searchPopup?.querySelector("input");
+
+const productSection = searchPopup?.querySelector("#search-popup-products");
+const suggestionSection = searchPopup?.querySelector("#search-popup-suggestion");
+const searchResultSection = searchPopup?.querySelector("#search-popup-result");
 
 const toggleSearchPopup = (type) => {
-  const searchPopup = document.querySelector("#search-popup");
-  const categories = document.querySelectorAll("#search-popup button");
-  const input = searchPopup?.querySelector("input");
-
   document.body.style.overflow = type === "open" ? "hidden" : "unset";
 
-  if (type === "open" && searchPopup) {
+  if (type === "open" && searchPopup !== null) {
     gsap
       .timeline()
-      .fromTo(searchPopup, { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 1, ease: "expo" }, "+=0.1")
-      .fromTo(categories, { autoAlpha: 0, y: 25 }, { autoAlpha: 1, y: 0, stagger: 0.075, ease: "expo" }, 0);
+      .fromTo(searchPopup, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, ease: "expo" })
+      .fromTo(searchPopupContent, { yPercent: -100 }, { yPercent: 0, duration: 0.9, ease: "expo.inOut" }, "<");
 
     setTimeout(() => {
       input.focus();
@@ -20,38 +27,16 @@ const toggleSearchPopup = (type) => {
 
     currentSearchVisible = true;
   } else if (type === "close" && searchPopup) {
-    gsap.to(searchPopup, { autoAlpha: 0, scale: 0.985, duration: 0.75, ease: "expo" });
+    gsap.timeline().to(searchPopupContent, { yPercent: -100, duration: 0.75, ease: "expo.inOut" }).to(searchPopup, { autoAlpha: 0, duration: 0.75, ease: "expo" }, "-=0.35");
     currentSearchVisible = false;
   }
 };
 
-const changeCategory = (category) => {
-  currentCategory = category;
+navSearchButton?.addEventListener("click", () => toggleSearchPopup("open"));
+closeSearchButton?.addEventListener("click", () => toggleSearchPopup("close"));
 
-  categoryButtons?.forEach((button) => {
-    const buttonCategory = button.dataset.category;
-    if (buttonCategory === currentCategory) {
-      button.classList.add("active");
-    } else {
-      button.classList.remove("active");
-    }
-  });
-};
-
-const categoryButtons = document.querySelectorAll("#search-popup button");
-const navSearchButton = document.querySelector("#nav-search-button");
-
-navSearchButton?.addEventListener("click", () => toggleSearchPopup(currentSearchVisible ? "close" : "open"));
-categoryButtons?.forEach((button) => {
-  const category = button.dataset.category;
-
-  if (category === currentCategory) {
-    button.classList.add("active");
-  } else {
-    button.classList.remove("active");
-  }
-
-  button.addEventListener("click", () => changeCategory(category));
+input?.addEventListener("input", (e) => {
+  const { value } = e.target;
 });
 
 toggleSearchPopup("close");

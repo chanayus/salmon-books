@@ -20,10 +20,10 @@ const showMore = (content, currentShow, totalToShow) => {
 };
 
 export const infiniteScroll = (selector, options, callback = () => {}) => {
-  const { showPerItem, totalItem } = options;
+  const { showPerItem, totalItem, isReset } = options;
   const container = document.querySelector(selector);
 
-  if (currentTotalShowing === 0 && container.children.length > 0) {
+  if ((currentTotalShowing === 0 && container?.children?.length > 0) || isReset) {
     initialRender(container.children, showPerItem, totalItem);
   }
 

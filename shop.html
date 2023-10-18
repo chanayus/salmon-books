@@ -39,20 +39,33 @@
     <navbar-component></navbar-component>
 
     <main id="main-content">
-      <h1 class="heading-text">shop</h1>
+      <div class="relative main-container">
+        <h1 class="heading-text">shop</h1>
+        <div class="absolute flex top-1/4 right-4 gap-x-6">
+          <a href="./account-detail.html">
+            <img src="./icons/user-black.svg" alt="" class="w-6" />
+          </a>
+          <a href="./cart.html">
+            <img src="./icons/cart-black.svg" alt="" class="w-6" />
+          </a>
+        </div>
+      </div>
 
-      <section id="filter-section" class="relative flex justify-center mb-20">
-        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
-          <button data-for="category" class="filter-toggle">Category</button>
-          <!-- Shirt Filter -->
-          <button data-category="shirts" data-for="shirt-category" class="filter-toggle !hidden">Category</button>
-          <button data-category="shirts" data-for="shirt-color" class="filter-toggle !hidden">Color</button>
-          <button data-category="shirts" data-for="shirt-size" class="filter-toggle !hidden">Size</button>
-          <!-- Book Filter -->
-          <button data-category="books" data-for="book-category" class="filter-toggle !hidden">Category</button>
-          <button data-category="books" data-for="book-year" class="filter-toggle !hidden">Year</button>
-          <button data-category="books" data-for="book-author" class="filter-toggle !hidden">Author</button>
-          <button data-for="sort-by" class="filter-toggle">Newest</button>
+      <section id="filter-section">
+        <div class="relative flex-col justify-center w-full gap-4 max-md:flex main-container">
+          <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
+            <button data-for="category" data-placeholder="Category" class="filter-toggle"></button>
+            <!-- Shirt Filter -->
+            <button data-category="shirts" data-for="shirt-category" data-placeholder="Category" class="filter-toggle !hidden"></button>
+            <button data-category="shirts" data-for="shirt-color" data-placeholder="Color" class="filter-toggle !hidden"></button>
+            <button data-category="shirts" data-for="shirt-size" data-placeholder="Size" class="filter-toggle !hidden"></button>
+            <!-- Book Filter -->
+            <button data-category="books" data-for="book-category" data-placeholder="Category" class="filter-toggle !hidden"></button>
+            <button data-category="books" data-for="book-year" data-placeholder="Year" class="filter-toggle !hidden"></button>
+            <button data-category="books" data-for="book-author" data-placeholder="Author" class="filter-toggle !hidden"></button>
+            <button data-for="sort-by" data-placeholder="Newest" class="filter-toggle"></button>
+          </div>
+          <button id="clear-filters">CLEAR FILTERS</button>
         </div>
 
         <!-- product category options -->
@@ -148,12 +161,7 @@
       <section id="product-content" class="grid grid-cols-2 gap-10 pb-24 main-container sm:grid-cols-3 justify-items-center">
         <a href="./book-detail.html" class="product-card">
           <figure>
-            <img
-              src="https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_FAIL-04.jpg"
-              alt=""
-              width="235"
-              height="235"
-            />
+            <img src="https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_FAIL-04.jpg" alt="" width="235" height="235" />
             <img
               class="hover-image"
               src="https://s3-alpha-sig.figma.com/img/b2da/4c5a/94b85896a90be0ccddc643ea22e736e3?Expires=1696809600&Signature=fS0y~wMRFdvMOady7P3jq0Ag2Q8hdkTMSy9c9yAtWnfANx~ZbCYVvBmeak-UlF4wisLGeDoRO21rpitvGzNXNa0OrJsbbQ6PpfHFFro4brh2r4EH~UxTYpzMa6pgq33Fv9o5LHiz66c4WTdPSMh8VkWeeBcJeMDnK-WSKhbZJ91JgAO-NUGEG~d2lvemeR16~tSqQzFsw8SYM5jmen4TmIATYlK3LjxEEc1EAq5piWbQVh6Of7dDOoWGt9vOjd51D7HgK-CRwaa~AWZVaeZ2f6sF3CRuWdj-hXRnXk~MC1IGqomephkWDakIsfJDr2pap-HyOyFqEWcZN7MSBfi6kQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
@@ -169,19 +177,8 @@
 
         <a href="./book-detail.html" class="product-card">
           <figure>
-            <img
-              src="https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_FAIL-04.jpg"
-              alt=""
-              width="235"
-              height="235"
-            />
-            <img
-              class="hover-image"
-              src="https://salmonbooks.deeboon.live/wp-content/uploads/2023/03/photo_641d798e07e6b.png"
-              alt=""
-              width="235"
-              height="235"
-            />
+            <img src="https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_FAIL-04.jpg" alt="" width="235" height="235" />
+            <img class="hover-image" src="https://salmonbooks.deeboon.live/wp-content/uploads/2023/03/photo_641d798e07e6b.png" alt="" width="235" height="235" />
           </figure>
 
           <h4 class="product-name">First Reformed Souvenir Hat</h4>

@@ -3,6 +3,7 @@ let currentFilterShow = null;
 const filterToggleButtons = document.querySelectorAll(".filter-toggle");
 const filterOptions = document.querySelectorAll(".filter-options");
 const optionsButton = document.querySelectorAll(".filter-options-content button");
+const clearFiltersButton = document.querySelector("#clear-filters");
 
 export const getSelectedData = () => {
   const data = {};
@@ -61,10 +62,32 @@ const onValueChange = (element) => {
   currentFilterShow && hideOptions();
 };
 
+const clearFilters = () => {
+  filterToggleButtons.forEach((button) => {
+    button.dataset.value = "";
+    button.classList.remove("active");
+    button.innerText = button.dataset.placeholder ?? "";
+
+    if (button.dataset.category) {
+      button.classList.add("!hidden");
+    }
+  });
+
+  optionsButton.forEach((option) => {
+    option.classList.remove("active");
+  });
+
+  currentFilterShow && hideOptions();
+};
+
 filterToggleButtons?.forEach((button) => {
   button.dataset.category && button.classList.add("!hidden");
-  button.dataset.value && onValueChange(button);
 
+  if (button.dataset.value) {
+    onValueChange(button);
+  } else {
+    button.innerText = button.dataset.placeholder ?? "";
+  }
   button.addEventListener("click", (e) => {
     if (currentFilterShow === e.target.dataset.for) {
       hideOptions();
@@ -85,3 +108,5 @@ document.addEventListener("click", (e) => {
     hideOptions();
   }
 });
+
+clearFiltersButton?.addEventListener("click", () => clearFilters());

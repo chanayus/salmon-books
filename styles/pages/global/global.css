@@ -491,6 +491,21 @@ input[type=checkbox] {
   letter-spacing: -0.4ch;
 }
 
+#filter-section {
+  position: relative;
+  margin-bottom: 5rem;
+}
+#filter-section #clear-filters {
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  #filter-section #clear-filters {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+  }
+}
+
 .filter-toggle {
   display: flex;
   align-items: center;

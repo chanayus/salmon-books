@@ -36,11 +36,26 @@
     <script type="module" src="./scripts/readership.js"></script>
   </head>
   <body>
-    <navbar-component></navbar-component>
+    <!-- <navbar-component></navbar-component> -->
 
-    <main id="main-content" class="space-y-11">
-      <header class="relative w-full bg-[url('./images/pages/readership/cover.webp')] bg-[70%_top] flex items-center bg-cover h-[100vh] max-h-[67.5rem]">
-        <div class="relative flex justify-center main-container lg:justify-start bottom-14">
+    <main id="main-content" class="!pt-0">
+      <header class="relative w-full max-lg:pt-28 overflow-hidden bg-[url('./images/pages/readership/cover.webp')] bg-[70%_top] flex items-center bg-cover min-h-[100vh] max-h-[67.5rem]">
+        <div class="absolute right-[18%] top-[10%] rotate-[72deg] space-y-8">
+          <div id="readership-card-1" class="relative aspect-[1.5] [&_img]:rounded-lg rounded-lg w-[22.5vw] min-w-[25rem] shadow-2xl shadow-black/30">
+            <img src="./images/pages/readership/card1.png" alt="" class="absolute w-full h-full" />
+            <img src="./images/pages/readership/card3.png" alt="" class="absolute w-full h-full" />
+            <img src="./images/pages/readership/card5.png" alt="" class="absolute w-full h-full" />
+            <img src="./images/pages/readership/card7.png" alt="" class="absolute w-full h-full" />
+          </div>
+
+          <div id="readership-card-2" class="relative aspect-[1.5] [&_img]:rounded-lg rounded-lg w-[22.5vw] min-w-[25rem] shadow-2xl shadow-black/30">
+            <img src="./images/pages/readership/card2.png" alt="" class="absolute w-full h-full" />
+            <img src="./images/pages/readership/card4.png" alt="" class="absolute w-full h-full" />
+            <img src="./images/pages/readership/card6.png" alt="" class="absolute w-full h-full" />
+          </div>
+        </div>
+
+        <div class="relative flex justify-center main-container lg:justify-start bottom-10">
           <form id="login-form" action="" class="px-10 max-w-[27rem] w-full py-10 space-y-10 bg-white/80 backdrop-blur-md rounded-3xl opacity-0">
             <figure>
               <img src="./images/pages/readership/logo.webp" alt="" width="260" class="mx-auto" />
@@ -66,9 +81,10 @@
             </section>
 
             <section class="space-y-8">
-              <button type="submit" class="btn-orange">เข้าสู่ระบบ
+              <button type="submit" class="btn-orange">
+                เข้าสู่ระบบ
 
-                <img src="./icons/arrow-right-white.svg" alt="" width="16" height="16">
+                <img src="./icons/arrow-right-white.svg" alt="" width="16" height="16" />
               </button>
 
               <a href="" class="block w-full font-semibold text-center">สมัครสมาชิก</a>
