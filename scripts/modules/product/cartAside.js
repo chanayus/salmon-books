@@ -22,5 +22,5 @@ const closeCartAside = () => {
   }
 };
 
-backdrop.addEventListener("click", () => closeCartAside());
-closeButton.addEventListener("click", () => closeCartAside());
+backdrop?.addEventListener("click", () => closeCartAside());
+closeButton?.addEventListener("click", () => closeCartAside());

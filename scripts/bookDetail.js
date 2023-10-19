@@ -1,4 +1,5 @@
 import "./modules/product/imgPreview.js";
+import "./modules/product/imgZoom.js";
 import "./modules/product/productIncrement.js";
 import { gravityHover } from "./modules/gravityHover.js";
 import { openCartAside } from "./modules/product/cartAside.js";

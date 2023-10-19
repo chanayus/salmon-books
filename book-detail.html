@@ -40,6 +40,21 @@
     <navbar-component></navbar-component>
     <cart-aside-component></cart-aside-component>
 
+    <section id="img-zoom-preview" class="fixed z-40 flex items-center justify-center invisible w-full h-full p-5 backdrop-blur-sm bg-black/60">
+      <div class="absolute z-10 flex top-6 right-6 gap-x-4">
+        <button id="img-zoomin-toggle" class="flex items-center justify-center rounded-full w-9 h-9 shrink-0 bg-black/60">
+          <img src="./icons/zoom-in-white.svg" alt="" width="20" height="20" class="" />
+        </button>
+        <button id="close-img-zoom-preview" class="flex items-center justify-center rounded-full w-9 h-9 shrink-0 bg-black/60">
+          <img src="./icons/close-white.svg" alt="" width="16" height="16" class="" />
+        </button>
+      </div>
+      <img id="img-preview" src="https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_ONEARTH-04.jpg" alt="" class="aspect-[0.675] w-[75vw] max-w-[30rem] object-contain cursor-zoom-in" />
+      <section class="absolute bottom-0 flex justify-center w-full bg-black/60">
+        <div id="zoom-img-preview-list" class="flex w-full max-w-4xl p-4 overflow-x-auto gap-x-4"></div>
+      </section>
+    </section>
+
     <main id="main-content">
       <!-- Breadcrumb -->
       <section class="breadcrumb">
@@ -51,7 +66,7 @@
       <header class="flex flex-col product-header gap-x-8 gap-y-12 lg:flex-row main-container">
         <section class="flex flex-col flex-1 mx-auto max-w-[32.5rem] gap-y-4 w-full">
           <!-- Current Image Preview -->
-          <figure class="relative flex-[0.675] aspect-square overflow-hidden">
+          <figure class="cursor-pointer relative flex-[0.675] aspect-square overflow-hidden">
             <img id="current-img-preview" src="https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_ONEARTH-04.jpg" alt="" class="absolute object-contain w-full h-full max-h-full" />
           </figure>
           <!-- Button Change Image Preview -->
@@ -64,7 +79,7 @@
             </button>
             <button class="btn-img-preview max-w-[clamp(4rem,5vw,5rem)] w-full shrink-0">
               <img
-                src="https://s3-alpha-sig.figma.com/img/f37b/c1a1/4f52e83b1295dbc2b25d478aabe712fd?Expires=1696809600&Signature=fGN43iClDjbdjl9qdjVwTkru3s7BYki5yRkD8DkfUkvOMPw9pr~24N86Am6PoLt3-SyaUvjBPHvt2mmn21PJT5s2NKjyCGmylKvgNXRI63RHRyhDBNE7hhh23ieM9SLVkOt-ajALLMDzdEdZUg1UoVhB22ex4YDGQlu9slqrAaOYi9b74ZyUY2GBXhF32jKe8N9Z5NKYz9oohVRGzC6C67MHQQsEnFhZH6Bn02F3hrZ9Axj~J3hKLxZRjMWEUQIgn8eVt~IJh9dReaffz8LtXTDyn2m0mqN906PkbPc82W90D6-I~u7wLQIpDTkoZEW5L0ZFZXRSIKvblugRudVW2w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                src="https://s3-alpha-sig.figma.com/img/3f10/b86d/111075baea1cde9fd6c4917acd5e2a69?Expires=1698624000&Signature=G-dgj27r6lRsQylI3n43AAejbDQ8Fv2Sg4UHEEq2PNTH~oB3L6Cv9pkueFRb3YmsWWcxGHbSBaZDxL-bZDWsHFLPPSJJbbvAeP-c1YYFi0VRhmlMVdeXc0BrGq-Zzi1fRXQsGNRk0S4FZ64RKu6ezjPkpmCeZjvhh52aHruU8evm7mfkIxqgeGsKq1I8k0FzZbZqAC9TPEU6CjxVHT7rMJaT6xJTgccwaOXHL3LoyowgtSHxf-EKQLF5kaMBoqeshB3S1xCHjEO7Q3YONbe2ynDdqO2XCCTKjTZK4W4u~oNClaBP~dX~YKzzljK2Z5yPujMpFXA0po0ixQyoOS9zsw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 alt=""
                 class="object-contain w-full h-full max-h-full"
               />
@@ -112,7 +127,7 @@
             </div>
 
             <button id="add-to-cart-button" class="btn-orange max-w-[11.5rem]">
-              <img src="./icons/cart-white.svg" alt="" width="18" />
+              <img src="./icons/cart-white.svg" alt="" width="18" class="mb-1" />
               <b>เพิ่มลงตะกร้า</b>
             </button>
           </div>

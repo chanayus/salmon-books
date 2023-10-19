@@ -27,19 +27,37 @@ const readershipCards2 = document.querySelectorAll("#readership-card-2 img");
 readershipCards1?.forEach((card, index) => card.classList.add(`z-[${readershipCards1.length - index}]`));
 readershipCards2?.forEach((card, index) => card.classList.add(`z-[${readershipCards2.length - index}]`));
 
-const delay = 4;
+gsap.set(["#readership-card-2 img:not(:first-of-type)", "#readership-card-1 img:not(:first-of-type)"], { x: 90, autoAlpha: 0 });
+
+const flipCardAnimate = (elements, delay) => {
+  let index = 0;
+
+  const flipCards = (currentEle, nextEle) => {
+    const tl = gsap
+      .timeline({
+        onComplete: () => {
+          if (index >= elements.length - 1) {
+            index = 0;
+            tl.kill();
+            flipCards(elements[0], elements[1]);
+          } else {
+            index += 1;
+            tl.kill();
+            flipCards(elements[index], elements[index + 1] ?? elements[0]);
+          }
+        },
+      })
+      .to(currentEle, { x: -40, autoAlpha: 0 }, `+=${delay}`)
+      .fromTo(nextEle, { x: 40, autoAlpha: 0 }, { x: 0, autoAlpha: 1 }, "+=0.1");
+  };
+
+  gsap.timeline().add(flipCards(elements[index], elements[index + 1]), `+=${delay}`);
+};
+
+flipCardAnimate(readershipCards1, 5);
+flipCardAnimate(readershipCards2, 3.25);
 
 gsap.fromTo(["#readership-card-2", "#readership-card-1"], { autoAlpha: 0, x: 50 }, { autoAlpha: 1, x: 0, stagger: 0.1, delay: 0.5, duration: 1, ease: "expo" });
-
-gsap
-  .timeline({ repeat: -1, repeatDelay: delay + 1 })
-  .to("#readership-card-1 img:not(:last-of-type)", { autoAlpha: 0, stagger: delay + 1 }, `+=${delay}`)
-  .to("#readership-card-1 img:first-of-type", { autoAlpha: 1 }, `+=${delay + 1}`);
-
-gsap
-  .timeline({ repeat: -1, repeatDelay: delay })
-  .to("#readership-card-2 img:not(:last-of-type)", { autoAlpha: 0, stagger: delay }, "+=1.75")
-  .to("#readership-card-2 img:first-of-type", { autoAlpha: 1 }, `+=${delay}`);
 
 gsap
   .timeline()
