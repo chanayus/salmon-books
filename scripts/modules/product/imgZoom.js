@@ -50,6 +50,7 @@ zoomPopupImage?.addEventListener("click", (e) => {
 });
 
 closePopupButton?.addEventListener("click", () => {
+  zoomOut();
   gsap.to(zoomPopup, { autoAlpha: 0, duration: 0.2 });
 });
 
@@ -83,6 +84,7 @@ zoomToggleButton?.addEventListener("click", (e) => {
 
 zoomPopup?.addEventListener("click", (e) => {
   if (zoomPopupImage && zoomImgPreview && zoomToggleButton && e.target && !zoomPopupImage.contains(e.target) && !zoomImgPreview.contains(e.target) && !zoomToggleButton.contains(e.target)) {
+    zoomOut();
     gsap.to(zoomPopup, { autoAlpha: 0, duration: 0.2 });
   }
 });
