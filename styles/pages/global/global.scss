@@ -230,8 +230,6 @@
     display: flex;
     align-items: center;
     padding: 0.5rem 1.5rem;
-    font-size: 1.125rem;
-
     border-radius: 9999px;
     border: 1px solid $smoke;
     width: fit-content;
@@ -404,7 +402,7 @@
 .theme-input {
     border: 1px solid rgba(#000, 0.25);
     border-radius: 0.25rem;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     transition:
         border-color 0.25s,
         box-shadow 0.25s;
@@ -443,7 +441,7 @@
     }
     & .show-password-button {
         position: absolute;
-        bottom: 0.5rem;
+        bottom: 0.75rem;
         right: 0.5rem;
         width: 1.5rem;
         height: 1.5rem;
