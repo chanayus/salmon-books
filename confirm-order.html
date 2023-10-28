@@ -94,7 +94,7 @@
 
       <section class="space-y-4">
         <h3 class="text-4xl"><b>Order details</b></h3>
-        <table class="table-fixed w-full text-left border-collapse [&_tr_th,&_tr_td]:border-black/10 [&_tr_th,&_tr_td]:border [&_th,&_td]:p-3">
+        <table class="woocommerce-table woocommerce-table--order-details table-fixed w-full text-left border-collapse [&_tr_th,&_tr_td]:border-black/10 [&_tr_th,&_tr_td]:border [&_th,&_td]:p-3">
           <thead>
             <tr>
               <th class="w-4/6">Product</th>
@@ -102,35 +102,53 @@
             </tr>
           </thead>
           <tbody class="[&>tr:nth-child(odd)]:bg-white/60">
-            <tr>
-              <th>ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย x 1</th>
-              <th>฿300.00</th>
+            <tr class="woocommerce-table__line-item">
+              <td class="woocommerce-table__product-name">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย x 1</td>
+              <td class="woocommerce-table__product-total product-total">
+                <span class="woocommerce-Price-amount amount"
+                  ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
+                >
+              </td>
             </tr>
-            <tr>
-              <th>Vid regnbågens slut finns en katt x 1</th>
-              <th>฿300.00</th>
+            <tr class="woocommerce-table__line-item">
+              <td class="woocommerce-table__product-name">Vid regnbågens slut finns en katt x 1</td>
+              <td class="woocommerce-table__product-total product-total">
+                <span class="woocommerce-Price-amount amount"
+                  ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
+                >
+              </td>
             </tr>
-            <tr>
-              <th>Våga våga x 1</th>
-              <th>฿300.00</th>
+            <tr class="woocommerce-table__line-item">
+              <td class="woocommerce-table__product-name">Våga våga x 1</td>
+              <td class="woocommerce-table__product-total product-total">
+                <span class="woocommerce-Price-amount amount"
+                  ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
+                >
+              </td>
             </tr>
-            <tr>
-              <th>Närmare x 1</th>
-              <th>฿300.00</th>
+            <tr class="woocommerce-table__line-item">
+              <td class="woocommerce-table__product-name">Närmare x 1</td>
+              <td class="woocommerce-table__product-total product-total">
+                <span class="woocommerce-Price-amount amount"
+                  ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
+                >
+              </td>
             </tr>
+          </tbody>
+          <tfoot>
             <tr>
               <td>Subtotal:</td>
-              <th>฿300.00</th>
+              <td>฿300.00</td>
             </tr>
             <tr>
               <td>Pay method:</td>
-              <th>฿300.00</th>
+              <td>฿300.00</td>
             </tr>
             <tr>
-              <td>Total:</td>
+              <th>Total:</th>
               <th>฿300.00</th>
             </tr>
-          </tbody>
+          </tfoot>
         </table>
       </section>
 
