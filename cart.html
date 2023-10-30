@@ -40,10 +40,21 @@
 
     <main id="main-content" class="flex flex-col main-container">
       <!-- Breadcrumb -->
-      <section class="breadcrumb">
-        <a href="">BOOKS</a>
-        /
-        <a href="">SHOPPING CART</a>
+      <section class="relative main-container">
+        <section class="breadcrumb">
+          <a href="">BOOKS</a>
+          /
+          <a href="">SHOPPING CART</a>
+        </section>
+
+        <div class="absolute right-0 flex -translate-y-1/2 top-1/2 gap-x-6">
+          <a href="./account-detail.html">
+            <img src="./icons/user-black.svg" alt="" class="w-6" />
+          </a>
+          <a href="./cart.html">
+            <img src="./icons/cart-black.svg" alt="" class="w-6" />
+          </a>
+        </div>
       </section>
 
       <!-- cart table section -->

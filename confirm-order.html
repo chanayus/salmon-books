@@ -38,136 +38,147 @@
   <body>
     <navbar-component></navbar-component>
 
-    <main id="main-content" class="mt-8 main-container lg:mt-14 space-y-14">
-      <section class="space-y-4">
-        <p class="text-lg">Thank you. Your order has been received.</p>
-        <div class="flex flex-wrap gap-2">
-          <div class="px-6 py-3 bg-white border rounded">
-            <p class="text-sm">ORDER NUMBER:</p>
-            <b>1647</b>
-          </div>
-          <div class="px-6 py-3 bg-white border rounded">
-            <p class="text-sm">DATE:</p>
-            <b>October 3, 2023</b>
-          </div>
-          <div class="px-6 py-3 bg-white border rounded">
-            <p class="text-sm">EMAIL:</p>
-            <b>info@deeboon.com</b>
-          </div>
-          <div class="px-6 py-3 bg-white border rounded">
-            <p class="text-sm">TOTAL:</p>
-            <b>฿159.00</b>
-          </div>
-          <div class="px-6 py-3 bg-white border rounded">
-            <p class="text-sm">PAYMENT METHOD:</p>
-            <b>Direct bank transfer</b>
-          </div>
-        </div>
-      </section>
+    <main id="main-content" class="mt-8 space-y-6 main-container">
+      <div class="flex justify-end gap-x-6">
+        <a href="./account-detail.html">
+          <img src="./icons/user-black.svg" alt="" class="w-6" />
+        </a>
+        <a href="./cart.html">
+          <img src="./icons/cart-black.svg" alt="" class="w-6" />
+        </a>
+      </div>
 
-      <section class="space-y-4">
-        <h3 class="text-4xl"><b>Our bank details</b></h3>
-        <h4 class="text-2xl"><b>123456:</b></h4>
-        <div class="flex flex-wrap gap-2">
-          <div class="px-6 py-3 bg-white border rounded">
-            <p class="text-sm">BANK:</p>
-            <b>11111</b>
+      <div class="space-y-12">
+        <section class="space-y-4">
+          <p class="text-lg">Thank you. Your order has been received.</p>
+          <div class="flex flex-wrap gap-2">
+            <div class="px-6 py-3 bg-white border rounded">
+              <p class="text-sm">ORDER NUMBER:</p>
+              <b>1647</b>
+            </div>
+            <div class="px-6 py-3 bg-white border rounded">
+              <p class="text-sm">DATE:</p>
+              <b>October 3, 2023</b>
+            </div>
+            <div class="px-6 py-3 bg-white border rounded">
+              <p class="text-sm">EMAIL:</p>
+              <b>info@deeboon.com</b>
+            </div>
+            <div class="px-6 py-3 bg-white border rounded">
+              <p class="text-sm">TOTAL:</p>
+              <b>฿159.00</b>
+            </div>
+            <div class="px-6 py-3 bg-white border rounded">
+              <p class="text-sm">PAYMENT METHOD:</p>
+              <b>Direct bank transfer</b>
+            </div>
           </div>
-          <div class="px-6 py-3 bg-white border rounded">
-            <p class="text-sm">ACCOUNT NUMBER:</p>
-            <b>54321</b>
-          </div>
-          <div class="px-6 py-3 bg-white border rounded">
-            <p class="text-sm">SORT CODE:</p>
-            <b>22222</b>
-          </div>
-          <div class="px-6 py-3 bg-white border rounded">
-            <p class="text-sm">IBAN:</p>
-            <b>33333</b>
-          </div>
-          <div class="px-6 py-3 bg-white border rounded">
-            <p class="text-sm">BIC:</p>
-            <b>44444</b>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="space-y-4">
-        <h3 class="text-4xl"><b>Order details</b></h3>
-        <table class="woocommerce-table woocommerce-table--order-details table-fixed w-full text-left border-collapse [&_tr_th,&_tr_td]:border-black/10 [&_tr_th,&_tr_td]:border [&_th,&_td]:p-3">
-          <thead>
-            <tr>
-              <th class="w-4/6">Product</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-          <tbody class="[&>tr:nth-child(odd)]:bg-white/60">
-            <tr class="woocommerce-table__line-item">
-              <td class="woocommerce-table__product-name">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย x 1</td>
-              <td class="woocommerce-table__product-total product-total">
-                <span class="woocommerce-Price-amount amount"
-                  ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
-                >
-              </td>
-            </tr>
-            <tr class="woocommerce-table__line-item">
-              <td class="woocommerce-table__product-name">Vid regnbågens slut finns en katt x 1</td>
-              <td class="woocommerce-table__product-total product-total">
-                <span class="woocommerce-Price-amount amount"
-                  ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
-                >
-              </td>
-            </tr>
-            <tr class="woocommerce-table__line-item">
-              <td class="woocommerce-table__product-name">Våga våga x 1</td>
-              <td class="woocommerce-table__product-total product-total">
-                <span class="woocommerce-Price-amount amount"
-                  ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
-                >
-              </td>
-            </tr>
-            <tr class="woocommerce-table__line-item">
-              <td class="woocommerce-table__product-name">Närmare x 1</td>
-              <td class="woocommerce-table__product-total product-total">
-                <span class="woocommerce-Price-amount amount"
-                  ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
-                >
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>Subtotal:</td>
-              <td>฿300.00</td>
-            </tr>
-            <tr>
-              <td>Pay method:</td>
-              <td>฿300.00</td>
-            </tr>
-            <tr>
-              <th>Total:</th>
-              <th>฿300.00</th>
-            </tr>
-          </tfoot>
-        </table>
-      </section>
+        <section class="space-y-4">
+          <h3 class="text-4xl"><b>Our bank details</b></h3>
+          <h4 class="text-2xl"><b>123456:</b></h4>
+          <div class="flex flex-wrap gap-2">
+            <div class="px-6 py-3 bg-white border rounded">
+              <p class="text-sm">BANK:</p>
+              <b>11111</b>
+            </div>
+            <div class="px-6 py-3 bg-white border rounded">
+              <p class="text-sm">ACCOUNT NUMBER:</p>
+              <b>54321</b>
+            </div>
+            <div class="px-6 py-3 bg-white border rounded">
+              <p class="text-sm">SORT CODE:</p>
+              <b>22222</b>
+            </div>
+            <div class="px-6 py-3 bg-white border rounded">
+              <p class="text-sm">IBAN:</p>
+              <b>33333</b>
+            </div>
+            <div class="px-6 py-3 bg-white border rounded">
+              <p class="text-sm">BIC:</p>
+              <b>44444</b>
+            </div>
+          </div>
+        </section>
 
-      <section class="space-y-4">
-        <h3 class="text-4xl"><b>Billing address</b></h3>
-        <div class="w-full p-4 border rounded bg-white/60 border-black/10">
-          <p>Bukayo Saka</p>
-          <p>Deeboon Ltd,.Part,</p>
-          <p>47/402 Industry Condominium Building (Narita Building) 7th Floor (NOO7035)</p>
-          <p>Poppulat Road, Banmai</p>
-          <p>Pak Kret</p>
-          <p>Nonthaburi</p>
-          <p>11120</p>
-          <p>Thailand</p>
-          <p>012345678</p>
+        <section class="space-y-4">
+          <h3 class="text-4xl"><b>Order details</b></h3>
+          <table class="woocommerce-table woocommerce-table--order-details table-fixed w-full text-left border-collapse [&_tr_th,&_tr_td]:border-black/10 [&_tr_th,&_tr_td]:border [&_th,&_td]:p-3">
+            <thead>
+              <tr>
+                <th class="w-4/6">Product</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody class="[&>tr:nth-child(odd)]:bg-white/60">
+              <tr class="woocommerce-table__line-item">
+                <td class="woocommerce-table__product-name">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย x 1</td>
+                <td class="woocommerce-table__product-total product-total">
+                  <span class="woocommerce-Price-amount amount"
+                    ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
+                  >
+                </td>
+              </tr>
+              <tr class="woocommerce-table__line-item">
+                <td class="woocommerce-table__product-name">Vid regnbågens slut finns en katt x 1</td>
+                <td class="woocommerce-table__product-total product-total">
+                  <span class="woocommerce-Price-amount amount"
+                    ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
+                  >
+                </td>
+              </tr>
+              <tr class="woocommerce-table__line-item">
+                <td class="woocommerce-table__product-name">Våga våga x 1</td>
+                <td class="woocommerce-table__product-total product-total">
+                  <span class="woocommerce-Price-amount amount"
+                    ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
+                  >
+                </td>
+              </tr>
+              <tr class="woocommerce-table__line-item">
+                <td class="woocommerce-table__product-name">Närmare x 1</td>
+                <td class="woocommerce-table__product-total product-total">
+                  <span class="woocommerce-Price-amount amount"
+                    ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
+                  >
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Subtotal:</td>
+                <td>฿300.00</td>
+              </tr>
+              <tr>
+                <td>Pay method:</td>
+                <td>฿300.00</td>
+              </tr>
+              <tr>
+                <th>Total:</th>
+                <th>฿300.00</th>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
 
-          <p>asd@hotmail.com</p>
-        </div>
-      </section>
+        <section class="space-y-4">
+          <h3 class="text-4xl"><b>Billing address</b></h3>
+          <div class="w-full p-4 border rounded bg-white/60 border-black/10">
+            <p>Bukayo Saka</p>
+            <p>Deeboon Ltd,.Part,</p>
+            <p>47/402 Industry Condominium Building (Narita Building) 7th Floor (NOO7035)</p>
+            <p>Poppulat Road, Banmai</p>
+            <p>Pak Kret</p>
+            <p>Nonthaburi</p>
+            <p>11120</p>
+            <p>Thailand</p>
+            <p>012345678</p>
+
+            <p>asd@hotmail.com</p>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer-component></footer-component>

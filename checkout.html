@@ -34,17 +34,75 @@
       referrerpolicy="no-referrer"
     ></script>
     <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/checkout.js"></script>
   </head>
   <body>
     <navbar-component></navbar-component>
 
-    <main id="main-content" class="mt-8 space-y-6 main-container lg:mt-12">
-      <section class="px-4 py-3 text-white bg-orange">Have a coupon? <a href="">Click here to enter your code</a></section>
+    <main id="main-content" class="mt-8 space-y-8 main-container">
+      <div class="flex justify-end gap-x-6">
+        <a href="./account-detail.html">
+          <img src="./icons/user-black.svg" alt="" class="w-6" />
+        </a>
+        <a href="./cart.html">
+          <img src="./icons/cart-black.svg" alt="" class="w-6" />
+        </a>
+      </div>
+
+      <section class="space-y-4">
+        <section class="px-4 py-3 text-white bg-orange">
+          Returning customer? <button id="login-form-toggle" class="duration-100 border-b border-transparent hover:border-white">Click here to login</button>
+        </section>
+
+        <form id="login-form" action="" class="w-full grid grid-rows-[0fr] transition-[grid-template-rows,padding] duration-300 space-y-6">
+          <div class="space-y-4 overflow-hidden">
+            <p>If you have shopped with us before, please enter your details below. If you are a new customer, please proceed to the Billing section.</p>
+            <section class="flex gap-4 max-sm:flex-col">
+              <div class="flex-1 input-wrapper">
+                <label for="username-email-input" class="text-sm">Username or Email</label>
+                <input type="text" class="theme-input" required id="username-email-input" />
+              </div>
+
+              <div class="flex-1 input-wrapper input-password">
+                <label for="password-input" class="text-sm">Password</label>
+                <input type="password" class="theme-input" required id="password-input" />
+                <button type="button" class="show-password-button"></button>
+              </div>
+            </section>
+
+            <section class="flex items-center gap-x-4">
+              <button type="submit" class="btn-orange max-w-fit">Log in</button>
+              <div class="flex items-center gap-x-1.5">
+                <input type="checkbox" id="remember-me" />
+                <label for="remember-me">Remember me</label>
+              </div>
+            </section>
+
+            <a class="block" href="./forgot-password.html">Lost your password?</a>
+          </div>
+        </form>
+
+        <section class="px-4 py-3 text-white bg-orange">
+          Have a coupon? <button id="coupon-toggle" class="duration-100 border-b border-transparent hover:border-white">Click here to enter your code</button>
+        </section>
+        <form id="coupon-form" action="" class="w-full grid grid-rows-[0fr] transition-[grid-template-rows,padding] duration-300 space-y-6">
+          <div class="space-y-4 overflow-hidden">
+            <p>If you have a coupon code, please apply it below.</p>
+            <section class="flex flex-wrap items-center gap-4">
+              <div class="flex-1 max-w-lg input-wrapper">
+                <input type="text" class="theme-input" required id="coupon-input" placeholder="Coupon Code" />
+              </div>
+
+              <button type="submit" class="btn-orange max-w-fit">Apply Coupon</button>
+            </section>
+          </div>
+        </form>
+      </section>
 
       <form action="" class="flex gap-8 max-lg:flex-col">
         <div class="flex-1 space-y-4">
           <h3 class="text-2xl font-bold">Billing detail</h3>
-          <section class="flex items-center gap-4">
+          <section class="flex flex-wrap items-center gap-4">
             <div class="flex-1 input-wrapper">
               <label for="firstname" class="text-sm">First name</label>
               <input type="text" class="theme-input" required id="firstname" />
