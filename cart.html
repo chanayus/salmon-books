@@ -131,26 +131,31 @@
                 </p>
               </td>
             </tr>
+
+            <tr>
+              <td colspan="6" class="actions">
+                <div class="flex items-center justify-between max-md:flex-col gap-y-8">
+                  <div class="flex gap-x-2 flex-[0.5] w-full items-center coupon">
+                    <input type="text" name="coupon_code" class="flex-1 theme-input" placeholder="เลขคูปอง" />
+                    <button type="submit" name="apply_coupon" value="Apply coupon" class="btn-orange max-w-fit whitespace-nowrap">กดใช้คูปอง</button>
+                  </div>
+                  <input type="hidden" name="_wp_http_referer" value="/cart/" />
+                  <input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="90173e59aa" />
+                  <button type="submit" name="update_cart" value="Update cart" id="update-cart-button" disabled class="btn-orange md:max-w-fit">แก้ไขตะกร้า</button>
+                </div>
+              </td>
+            </tr>
           </tbody>
         </table>
 
-        <section class="flex flex-col justify-between mb-16 actions md:items-center md:flex-row gap-y-8">
-          <div class="flex gap-x-2 flex-[0.5] items-center coupon">
-            <input type="text" name="coupon_code" class="flex-1 theme-input" placeholder="เลขคูปอง" />
-            <button type="submit" name="apply_coupon" value="Apply coupon" class="btn-orange max-w-fit whitespace-nowrap">กดใช้คูปอง</button>
-          </div>
-
-          <button type="submit" name="update_cart" value="Update cart" id="update-cart-button" disabled class="btn-orange md:max-w-fit">แก้ไขตะกร้า</button>
-        </section>
-
         <section class="flex justify-end w-full cart-collaterals">
           <div class="w-full space-y-4 md:max-w-xl cart_totals">
-            <h6 class="text-2xl font-bold">ราคา</h6>
+            <h2 class="text-2xl font-bold">ราคา</h2>
 
             <table cellspacing="0" class="w-full text-lefttable-fixed shop_table shop_table_responsive">
               <tbody>
                 <tr class="cart-subtotal [&_td]:p-2.5">
-                  <td>ภาษีมูลค่าเพิ่ม</td>
+                  <th>ภาษีมูลค่าเพิ่ม</th>
                   <td data-title="Subtotal" class="text-right">
                     <span class="woocommerce-Price-amount amount"
                       ><bdi><span class="woocommerce-Price-currencySymbol">$</span>60.00</bdi></span
@@ -159,7 +164,7 @@
                 </tr>
 
                 <tr class="order-total [&_td]:p-2.5">
-                  <td>รวมเป็นเงินที่ต้องชำระ</td>
+                  <th>รวมเป็นเงินที่ต้องชำระ</th>
                   <td data-title="Total" class="text-right">
                     <strong
                       ><span class="woocommerce-Price-amount amount"
