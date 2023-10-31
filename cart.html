@@ -38,7 +38,7 @@
   <body>
     <navbar-component></navbar-component>
 
-    <main id="main-content" class="flex flex-col main-container">
+    <main id="main-content" class="flex flex-col woocommerce main-container">
       <!-- Breadcrumb -->
       <section class="relative main-container">
         <section class="breadcrumb">
@@ -57,103 +57,126 @@
         </div>
       </section>
 
+      <div class="woocommerce-notices-wrapper"></div>
+
       <!-- cart table section -->
-      <table class="mb-8 text-left border-separate border-spacing-y-3 woocommerce-cart-form__contents">
-        <thead class="max-md:hidden sticky top-[6rem] z-10 bg-body-white font-bold">
-          <tr class="[&_th]:py-3">
-            <th></th>
-            <th></th>
-            <th>สินค้า</th>
-            <th>ราคา</th>
-            <th>จำนวน</th>
-            <th>รวม</th>
-          </tr>
-        </thead>
+      <form action="" class="woocommerce-cart-form">
+        <table class="w-full mb-8 text-left border-separate border-spacing-y-3 woocommerce-cart-form__contents">
+          <thead class="max-md:hidden sticky top-[6rem] z-10 bg-body-white font-bold">
+            <tr class="[&_th]:py-3">
+              <th class="invisible product-remove"><span class="screen-reader-text"></span></th>
+              <th class="invisible product-thumbnail"><span class="screen-reader-text"></span></th>
+              <th class="product-name">สินค้า</th>
+              <th class="product-price">ราคา</th>
+              <th class="product-quantity">จำนวน</th>
+              <th class="product-subtotal">รวม</th>
+            </tr>
+          </thead>
 
-        <tbody>
-          <tr class="relative bg-[#eeeeee] woocommerce-cart-form__cart-item cart_item">
-            <td class="md:px-6 product-remove">
-              <button class="mx-auto rounded-full max-md:absolute top-4 right-4">
-                <img src="./icons/close-black.svg" alt="" width="12" height="12" />
-              </button>
-            </td>
-            <td class="py-2 max-md:hidden product-thumbnail">
-              <a href="">
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt=""
-                  width="300"
-                  height="300"
-                  class="object-contain mt-0 w-28 h-28 bg-body-white"
-                />
-              </a>
-            </td>
+          <tbody>
+            <tr class="relative bg-[#eeeeee] woocommerce-cart-form__cart-item cart_item">
+              <td class="md:px-6 product-remove">
+                <a href="" class="mx-auto rounded-full remove max-md:absolute top-4 right-4">
+                  <img src="./icons/close-black.svg" alt="" width="12" height="12" />
+                </a>
+              </td>
+              <td class="py-2 max-md:hidden product-thumbnail">
+                <a href="">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt=""
+                    width="300"
+                    height="300"
+                    class="object-contain mt-0 attachment-woocommerce_thumbnail size-woocommerce_thumbnail w-28 h-28 bg-body-white"
+                  />
+                </a>
+              </td>
 
-            <td class="flex-col max-md:pt-4 max-md:flex product-name">
-              <a href="" class="md:hidden">
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt=""
-                  width="300"
-                  height="300"
-                  class="object-contain mt-0 w-28 h-28 bg-body-white"
-                />
-              </a>
-              <div class="flex items-center justify-between w-full md:block max-md:my-3">
-                <b class="md:hidden">Product:</b>
-                <a href="./book-detail.html" class="line-clamp-2 max-md:max-w-[55%] max-md:text-right">CHECK YOUR BALANCE ยอดคนเงินเหลือ</a>
-              </div>
-            </td>
+              <td class="flex-col max-md:pt-4 max-md:flex product-name">
+                <a href="" class="md:hidden">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt=""
+                    width="300"
+                    height="300"
+                    class="object-contain mt-0 w-28 h-28 bg-body-white"
+                  />
+                </a>
+                <div class="flex items-center justify-between w-full md:block max-md:my-3">
+                  <b class="md:hidden">Product:</b>
+                  <a href="./book-detail.html" class="line-clamp-2 max-md:max-w-[55%] max-md:text-right">CHECK YOUR BALANCE ยอดคนเงินเหลือ</a>
+                </div>
+              </td>
 
-            <td class="flex items-center justify-between min-w-0 product-price md:table-cell max-md:my-3">
-              <b class="md:hidden">Price:</b>
-              <p class="max-w-full truncate">฿300.000</p>
-            </td>
+              <td class="flex items-center justify-between min-w-0 product-price md:table-cell max-md:my-3">
+                <b class="md:hidden">Price:</b>
+                <p class="max-w-full truncate woocommerce-Price-amount amount">
+                  <bdi><span class="woocommerce-Price-currencySymbol">$</span>60.00</bdi>
+                </p>
+              </td>
 
-            <td class="flex items-center justify-between product-quantity md:table-cell max-md:my-3">
-              <b class="md:hidden">Quantity:</b>
-              <div class="product-increment">
-                <button class="decrease">-</button>
-                <input type="number" id="input-value" value="1" />
-                <button class="increase">+</button>
-              </div>
-            </td>
+              <td class="flex items-center justify-between product-quantity md:table-cell max-md:my-3">
+                <b class="md:hidden">Quantity:</b>
+                <div class="product-increment">
+                  <button class="decrease">-</button>
+                  <input type="number" id="input-value" value="1" />
+                  <button class="increase">+</button>
+                </div>
+              </td>
 
-            <td class="flex items-center justify-between truncate product-subtotal md:table-cell max-md:my-3">
-              <b class="md:hidden">Subtotal:</b>
-              <p class="truncate">฿300.00</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              <td class="flex items-center justify-between truncate product-subtotal md:table-cell max-md:my-3">
+                <b class="md:hidden">Subtotal:</b>
+                <p class="max-w-full truncate woocommerce-Price-amount amount">
+                  <bdi><span class="woocommerce-Price-currencySymbol">$</span>60.00</bdi>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-      <section class="flex flex-col justify-between mb-16 md:items-center md:flex-row gap-y-8">
-        <div class="flex gap-x-2 flex-[0.5] items-center">
-          <input type="text" class="flex-1 theme-input" placeholder="เลขคูปอง" />
-          <button class="btn-orange max-w-fit whitespace-nowrap">กดใช้คูปอง</button>
-        </div>
+        <section class="flex flex-col justify-between mb-16 actions md:items-center md:flex-row gap-y-8">
+          <div class="flex gap-x-2 flex-[0.5] items-center coupon">
+            <input type="text" name="coupon_code" class="flex-1 theme-input" placeholder="เลขคูปอง" />
+            <button type="submit" name="apply_coupon" value="Apply coupon" class="btn-orange max-w-fit whitespace-nowrap">กดใช้คูปอง</button>
+          </div>
 
-        <button id="update-cart-button" disabled class="btn-orange md:max-w-fit">แก้ไขตะกร้า</button>
-      </section>
+          <button type="submit" name="update_cart" value="Update cart" id="update-cart-button" disabled class="btn-orange md:max-w-fit">แก้ไขตะกร้า</button>
+        </section>
 
-      <section class="flex justify-end w-full">
-        <div class="w-full space-y-4 md:max-w-xl">
-          <h6 class="text-2xl font-bold">ราคา</h6>
-          <div class="space-y-1">
-            <div class="flex justify-between p-3 bg-[#eee]">
-              <p>ภาษีมูลค่าเพิ่ม</p>
-              <p>฿110.00</p>
-            </div>
-            <div class="flex justify-between p-3 bg-[#eee]">
-              <p>รวมเป็นเงินที่ต้องชำระ</p>
-              <b>฿110.00</b>
+        <section class="flex justify-end w-full cart-collaterals">
+          <div class="w-full space-y-4 md:max-w-xl cart_totals">
+            <h6 class="text-2xl font-bold">ราคา</h6>
+
+            <table cellspacing="0" class="w-full text-lefttable-fixed shop_table shop_table_responsive">
+              <tbody>
+                <tr class="cart-subtotal [&_td]:p-2.5">
+                  <td>ภาษีมูลค่าเพิ่ม</td>
+                  <td data-title="Subtotal" class="text-right">
+                    <span class="woocommerce-Price-amount amount"
+                      ><bdi><span class="woocommerce-Price-currencySymbol">$</span>60.00</bdi></span
+                    >
+                  </td>
+                </tr>
+
+                <tr class="order-total [&_td]:p-2.5">
+                  <td>รวมเป็นเงินที่ต้องชำระ</td>
+                  <td data-title="Total" class="text-right">
+                    <strong
+                      ><span class="woocommerce-Price-amount amount"
+                        ><bdi><span class="woocommerce-Price-currencySymbol">$</span>60.00</bdi></span
+                      ></strong
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="wc-proceed-to-checkout">
+              <a href="" class="btn-orange checkout-button button alt wc-forward">สั่งซื้อเลย</a>
             </div>
           </div>
-          <a href="" class="btn-orange">
-            <b>สั่งซื้อเลย</b>
-          </a>
-        </div>
-      </section>
+        </section>
+      </form>
     </main>
 
     <footer-component></footer-component>
