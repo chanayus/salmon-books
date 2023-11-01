@@ -39,8 +39,8 @@
   <body>
     <navbar-component></navbar-component>
 
-    <main id="main-content" class="mt-8 space-y-8 main-container">
-      <div class="flex justify-end gap-x-6">
+    <main id="main-content" class="mt-8 main-container woocommerce">
+      <div class="flex justify-end mb-8 gap-x-6">
         <a href="./account-detail.html">
           <img src="./icons/user-black.svg" alt="" class="w-6" />
         </a>
@@ -49,235 +49,231 @@
         </a>
       </div>
 
-      <section class="space-y-4">
-        <section class="px-4 py-3 text-white bg-orange">
-          Have a coupon? <button id="coupon-toggle" class="duration-100 border-b border-transparent hover:border-white">Click here to enter your code</button>
-        </section>
-        <form id="coupon-form" action="" class="w-full grid grid-rows-[0fr] transition-[grid-template-rows,padding] duration-300 space-y-6">
-          <div class="space-y-4 overflow-hidden">
-            <p>If you have a coupon code, please apply it below.</p>
-            <section class="flex flex-wrap items-center gap-4">
-              <div class="flex-1 max-w-lg input-wrapper">
-                <input type="text" class="theme-input" required id="coupon-input" placeholder="Coupon Code" />
-              </div>
-
-              <button type="submit" class="btn-orange max-w-fit">Apply Coupon</button>
-            </section>
-          </div>
-        </form>
-      </section>
-
-      <form action="" class="flex gap-8 max-lg:flex-col">
-        <div class="flex-1 space-y-4">
-          <h3 class="text-2xl font-bold">Billing detail</h3>
+      <div class="px-4 py-3 mb-4 text-white woocommerce-form-coupon-toggle bg-orange">
+        <div class="woocommerce-info">Have a coupon? <a id="coupon-toggle" class="duration-100 border-b border-transparent cursor-pointer hover:border-white">Click here to enter your code</a></div>
+      </div>
+      <form id="coupon-form" action="" method="" class="checkout_coupon woocommerce-form-coupon w-full grid grid-rows-[0fr] transition-[grid-template-rows,padding] duration-300 space-y-6">
+        <div class="space-y-4 overflow-hidden">
+          <p>If you have a coupon code, please apply it below.</p>
           <section class="flex flex-wrap items-center gap-4">
-            <div class="flex-1 input-wrapper">
-              <label for="firstname" class="text-sm">First name</label>
-              <input type="text" class="theme-input" required id="firstname" />
+            <div class="flex-1 max-w-lg input-wrapper">
+              <label for="coupon_code" class="hidden screen-reader-text">Coupon:</label>
+              <input type="text" class="theme-input" required id="coupon_code" name="coupon_code" placeholder="Coupon Code" />
             </div>
 
-            <div class="flex-1 input-wrapper">
-              <label for="lastname" class="text-sm">Last name</label>
-              <input type="text" class="theme-input" required id="lastname" />
-            </div>
-          </section>
-
-          <section class="input-wrapper">
-            <label for="display-name" class="text-sm">Company name (optional)</label>
-            <input type="text" class="theme-input" id="display-name" />
-          </section>
-
-          <section class="input-wrapper">
-            <label for="country-region" class="text-sm">Country / Region</label>
-            <select class="theme-input" required id="country-region">
-              <option value="thailand">Thailand</option>
-              <option value="england">England</option>
-            </select>
-          </section>
-
-          <section class="input-wrapper">
-            <label for="street" class="text-sm">Street address</label>
-            <input type="text" class="theme-input" required id="street" placeholder="House number and street name" />
-            <input type="text" class="mt-2 theme-input" id="street-optional" placeholder="Apartment, suite, unit, etc. (optional)" />
-          </section>
-
-          <section class="input-wrapper">
-            <label for="town-city" class="text-sm">Town / City</label>
-            <input type="text" class="theme-input" required id="town-city" />
-          </section>
-
-          <section class="input-wrapper">
-            <label for="state" class="text-sm">State</label>
-            <select class="theme-input" required id="state">
-              <option value="thailand">Bangkok</option>
-              <option value="england">Samutpakarn</option>
-            </select>
-          </section>
-
-          <section class="input-wrapper">
-            <label for="zip-code" class="text-sm">Zip Code</label>
-            <input type="number" class="theme-input" required id="zip-code" />
-          </section>
-
-          <section class="input-wrapper">
-            <label for="phone" class="text-sm">Phone</label>
-            <input type="tel" class="theme-input" required id="phone" />
-          </section>
-
-          <section class="input-wrapper">
-            <label for="email" class="text-sm">Email address</label>
-            <input type="email" class="theme-input" required id="email" />
-          </section>
-
-          <h3 class="text-2xl font-bold">Additional information</h3>
-
-          <section class="input-wrapper">
-            <label for="email" class="text-sm">Order note (optional)</label>
-            <textarea type="email" class="theme-input" id="email" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+            <button type="submit" name="apply_coupon" value="Apply coupon" class="btn-orange max-w-fit">Apply Coupon</button>
           </section>
         </div>
-        <div class="flex-[0.75] space-y-4">
-          <h3 class="text-2xl font-bold">Your Order</h3>
+      </form>
 
-          <section class="p-4 space-y-4 bg-white rounded max-h-[24rem] overflow-y-auto sm-scrollbar">
-            <div class="flex items-center sm:gap-x-8 gap-x-4">
-              <a href="./book-detail.html" target="_blank" class="flex items-center gap-x-4">
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt=""
-                  width="300"
-                  height="300"
-                  class="object-contain w-16 mt-0 sm:w-20 aspect-square"
-                />
+      <div class="woocommerce-notices-wrapper"></div>
 
-                <div class="space-y-1 text-sm">
-                  <p class="max-w-[35ch] font-semibold line-clamp-3">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย</p>
-                  <p>Quantity: 1</p>
+      <form name="checkout" action="" method="" enctype="multipart/form-data" novalidate="novalidate" class="checkout woocommerce-checkout force-contained-rows">
+        <div class="flex gap-8 mt-8 max-lg:flex-col" id="customer_details">
+          <div class="flex-1 woocommerce-billing-fields">
+            <h3 class="mb-4 text-2xl font-bold">Billing detail</h3>
+            <div class="mb-12 space-y-4 woocommerce-billing-fields__field-wrapper">
+              <div class="lg:!inline-block lg:max-w-[calc(50%-0.5rem)] lg:mr-2 w-full input-wrapper" id="billing_first_name_field" data-priority="10">
+                <label for="firstname" class="text-sm">First name</label>
+                <span class="woocommerce-input-wrapper">
+                  <input type="text" class="theme-input" required id="firstname" />
+                </span>
+              </div>
+
+              <div class="lg:!inline-block lg:max-w-[calc(50%-0.25rem)] w-full input-wrapper" id="billing_last_name_field">
+                <label for="lastname" class="text-sm">Last name</label>
+                <span class="woocommerce-input-wrapper">
+                  <input type="text" class="theme-input" required id="lastname" />
+                </span>
+              </div>
+
+              <section class="input-wrapper">
+                <label for="display-name" class="text-sm">Company name (optional)</label>
+                <span class="woocommerce-input-wrapper">
+                  <input type="text" class="theme-input" id="display-name" />
+                </span>
+              </section>
+
+              <section class="input-wrapper">
+                <label for="country-region" class="text-sm">Country / Region</label>
+                <span class="woocommerce-input-wrapper">
+                  <select class="theme-input" required id="country-region">
+                    <option value="thailand">Thailand</option>
+                    <option value="england">England</option>
+                  </select>
+                </span>
+              </section>
+
+              <section class="input-wrapper">
+                <label for="street" class="text-sm">Street address</label>
+                <span class="woocommerce-input-wrapper">
+                  <input type="text" class="theme-input" required id="street" placeholder="House number and street name" />
+                </span>
+                <span class="woocommerce-input-wrapper">
+                  <input type="text" class="mt-2 theme-input" id="street-optional" placeholder="Apartment, suite, unit, etc. (optional)" />
+                </span>
+              </section>
+
+              <section class="input-wrapper">
+                <label for="town-city" class="text-sm">Town / City</label>
+                <span class="woocommerce-input-wrapper">
+                  <input type="text" class="theme-input" required id="town-city" />
+                </span>
+              </section>
+
+              <section class="input-wrapper">
+                <label for="state" class="text-sm">State</label>
+                <span class="woocommerce-input-wrapper">
+                  <select class="theme-input" required id="state">
+                    <option value="thailand">Bangkok</option>
+                    <option value="england">Samutpakarn</option>
+                  </select>
+                </span>
+              </section>
+
+              <section class="input-wrapper">
+                <label for="zip-code" class="text-sm">Zip Code</label>
+                <span class="woocommerce-input-wrapper">
+                  <input type="number" class="theme-input" required id="zip-code" />
+                </span>
+              </section>
+
+              <section class="input-wrapper">
+                <label for="phone" class="text-sm">Phone</label>
+                <span class="woocommerce-input-wrapper">
+                  <input type="tel" class="theme-input" required id="phone" />
+                </span>
+              </section>
+
+              <section class="input-wrapper">
+                <label for="email" class="text-sm">Email address</label>
+                <span class="woocommerce-input-wrapper">
+                  <input type="email" class="theme-input" required id="email" />
+                </span>
+              </section>
+            </div>
+            <div class="space-y-4 woocommerce-additional-fields">
+              <h3 class="text-2xl font-bold">Additional information</h3>
+
+              <section class="input-wrapper">
+                <label for="order_comments" class="text-sm">Order note (optional)</label>
+                <span class="woocommerce-input-wrapper">
+                  <textarea type="email" class="theme-input" id="order_comments" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                </span>
+              </section>
+            </div>
+          </div>
+          <div class="flex-[0.75] space-y-4">
+            <h3 id="order_review_heading" class="text-2xl font-bold">Your Order</h3>
+            <div id="order_review" class="space-y-4 woocommerce-checkout-review-order">
+              <div class="space-y-4 shop_table woocommerce-checkout-review-order-table">
+                <section class="product-container p-4 space-y-4 bg-white rounded max-h-[24rem] overflow-y-auto sm-scrollbar">
+                  <div class="flex items-center cart_item sm:gap-x-8 gap-x-4">
+                    <div class="product-image">
+                      <a href="" target="_blank">
+                        <img
+                          src="https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_ONEARTH-04.jpg"
+                          alt=""
+                          width="300"
+                          height="300"
+                          class="object-contain w-16 mt-0 sm:w-20 aspect-square"
+                        />
+                      </a>
+                    </div>
+                    <div class="flex items-center justify-between flex-1 product-info">
+                      <div class="inner">
+                        <h4 class="max-w-[35ch]">
+                          <a class="font-semibold line-clamp-2 max-w-[90%]" href="https://shop.websitecafe.info/product/complete-acne-defense/" target="_blank"
+                            >Complete Acne Defense Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque eum labore in repudiandae! Accusantium illo iste est molestias voluptatibus
+                            laudantium officiis similique consectetur veritatis dolores soluta, eaque cumque ipsum fuga?</a
+                          >
+                          <span class="block product-quantity">Quantity: 1</span>
+                        </h4>
+                      </div>
+                      <span class="block woocommerce-Price-amount amount"
+                        ><bdi><span class="woocommerce-Price-currencySymbol">$</span>60.00</bdi></span
+                      >
+                    </div>
+                  </div>
+                </section>
+
+                <table class="w-full py-2 order-review border-y border-black/10">
+                  <tbody>
+                    <tr class="cart-subtotal">
+                      <td class="pt-4 text-left">Subtotal</td>
+                      <td class="pt-4 text-right">
+                        <span class="woocommerce-Price-amount amount"
+                          ><bdi><span class="woocommerce-Price-currencySymbol">$</span>60.00</bdi></span
+                        >
+                      </td>
+                    </tr>
+
+                    <tr class="order-total">
+                      <th class="py-4 text-left">Total</th>
+                      <td class="text-right">
+                        <strong
+                          ><span class="woocommerce-Price-amount amount"
+                            ><bdi><span class="woocommerce-Price-currencySymbol">$</span>60.00</bdi></span
+                          ></strong
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div id="payment" class="mb-8 woocommerce-checkout-payment">
+                <ul class="px-0 space-y-4 wc_payment_methods payment_methods methods">
+                  <li class="list-none wc_payment_method payment_method_bacs [&>input:checked~.desc]:grid-rows-[1fr]">
+                    <input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="bacs" checked="checked" data-order_button_text="" />
+
+                    <label for="payment_method_bacs"> Direct bank transfer </label>
+                    <div class="payment_box payment_method_bacs desc grid grid-rows-[0fr] duration-200 mt-1 ml-5">
+                      <p class="overflow-hidden opacity-75">
+                        Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list-none wc_payment_method payment_method_cod [&>input:checked~.desc]:grid-rows-[1fr]">
+                    <input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod" data-order_button_text="" />
+
+                    <label for="payment_method_cod"> Cash on delivery </label>
+                    <div class="payment_box payment_method_cod desc grid grid-rows-[0fr] duration-200 mt-1 ml-5">
+                      <p class="overflow-hidden opacity-75">
+                        Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our
+                        <a href="https://shop.websitecafe.info/?page_id=3" class="woocommerce-privacy-policy-link" target="_blank">privacy policy</a>.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="form-row place-order">
+                  <noscript>
+                    Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than
+                    the amount stated above if you fail to do so. <br /><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Update totals">Update totals</button>
+                  </noscript>
+
+                  <div class="hidden woocommerce-terms-and-conditions-wrapper">
+                    <div class="woocommerce-privacy-policy-text desc">
+                      <p class="overflow-hidden opacity-75">
+                        Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our
+                        <a href="https://shop.websitecafe.info/?page_id=3" class="woocommerce-privacy-policy-link" target="_blank">privacy policy</a>.
+                      </p>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="mt-6 text-lg button alt btn-orange" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">
+                    Place order
+                  </button>
+
+                  <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="a61ef675d7" /><input
+                    type="hidden"
+                    name="_wp_http_referer"
+                    value="/?wc-ajax=update_order_review"
+                  />
                 </div>
-              </a>
-              <div class="flex justify-end flex-1 max-lg:items-end max-lg:flex-col-reverse gap-x-10 gap-y-2">
-                <b>฿150.00</b>
               </div>
             </div>
-
-            <div class="flex items-center sm:gap-x-8 gap-x-4">
-              <a href="./book-detail.html" target="_blank" class="flex items-center gap-x-4">
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt=""
-                  width="300"
-                  height="300"
-                  class="object-contain w-16 mt-0 sm:w-20 aspect-square"
-                />
-
-                <div class="space-y-1 text-sm">
-                  <p class="max-w-[35ch] font-semibold line-clamp-3">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย</p>
-                  <p>Quantity: 1</p>
-                </div>
-              </a>
-              <div class="flex justify-end flex-1 max-lg:items-end max-lg:flex-col-reverse gap-x-10 gap-y-2">
-                <b>฿150.00</b>
-              </div>
-            </div>
-
-            <div class="flex items-center sm:gap-x-8 gap-x-4">
-              <a href="./book-detail.html" target="_blank" class="flex items-center gap-x-4">
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt=""
-                  width="300"
-                  height="300"
-                  class="object-contain w-16 mt-0 sm:w-20 aspect-square"
-                />
-
-                <div class="space-y-1 text-sm">
-                  <p class="max-w-[35ch] font-semibold line-clamp-3">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย</p>
-                  <p>Quantity: 1</p>
-                </div>
-              </a>
-              <div class="flex justify-end flex-1 max-lg:items-end max-lg:flex-col-reverse gap-x-10 gap-y-2">
-                <b>฿150.00</b>
-              </div>
-            </div>
-
-            <div class="flex items-center sm:gap-x-8 gap-x-4">
-              <a href="./book-detail.html" target="_blank" class="flex items-center gap-x-4">
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt=""
-                  width="300"
-                  height="300"
-                  class="object-contain w-16 mt-0 sm:w-20 aspect-square"
-                />
-
-                <div class="space-y-1 text-sm">
-                  <p class="max-w-[35ch] font-semibold line-clamp-3">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย</p>
-                  <p>Quantity: 1</p>
-                </div>
-              </a>
-              <div class="flex justify-end flex-1 max-lg:items-end max-lg:flex-col-reverse gap-x-10 gap-y-2">
-                <b>฿150.00</b>
-              </div>
-            </div>
-
-            <div class="flex items-center sm:gap-x-8 gap-x-4">
-              <a href="./book-detail.html" target="_blank" class="flex items-center gap-x-4">
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/c6f8/61fd/115a6a30c2aad4d08221a43ab9cd4c58?Expires=1698019200&Signature=S8uVotx8vQ0Oh~owpYqWg2UCFrhogP453DB9byNUHev5WcCgRmbzjjQpFGcyt-wn1X-kgAXqmQVQ3KAINWche1HlHwW62bAGJo~kBBKaxcmQti6yDBrjdRkTuleE2dMSIN7cAbsneSg~Pn414cSTekgLqEESGRzyVC2hSrnW8k-pqZj5tD~r-UCDTl-JEhMSO1uaP0Ce13XETCGzwTjtoLeBKCUzjW219muh03kDP7a8euC1p74lwYioV2upL8V5JSm~nC2gtfRSzN0FK0u9-SlRS4wj~Amex~sM8JkANxmPg4Xc92KP8si~PnXrHwBPlu0zehCu137McdWn1Sg1YA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt=""
-                  width="300"
-                  height="300"
-                  class="object-contain w-16 mt-0 sm:w-20 aspect-square"
-                />
-
-                <div class="space-y-1 text-sm">
-                  <p class="max-w-[35ch] font-semibold line-clamp-3">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย</p>
-                  <p>Quantity: 1</p>
-                </div>
-              </a>
-              <div class="flex justify-end flex-1 max-lg:items-end max-lg:flex-col-reverse gap-x-10 gap-y-2">
-                <b>฿150.00</b>
-              </div>
-            </div>
-          </section>
-
-          <section class="py-4 space-y-2 border-y border-black/10">
-            <div class="flex items-center justify-between text-sm">
-              <p>Subtotal</p>
-              <p>฿699.96</p>
-            </div>
-            <div class="flex items-center justify-between text-lg font-bold">
-              <p>Total</p>
-              <p>฿699.96</p>
-            </div>
-          </section>
-
-          <section class="space-y-4">
-            <div class="[&>input:checked~.desc]:grid-rows-[1fr]">
-              <input type="radio" name="payment-method" id="d-b-t" />
-              <label for="d-b-t" class="ml-1">Direct bank transfer</label>
-              <p class="h-0 mt-2 ml-5 overflow-hidden opacity-75"></p>
-              <div class="desc grid grid-rows-[0fr] duration-200 mt-1 ml-5">
-                <p class="overflow-hidden opacity-75">
-                  Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
-                </p>
-              </div>
-            </div>
-
-            <div class="[&>input:checked~.desc]:grid-rows-[1fr]">
-              <input type="radio" name="payment-method" id="c-o-d" />
-              <label for="c-o-d" class="ml-1">Cash on delivery</label>
-              <div class="desc grid grid-rows-[0fr] duration-200 mt-1 ml-5">
-                <p class="overflow-hidden opacity-75">Pay with cash upon delivery.</p>
-              </div>
-            </div>
-          </section>
-
-          <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
-
-          <button type="submit" class="text-lg btn-orange">
-            <b>Place Order</b>
-          </button>
+          </div>
         </div>
       </form>
     </main>
