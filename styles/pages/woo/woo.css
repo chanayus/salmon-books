@@ -1,3 +1,255 @@
+.text-orange {
+  color: rgb(252, 116, 74);
+}
+
+.bg-orange {
+  background: rgb(252, 116, 74);
+}
+
+.accent-orange {
+  accent-color: rgb(252, 116, 74);
+}
+
+.border-orange {
+  border-color: rgb(252, 116, 74);
+}
+
+.hover-bg-orange:hover {
+  background: rgb(252, 116, 74);
+}
+
+.hover-text-orange:hover {
+  color: rgb(252, 116, 74);
+}
+
+.text-yellow {
+  color: #f8c520;
+}
+
+.bg-yellow {
+  background: #f8c520;
+}
+
+.accent-yellow {
+  accent-color: #f8c520;
+}
+
+.border-yellow {
+  border-color: #f8c520;
+}
+
+.hover-bg-yellow:hover {
+  background: #f8c520;
+}
+
+.hover-text-yellow:hover {
+  color: #f8c520;
+}
+
+.text-sky-blue {
+  color: #66bdd8;
+}
+
+.bg-sky-blue {
+  background: #66bdd8;
+}
+
+.accent-sky-blue {
+  accent-color: #66bdd8;
+}
+
+.border-sky-blue {
+  border-color: #66bdd8;
+}
+
+.hover-bg-sky-blue:hover {
+  background: #66bdd8;
+}
+
+.hover-text-sky-blue:hover {
+  color: #66bdd8;
+}
+
+.text-body-white {
+  color: #f1f1f1;
+}
+
+.bg-body-white {
+  background: #f1f1f1;
+}
+
+.accent-body-white {
+  accent-color: #f1f1f1;
+}
+
+.border-body-white {
+  border-color: #f1f1f1;
+}
+
+.hover-bg-body-white:hover {
+  background: #f1f1f1;
+}
+
+.hover-text-body-white:hover {
+  color: #f1f1f1;
+}
+
+.text-gray {
+  color: #8a8a8a;
+}
+
+.bg-gray {
+  background: #8a8a8a;
+}
+
+.accent-gray {
+  accent-color: #8a8a8a;
+}
+
+.border-gray {
+  border-color: #8a8a8a;
+}
+
+.hover-bg-gray:hover {
+  background: #8a8a8a;
+}
+
+.hover-text-gray:hover {
+  color: #8a8a8a;
+}
+
+.text-light-gray {
+  color: #e6e6e6;
+}
+
+.bg-light-gray {
+  background: #e6e6e6;
+}
+
+.accent-light-gray {
+  accent-color: #e6e6e6;
+}
+
+.border-light-gray {
+  border-color: #e6e6e6;
+}
+
+.hover-bg-light-gray:hover {
+  background: #e6e6e6;
+}
+
+.hover-text-light-gray:hover {
+  color: #e6e6e6;
+}
+
+.text-smoke {
+  color: #cdcdcd;
+}
+
+.bg-smoke {
+  background: #cdcdcd;
+}
+
+.accent-smoke {
+  accent-color: #cdcdcd;
+}
+
+.border-smoke {
+  border-color: #cdcdcd;
+}
+
+.hover-bg-smoke:hover {
+  background: #cdcdcd;
+}
+
+.hover-text-smoke:hover {
+  color: #cdcdcd;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.btn-base, .btn-light-gray, .btn-stroke-orange, .btn-orange, button[type=submit] {
+  width: 100%;
+  height: 2.75rem;
+  border-radius: 9999px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
+.btn-orange, button[type=submit] {
+  background-color: rgb(252, 116, 74);
+  color: #fff;
+}
+.btn-orange:hover, button[type=submit]:hover {
+  background-color: rgba(235, 59, 4, 0.8);
+}
+
+.btn-stroke-orange {
+  border: 1px solid rgb(252, 116, 74);
+  color: rgb(252, 116, 74);
+}
+.btn-stroke-orange:hover {
+  background-color: rgb(252, 116, 74);
+  color: #fff;
+}
+.btn-stroke-orange:hover img {
+  filter: brightness(100);
+}
+
+.btn-light-gray {
+  background-color: #e6e6e6;
+  color: #8a8a8a;
+}
+
+.text-link {
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
+.sm-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
 .woocommerce h1 {
   display: block;
   font-size: 2rem;
@@ -291,4 +543,17 @@ div.payment_box {
 
 p.woocommerce-notice {
   margin-bottom: 1rem;
+}
+
+form.woocommerce-ResetPassword .form-row {
+  margin-top: 1.75rem;
+}
+form.woocommerce-ResetPassword .form-row input {
+  max-width: 480px;
+}
+
+button[type=submit] {
+  margin-top: 0.75rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }/*# sourceMappingURL=woo.css.map */

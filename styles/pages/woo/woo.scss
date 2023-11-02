@@ -1,5 +1,5 @@
 @import "../../modules/colors";
-
+@import "../../modules/utilities";
 // base
 
 .woocommerce {
@@ -307,4 +307,21 @@ div.payment_box {
 }
 p.woocommerce-notice {
     margin-bottom: 1rem;
+}
+
+// forgot password page
+
+form.woocommerce-ResetPassword {
+    & .form-row {
+        margin-top: 1.75rem;
+        & input {
+            max-width: 480px;
+        }
+    }
+}
+
+button[type="submit"] {
+    @extend .btn-orange;
+    margin-top: 0.75rem;
+    max-width: fit-content;
 }
