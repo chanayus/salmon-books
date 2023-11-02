@@ -17,7 +17,10 @@
         hash: false,
       });
     </script>
-    <link rel="stylesheet" href="./styles/pages/global/global.css" />
+    <link rel="stylesheet" href="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/styles/pages/global/global.css?ver=1698917465" />
+
+    <link rel="stylesheet" href="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/styles/pages/auth/auth.css?ver=1698917465" />
+    <link rel="stylesheet" href="./styles/pages/woo/woo.css" />
 
     <!-- JS -->
     <script
@@ -28,9 +31,9 @@
       referrerpolicy="no-referrer"
     ></script>
     <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/scripts/main.js?ver=1698894903"></script>
+    <script type="module" src="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/scripts/main.js?ver=1698917465"></script>
 
-    <script type="module" src="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/scripts/checkout.js?ver=1698894903"></script>
+    <script type="module" src="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/scripts/checkout.js?ver=1698917465"></script>
 
     <!-- Wordpress -->
     <script>
@@ -492,7 +495,7 @@
         visibility: visible;
       }
     </style>
-    <link rel="stylesheet" id="salmon-books-style-css" href="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/style.css?ver=1698894902" media="all" />
+    <link rel="stylesheet" id="salmon-books-style-css" href="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/style.css?ver=1698917465" media="all" />
     <link rel="stylesheet" id="omise-css" href="https://salmonbooks.deeboon.live/wp-content/plugins/omise/includes/gateway/../../assets/css/omise-css.css?ver=5.5.0" media="all" />
     <link
       rel="stylesheet"
@@ -652,12 +655,12 @@
           <div>Have a coupon? <a id="coupon-toggle" class="duration-100 border-b border-transparent cursor-pointer hover:border-white">Click here to enter your code</a></div>
         </div>
 
-        <form id="coupon-form" class="w-full grid transition-[grid-template-rows,padding] duration-300 space-y-6 grid-rows-[0fr]" method="post">
+        <form id="coupon-form" class="w-full grid grid-rows-[0fr] transition-[grid-template-rows,padding] duration-300 space-y-6" method="post">
           <div class="space-y-4 overflow-hidden">
             <p>If you have a coupon code, please apply it below.</p>
 
             <section class="flex flex-wrap items-center gap-4">
-              <div class="flex-1 max-w-lg">
+              <div class="flex-1 max-w-lg input-wrapper">
                 <label for="coupon_code" class="screen-reader-text">Coupon:</label>
                 <input type="text" name="coupon_code" class="theme-input" placeholder="Coupon code" id="coupon_code" value="" />
               </div>
@@ -667,712 +670,715 @@
           </div>
         </form>
         <div class="woocommerce-notices-wrapper"></div>
-        <form
-          name="checkout"
-          method="post"
-          class="flex gap-8 mt-8 checkout woocommerce-checkout force-contained-rows max-lg:flex-col"
-          action="https://salmonbooks.deeboon.live/checkout/"
-          enctype="multipart/form-data"
-          novalidate="novalidate"
-        >
-          <div id="customer_details" class="flex-1">
-            <div class="flex-1 woocommerce-billing-fields">
-              <h3 class="mb-4 text-2xl font-bold">Billing details</h3>
+        <form name="checkout" method="post" class="checkout woocommerce-checkout" action="https://salmonbooks.deeboon.live/checkout/" enctype="multipart/form-data" novalidate="novalidate">
+          <div class="col2-set" id="customer_details">
+            <div class="col-1">
+              <div class="flex-1 woocommerce-billing-fields">
+                <h3 class="mb-4 text-2xl font-bold">Billing details</h3>
 
-              <div class="mb-12 woocommerce-billing-fields__field-wrapper">
-                <p class="form-row form-row-first validate-required" id="billing_first_name_field" data-priority="10">
-                  <label for="billing_first_name" class="">First name&nbsp;<abbr class="required" title="required">*</abbr></label
-                  ><span class="woocommerce-input-wrapper"
-                    ><input type="text" class="input-text" name="billing_first_name" id="billing_first_name" placeholder="" value="" autocomplete="given-name"
-                  /></span>
-                </p>
-                <p class="form-row form-row-last validate-required" id="billing_last_name_field" data-priority="20">
-                  <label for="billing_last_name" class="">Last name&nbsp;<abbr class="required" title="required">*</abbr></label
-                  ><span class="woocommerce-input-wrapper"
-                    ><input type="text" class="input-text" name="billing_last_name" id="billing_last_name" placeholder="" value="" autocomplete="family-name"
-                  /></span>
-                </p>
-                <p class="form-row form-row-wide" id="billing_company_field" data-priority="30">
-                  <label for="billing_company" class="">Company name&nbsp;<span class="optional">(optional)</span></label
-                  ><span class="woocommerce-input-wrapper"
-                    ><input type="text" class="input-text" name="billing_company" id="billing_company" placeholder="" value="" autocomplete="organization"
-                  /></span>
-                </p>
-
-                <p class="form-row form-row-wide address-field update_totals_on_change validate-required" id="billing_country_field" data-priority="40">
-                  <label for="billing_country" class="">Country / Region&nbsp;<abbr class="required" title="required">*</abbr></label
-                  ><span class="woocommerce-input-wrapper"
-                    ><select
-                      name="billing_country"
-                      id="billing_country"
-                      class="country_to_state country_select select2-hidden-accessible"
-                      autocomplete="country"
-                      data-placeholder="Select a country / region…"
-                      data-label="Country / Region"
-                      tabindex="-1"
-                      aria-hidden="true"
+                <div class="mb-12 woocommerce-billing-fields__field-wrapper">
+                  <p class="form-row form-row-first validate-required" id="billing_first_name_field" data-priority="10">
+                    <label for="billing_first_name" class="">First name&nbsp;<abbr class="required" title="required">*</abbr></label
+                    ><span class="woocommerce-input-wrapper"
+                      ><input type="text" class="input-text" name="billing_first_name" id="billing_first_name" placeholder="" value="" autocomplete="given-name"
+                    /></span>
+                  </p>
+                  <p class="form-row form-row-last validate-required" id="billing_last_name_field" data-priority="20">
+                    <label for="billing_last_name" class="">Last name&nbsp;<abbr class="required" title="required">*</abbr></label
+                    ><span class="woocommerce-input-wrapper"
+                      ><input type="text" class="input-text" name="billing_last_name" id="billing_last_name" placeholder="" value="" autocomplete="family-name"
+                    /></span>
+                  </p>
+                  <p class="form-row form-row-wide" id="billing_company_field" data-priority="30">
+                    <label for="billing_company" class="">Company name&nbsp;<span class="optional">(optional)</span></label
+                    ><span class="woocommerce-input-wrapper"
+                      ><input type="text" class="input-text" name="billing_company" id="billing_company" placeholder="" value="" autocomplete="organization"
+                    /></span>
+                  </p>
+                  <p class="form-row form-row-wide address-field update_totals_on_change validate-required" id="billing_country_field" data-priority="40">
+                    <label for="billing_country" class="">Country / Region&nbsp;<abbr class="required" title="required">*</abbr></label
+                    ><span class="woocommerce-input-wrapper"
+                      ><select
+                        name="billing_country"
+                        id="billing_country"
+                        class="country_to_state country_select select2-hidden-accessible"
+                        autocomplete="country"
+                        data-placeholder="Select a country / region…"
+                        data-label="Country / Region"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="">Select a country / region…</option>
+                        <option value="AF">Afghanistan</option>
+                        <option value="AX">Åland Islands</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AS">American Samoa</option>
+                        <option value="AD">Andorra</option>
+                        <option value="AO">Angola</option>
+                        <option value="AI">Anguilla</option>
+                        <option value="AQ">Antarctica</option>
+                        <option value="AG">Antigua and Barbuda</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AM">Armenia</option>
+                        <option value="AW">Aruba</option>
+                        <option value="AU">Australia</option>
+                        <option value="AT">Austria</option>
+                        <option value="AZ">Azerbaijan</option>
+                        <option value="BS">Bahamas</option>
+                        <option value="BH">Bahrain</option>
+                        <option value="BD">Bangladesh</option>
+                        <option value="BB">Barbados</option>
+                        <option value="BY">Belarus</option>
+                        <option value="PW">Belau</option>
+                        <option value="BE">Belgium</option>
+                        <option value="BZ">Belize</option>
+                        <option value="BJ">Benin</option>
+                        <option value="BM">Bermuda</option>
+                        <option value="BT">Bhutan</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BQ">Bonaire, Saint Eustatius and Saba</option>
+                        <option value="BA">Bosnia and Herzegovina</option>
+                        <option value="BW">Botswana</option>
+                        <option value="BV">Bouvet Island</option>
+                        <option value="BR">Brazil</option>
+                        <option value="IO">British Indian Ocean Territory</option>
+                        <option value="BN">Brunei</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="BF">Burkina Faso</option>
+                        <option value="BI">Burundi</option>
+                        <option value="KH">Cambodia</option>
+                        <option value="CM">Cameroon</option>
+                        <option value="CA">Canada</option>
+                        <option value="CV">Cape Verde</option>
+                        <option value="KY">Cayman Islands</option>
+                        <option value="CF">Central African Republic</option>
+                        <option value="TD">Chad</option>
+                        <option value="CL">Chile</option>
+                        <option value="CN">China</option>
+                        <option value="CX">Christmas Island</option>
+                        <option value="CC">Cocos (Keeling) Islands</option>
+                        <option value="CO">Colombia</option>
+                        <option value="KM">Comoros</option>
+                        <option value="CG">Congo (Brazzaville)</option>
+                        <option value="CD">Congo (Kinshasa)</option>
+                        <option value="CK">Cook Islands</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="HR">Croatia</option>
+                        <option value="CU">Cuba</option>
+                        <option value="CW">Curaçao</option>
+                        <option value="CY">Cyprus</option>
+                        <option value="CZ">Czech Republic</option>
+                        <option value="DK">Denmark</option>
+                        <option value="DJ">Djibouti</option>
+                        <option value="DM">Dominica</option>
+                        <option value="DO">Dominican Republic</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="EG">Egypt</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="GQ">Equatorial Guinea</option>
+                        <option value="ER">Eritrea</option>
+                        <option value="EE">Estonia</option>
+                        <option value="SZ">Eswatini</option>
+                        <option value="ET">Ethiopia</option>
+                        <option value="FK">Falkland Islands</option>
+                        <option value="FO">Faroe Islands</option>
+                        <option value="FJ">Fiji</option>
+                        <option value="FI">Finland</option>
+                        <option value="FR">France</option>
+                        <option value="GF">French Guiana</option>
+                        <option value="PF">French Polynesia</option>
+                        <option value="TF">French Southern Territories</option>
+                        <option value="GA">Gabon</option>
+                        <option value="GM">Gambia</option>
+                        <option value="GE">Georgia</option>
+                        <option value="DE">Germany</option>
+                        <option value="GH">Ghana</option>
+                        <option value="GI">Gibraltar</option>
+                        <option value="GR">Greece</option>
+                        <option value="GL">Greenland</option>
+                        <option value="GD">Grenada</option>
+                        <option value="GP">Guadeloupe</option>
+                        <option value="GU">Guam</option>
+                        <option value="GT">Guatemala</option>
+                        <option value="GG">Guernsey</option>
+                        <option value="GN">Guinea</option>
+                        <option value="GW">Guinea-Bissau</option>
+                        <option value="GY">Guyana</option>
+                        <option value="HT">Haiti</option>
+                        <option value="HM">Heard Island and McDonald Islands</option>
+                        <option value="HN">Honduras</option>
+                        <option value="HK">Hong Kong</option>
+                        <option value="HU">Hungary</option>
+                        <option value="IS">Iceland</option>
+                        <option value="IN">India</option>
+                        <option value="ID">Indonesia</option>
+                        <option value="IR">Iran</option>
+                        <option value="IQ">Iraq</option>
+                        <option value="IE">Ireland</option>
+                        <option value="IM">Isle of Man</option>
+                        <option value="IL">Israel</option>
+                        <option value="IT">Italy</option>
+                        <option value="CI">Ivory Coast</option>
+                        <option value="JM">Jamaica</option>
+                        <option value="JP">Japan</option>
+                        <option value="JE">Jersey</option>
+                        <option value="JO">Jordan</option>
+                        <option value="KZ">Kazakhstan</option>
+                        <option value="KE">Kenya</option>
+                        <option value="KI">Kiribati</option>
+                        <option value="KW">Kuwait</option>
+                        <option value="KG">Kyrgyzstan</option>
+                        <option value="LA">Laos</option>
+                        <option value="LV">Latvia</option>
+                        <option value="LB">Lebanon</option>
+                        <option value="LS">Lesotho</option>
+                        <option value="LR">Liberia</option>
+                        <option value="LY">Libya</option>
+                        <option value="LI">Liechtenstein</option>
+                        <option value="LT">Lithuania</option>
+                        <option value="LU">Luxembourg</option>
+                        <option value="MO">Macao</option>
+                        <option value="MG">Madagascar</option>
+                        <option value="MW">Malawi</option>
+                        <option value="MY">Malaysia</option>
+                        <option value="MV">Maldives</option>
+                        <option value="ML">Mali</option>
+                        <option value="MT">Malta</option>
+                        <option value="MH">Marshall Islands</option>
+                        <option value="MQ">Martinique</option>
+                        <option value="MR">Mauritania</option>
+                        <option value="MU">Mauritius</option>
+                        <option value="YT">Mayotte</option>
+                        <option value="MX">Mexico</option>
+                        <option value="FM">Micronesia</option>
+                        <option value="MD">Moldova</option>
+                        <option value="MC">Monaco</option>
+                        <option value="MN">Mongolia</option>
+                        <option value="ME">Montenegro</option>
+                        <option value="MS">Montserrat</option>
+                        <option value="MA">Morocco</option>
+                        <option value="MZ">Mozambique</option>
+                        <option value="MM">Myanmar</option>
+                        <option value="NA">Namibia</option>
+                        <option value="NR">Nauru</option>
+                        <option value="NP">Nepal</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="NC">New Caledonia</option>
+                        <option value="NZ">New Zealand</option>
+                        <option value="NI">Nicaragua</option>
+                        <option value="NE">Niger</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="NU">Niue</option>
+                        <option value="NF">Norfolk Island</option>
+                        <option value="KP">North Korea</option>
+                        <option value="MK">North Macedonia</option>
+                        <option value="MP">Northern Mariana Islands</option>
+                        <option value="NO">Norway</option>
+                        <option value="OM">Oman</option>
+                        <option value="PK">Pakistan</option>
+                        <option value="PS">Palestinian Territory</option>
+                        <option value="PA">Panama</option>
+                        <option value="PG">Papua New Guinea</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Peru</option>
+                        <option value="PH">Philippines</option>
+                        <option value="PN">Pitcairn</option>
+                        <option value="PL">Poland</option>
+                        <option value="PT">Portugal</option>
+                        <option value="PR">Puerto Rico</option>
+                        <option value="QA">Qatar</option>
+                        <option value="RE">Reunion</option>
+                        <option value="RO">Romania</option>
+                        <option value="RU">Russia</option>
+                        <option value="RW">Rwanda</option>
+                        <option value="ST">São Tomé and Príncipe</option>
+                        <option value="BL">Saint Barthélemy</option>
+                        <option value="SH">Saint Helena</option>
+                        <option value="KN">Saint Kitts and Nevis</option>
+                        <option value="LC">Saint Lucia</option>
+                        <option value="SX">Saint Martin (Dutch part)</option>
+                        <option value="MF">Saint Martin (French part)</option>
+                        <option value="PM">Saint Pierre and Miquelon</option>
+                        <option value="VC">Saint Vincent and the Grenadines</option>
+                        <option value="WS">Samoa</option>
+                        <option value="SM">San Marino</option>
+                        <option value="SA">Saudi Arabia</option>
+                        <option value="SN">Senegal</option>
+                        <option value="RS">Serbia</option>
+                        <option value="SC">Seychelles</option>
+                        <option value="SL">Sierra Leone</option>
+                        <option value="SG">Singapore</option>
+                        <option value="SK">Slovakia</option>
+                        <option value="SI">Slovenia</option>
+                        <option value="SB">Solomon Islands</option>
+                        <option value="SO">Somalia</option>
+                        <option value="ZA">South Africa</option>
+                        <option value="GS">South Georgia/Sandwich Islands</option>
+                        <option value="KR">South Korea</option>
+                        <option value="SS">South Sudan</option>
+                        <option value="ES">Spain</option>
+                        <option value="LK">Sri Lanka</option>
+                        <option value="SD">Sudan</option>
+                        <option value="SR">Suriname</option>
+                        <option value="SJ">Svalbard and Jan Mayen</option>
+                        <option value="SE">Sweden</option>
+                        <option value="CH">Switzerland</option>
+                        <option value="SY">Syria</option>
+                        <option value="TW">Taiwan</option>
+                        <option value="TJ">Tajikistan</option>
+                        <option value="TZ">Tanzania</option>
+                        <option value="TH" selected="selected">Thailand</option>
+                        <option value="TL">Timor-Leste</option>
+                        <option value="TG">Togo</option>
+                        <option value="TK">Tokelau</option>
+                        <option value="TO">Tonga</option>
+                        <option value="TT">Trinidad and Tobago</option>
+                        <option value="TN">Tunisia</option>
+                        <option value="TR">Turkey</option>
+                        <option value="TM">Turkmenistan</option>
+                        <option value="TC">Turks and Caicos Islands</option>
+                        <option value="TV">Tuvalu</option>
+                        <option value="UG">Uganda</option>
+                        <option value="UA">Ukraine</option>
+                        <option value="AE">United Arab Emirates</option>
+                        <option value="GB">United Kingdom (UK)</option>
+                        <option value="US">United States (US)</option>
+                        <option value="UM">United States (US) Minor Outlying Islands</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="UZ">Uzbekistan</option>
+                        <option value="VU">Vanuatu</option>
+                        <option value="VA">Vatican</option>
+                        <option value="VE">Venezuela</option>
+                        <option value="VN">Vietnam</option>
+                        <option value="VG">Virgin Islands (British)</option>
+                        <option value="VI">Virgin Islands (US)</option>
+                        <option value="WF">Wallis and Futuna</option>
+                        <option value="EH">Western Sahara</option>
+                        <option value="YE">Yemen</option>
+                        <option value="ZM">Zambia</option>
+                        <option value="ZW">Zimbabwe</option></select
+                      ><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 100%"
+                        ><span class="selection"
+                          ><span class="select2-selection select2-selection--single" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-label="Country / Region" role="combobox"
+                            ><span class="select2-selection__rendered" id="select2-billing_country-container" role="textbox" aria-readonly="true" title="Thailand">Thailand</span
+                            ><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span
+                        ><span class="dropdown-wrapper" aria-hidden="true"></span></span
+                      ><noscript><button type="submit" name="woocommerce_checkout_update_totals" value="Update country / region">Update country / region</button></noscript></span
                     >
-                      <option value="">Select a country / region…</option>
-                      <option value="AF">Afghanistan</option>
-                      <option value="AX">Åland Islands</option>
-                      <option value="AL">Albania</option>
-                      <option value="DZ">Algeria</option>
-                      <option value="AS">American Samoa</option>
-                      <option value="AD">Andorra</option>
-                      <option value="AO">Angola</option>
-                      <option value="AI">Anguilla</option>
-                      <option value="AQ">Antarctica</option>
-                      <option value="AG">Antigua and Barbuda</option>
-                      <option value="AR">Argentina</option>
-                      <option value="AM">Armenia</option>
-                      <option value="AW">Aruba</option>
-                      <option value="AU">Australia</option>
-                      <option value="AT">Austria</option>
-                      <option value="AZ">Azerbaijan</option>
-                      <option value="BS">Bahamas</option>
-                      <option value="BH">Bahrain</option>
-                      <option value="BD">Bangladesh</option>
-                      <option value="BB">Barbados</option>
-                      <option value="BY">Belarus</option>
-                      <option value="PW">Belau</option>
-                      <option value="BE">Belgium</option>
-                      <option value="BZ">Belize</option>
-                      <option value="BJ">Benin</option>
-                      <option value="BM">Bermuda</option>
-                      <option value="BT">Bhutan</option>
-                      <option value="BO">Bolivia</option>
-                      <option value="BQ">Bonaire, Saint Eustatius and Saba</option>
-                      <option value="BA">Bosnia and Herzegovina</option>
-                      <option value="BW">Botswana</option>
-                      <option value="BV">Bouvet Island</option>
-                      <option value="BR">Brazil</option>
-                      <option value="IO">British Indian Ocean Territory</option>
-                      <option value="BN">Brunei</option>
-                      <option value="BG">Bulgaria</option>
-                      <option value="BF">Burkina Faso</option>
-                      <option value="BI">Burundi</option>
-                      <option value="KH">Cambodia</option>
-                      <option value="CM">Cameroon</option>
-                      <option value="CA">Canada</option>
-                      <option value="CV">Cape Verde</option>
-                      <option value="KY">Cayman Islands</option>
-                      <option value="CF">Central African Republic</option>
-                      <option value="TD">Chad</option>
-                      <option value="CL">Chile</option>
-                      <option value="CN">China</option>
-                      <option value="CX">Christmas Island</option>
-                      <option value="CC">Cocos (Keeling) Islands</option>
-                      <option value="CO">Colombia</option>
-                      <option value="KM">Comoros</option>
-                      <option value="CG">Congo (Brazzaville)</option>
-                      <option value="CD">Congo (Kinshasa)</option>
-                      <option value="CK">Cook Islands</option>
-                      <option value="CR">Costa Rica</option>
-                      <option value="HR">Croatia</option>
-                      <option value="CU">Cuba</option>
-                      <option value="CW">Curaçao</option>
-                      <option value="CY">Cyprus</option>
-                      <option value="CZ">Czech Republic</option>
-                      <option value="DK">Denmark</option>
-                      <option value="DJ">Djibouti</option>
-                      <option value="DM">Dominica</option>
-                      <option value="DO">Dominican Republic</option>
-                      <option value="EC">Ecuador</option>
-                      <option value="EG">Egypt</option>
-                      <option value="SV">El Salvador</option>
-                      <option value="GQ">Equatorial Guinea</option>
-                      <option value="ER">Eritrea</option>
-                      <option value="EE">Estonia</option>
-                      <option value="SZ">Eswatini</option>
-                      <option value="ET">Ethiopia</option>
-                      <option value="FK">Falkland Islands</option>
-                      <option value="FO">Faroe Islands</option>
-                      <option value="FJ">Fiji</option>
-                      <option value="FI">Finland</option>
-                      <option value="FR">France</option>
-                      <option value="GF">French Guiana</option>
-                      <option value="PF">French Polynesia</option>
-                      <option value="TF">French Southern Territories</option>
-                      <option value="GA">Gabon</option>
-                      <option value="GM">Gambia</option>
-                      <option value="GE">Georgia</option>
-                      <option value="DE">Germany</option>
-                      <option value="GH">Ghana</option>
-                      <option value="GI">Gibraltar</option>
-                      <option value="GR">Greece</option>
-                      <option value="GL">Greenland</option>
-                      <option value="GD">Grenada</option>
-                      <option value="GP">Guadeloupe</option>
-                      <option value="GU">Guam</option>
-                      <option value="GT">Guatemala</option>
-                      <option value="GG">Guernsey</option>
-                      <option value="GN">Guinea</option>
-                      <option value="GW">Guinea-Bissau</option>
-                      <option value="GY">Guyana</option>
-                      <option value="HT">Haiti</option>
-                      <option value="HM">Heard Island and McDonald Islands</option>
-                      <option value="HN">Honduras</option>
-                      <option value="HK">Hong Kong</option>
-                      <option value="HU">Hungary</option>
-                      <option value="IS">Iceland</option>
-                      <option value="IN">India</option>
-                      <option value="ID">Indonesia</option>
-                      <option value="IR">Iran</option>
-                      <option value="IQ">Iraq</option>
-                      <option value="IE">Ireland</option>
-                      <option value="IM">Isle of Man</option>
-                      <option value="IL">Israel</option>
-                      <option value="IT">Italy</option>
-                      <option value="CI">Ivory Coast</option>
-                      <option value="JM">Jamaica</option>
-                      <option value="JP">Japan</option>
-                      <option value="JE">Jersey</option>
-                      <option value="JO">Jordan</option>
-                      <option value="KZ">Kazakhstan</option>
-                      <option value="KE">Kenya</option>
-                      <option value="KI">Kiribati</option>
-                      <option value="KW">Kuwait</option>
-                      <option value="KG">Kyrgyzstan</option>
-                      <option value="LA">Laos</option>
-                      <option value="LV">Latvia</option>
-                      <option value="LB">Lebanon</option>
-                      <option value="LS">Lesotho</option>
-                      <option value="LR">Liberia</option>
-                      <option value="LY">Libya</option>
-                      <option value="LI">Liechtenstein</option>
-                      <option value="LT">Lithuania</option>
-                      <option value="LU">Luxembourg</option>
-                      <option value="MO">Macao</option>
-                      <option value="MG">Madagascar</option>
-                      <option value="MW">Malawi</option>
-                      <option value="MY">Malaysia</option>
-                      <option value="MV">Maldives</option>
-                      <option value="ML">Mali</option>
-                      <option value="MT">Malta</option>
-                      <option value="MH">Marshall Islands</option>
-                      <option value="MQ">Martinique</option>
-                      <option value="MR">Mauritania</option>
-                      <option value="MU">Mauritius</option>
-                      <option value="YT">Mayotte</option>
-                      <option value="MX">Mexico</option>
-                      <option value="FM">Micronesia</option>
-                      <option value="MD">Moldova</option>
-                      <option value="MC">Monaco</option>
-                      <option value="MN">Mongolia</option>
-                      <option value="ME">Montenegro</option>
-                      <option value="MS">Montserrat</option>
-                      <option value="MA">Morocco</option>
-                      <option value="MZ">Mozambique</option>
-                      <option value="MM">Myanmar</option>
-                      <option value="NA">Namibia</option>
-                      <option value="NR">Nauru</option>
-                      <option value="NP">Nepal</option>
-                      <option value="NL">Netherlands</option>
-                      <option value="NC">New Caledonia</option>
-                      <option value="NZ">New Zealand</option>
-                      <option value="NI">Nicaragua</option>
-                      <option value="NE">Niger</option>
-                      <option value="NG">Nigeria</option>
-                      <option value="NU">Niue</option>
-                      <option value="NF">Norfolk Island</option>
-                      <option value="KP">North Korea</option>
-                      <option value="MK">North Macedonia</option>
-                      <option value="MP">Northern Mariana Islands</option>
-                      <option value="NO">Norway</option>
-                      <option value="OM">Oman</option>
-                      <option value="PK">Pakistan</option>
-                      <option value="PS">Palestinian Territory</option>
-                      <option value="PA">Panama</option>
-                      <option value="PG">Papua New Guinea</option>
-                      <option value="PY">Paraguay</option>
-                      <option value="PE">Peru</option>
-                      <option value="PH">Philippines</option>
-                      <option value="PN">Pitcairn</option>
-                      <option value="PL">Poland</option>
-                      <option value="PT">Portugal</option>
-                      <option value="PR">Puerto Rico</option>
-                      <option value="QA">Qatar</option>
-                      <option value="RE">Reunion</option>
-                      <option value="RO">Romania</option>
-                      <option value="RU">Russia</option>
-                      <option value="RW">Rwanda</option>
-                      <option value="ST">São Tomé and Príncipe</option>
-                      <option value="BL">Saint Barthélemy</option>
-                      <option value="SH">Saint Helena</option>
-                      <option value="KN">Saint Kitts and Nevis</option>
-                      <option value="LC">Saint Lucia</option>
-                      <option value="SX">Saint Martin (Dutch part)</option>
-                      <option value="MF">Saint Martin (French part)</option>
-                      <option value="PM">Saint Pierre and Miquelon</option>
-                      <option value="VC">Saint Vincent and the Grenadines</option>
-                      <option value="WS">Samoa</option>
-                      <option value="SM">San Marino</option>
-                      <option value="SA">Saudi Arabia</option>
-                      <option value="SN">Senegal</option>
-                      <option value="RS">Serbia</option>
-                      <option value="SC">Seychelles</option>
-                      <option value="SL">Sierra Leone</option>
-                      <option value="SG">Singapore</option>
-                      <option value="SK">Slovakia</option>
-                      <option value="SI">Slovenia</option>
-                      <option value="SB">Solomon Islands</option>
-                      <option value="SO">Somalia</option>
-                      <option value="ZA">South Africa</option>
-                      <option value="GS">South Georgia/Sandwich Islands</option>
-                      <option value="KR">South Korea</option>
-                      <option value="SS">South Sudan</option>
-                      <option value="ES">Spain</option>
-                      <option value="LK">Sri Lanka</option>
-                      <option value="SD">Sudan</option>
-                      <option value="SR">Suriname</option>
-                      <option value="SJ">Svalbard and Jan Mayen</option>
-                      <option value="SE">Sweden</option>
-                      <option value="CH">Switzerland</option>
-                      <option value="SY">Syria</option>
-                      <option value="TW">Taiwan</option>
-                      <option value="TJ">Tajikistan</option>
-                      <option value="TZ">Tanzania</option>
-                      <option value="TH" selected="selected">Thailand</option>
-                      <option value="TL">Timor-Leste</option>
-                      <option value="TG">Togo</option>
-                      <option value="TK">Tokelau</option>
-                      <option value="TO">Tonga</option>
-                      <option value="TT">Trinidad and Tobago</option>
-                      <option value="TN">Tunisia</option>
-                      <option value="TR">Turkey</option>
-                      <option value="TM">Turkmenistan</option>
-                      <option value="TC">Turks and Caicos Islands</option>
-                      <option value="TV">Tuvalu</option>
-                      <option value="UG">Uganda</option>
-                      <option value="UA">Ukraine</option>
-                      <option value="AE">United Arab Emirates</option>
-                      <option value="GB">United Kingdom (UK)</option>
-                      <option value="US">United States (US)</option>
-                      <option value="UM">United States (US) Minor Outlying Islands</option>
-                      <option value="UY">Uruguay</option>
-                      <option value="UZ">Uzbekistan</option>
-                      <option value="VU">Vanuatu</option>
-                      <option value="VA">Vatican</option>
-                      <option value="VE">Venezuela</option>
-                      <option value="VN">Vietnam</option>
-                      <option value="VG">Virgin Islands (British)</option>
-                      <option value="VI">Virgin Islands (US)</option>
-                      <option value="WF">Wallis and Futuna</option>
-                      <option value="EH">Western Sahara</option>
-                      <option value="YE">Yemen</option>
-                      <option value="ZM">Zambia</option>
-                      <option value="ZW">Zimbabwe</option></select
-                    ><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%"
-                      ><span class="selection"
-                        ><span class="select2-selection select2-selection--single" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-label="Country / Region" role="combobox"
-                          ><span class="select2-selection__rendered" id="select2-billing_country-container" role="textbox" aria-readonly="true" title="Thailand">Thailand</span
-                          ><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span
-                      ><span class="dropdown-wrapper" aria-hidden="true"></span></span
-                    ><noscript><button type="submit" name="woocommerce_checkout_update_totals" value="Update country / region">Update country / region</button></noscript></span
+                  </p>
+                  <p class="form-row address-field validate-required form-row-wide" id="billing_address_1_field" data-priority="50">
+                    <label for="billing_address_1" class="">Street address&nbsp;<abbr class="required" title="required">*</abbr></label
+                    ><span class="woocommerce-input-wrapper"
+                      ><input
+                        type="text"
+                        class="input-text"
+                        name="billing_address_1"
+                        id="billing_address_1"
+                        placeholder="House number and street name"
+                        value=""
+                        autocomplete="address-line1"
+                        data-placeholder="House number and street name"
+                    /></span>
+                  </p>
+                  <p class="form-row address-field form-row-wide" id="billing_address_2_field" data-priority="60">
+                    <label for="billing_address_2" class="screen-reader-text">Apartment, suite, unit, etc.&nbsp;<span class="optional">(optional)</span></label
+                    ><span class="woocommerce-input-wrapper"
+                      ><input
+                        type="text"
+                        class="input-text"
+                        name="billing_address_2"
+                        id="billing_address_2"
+                        placeholder="Apartment, suite, unit, etc. (optional)"
+                        value=""
+                        autocomplete="address-line2"
+                        data-placeholder="Apartment, suite, unit, etc. (optional)"
+                    /></span>
+                  </p>
+                  <p class="form-row address-field validate-required form-row-wide" id="billing_city_field" data-priority="70" data-o_class="form-row form-row-wide address-field validate-required">
+                    <label for="billing_city" class="">Town / City&nbsp;<abbr class="required" title="required">*</abbr></label
+                    ><span class="woocommerce-input-wrapper"><input type="text" class="input-text" name="billing_city" id="billing_city" placeholder="" value="" autocomplete="address-level2" /></span>
+                  </p>
+                  <p
+                    class="form-row address-field validate-required validate-state form-row-wide"
+                    id="billing_state_field"
+                    data-priority="80"
+                    data-o_class="form-row form-row-wide address-field validate-required validate-state"
                   >
-                </p>
-                <p class="form-row address-field validate-required form-row-wide" id="billing_address_1_field" data-priority="50">
-                  <label for="billing_address_1" class="">Street address&nbsp;<abbr class="required" title="required">*</abbr></label
-                  ><span class="woocommerce-input-wrapper"
-                    ><input
-                      type="text"
-                      class="input-text"
-                      name="billing_address_1"
-                      id="billing_address_1"
-                      placeholder="House number and street name"
-                      value=""
-                      autocomplete="address-line1"
-                      data-placeholder="House number and street name"
-                  /></span>
-                </p>
-                <p class="form-row address-field form-row-wide" id="billing_address_2_field" data-priority="60">
-                  <label for="billing_address_2" class="screen-reader-text">Apartment, suite, unit, etc.&nbsp;<span class="optional">(optional)</span></label
-                  ><span class="woocommerce-input-wrapper"
-                    ><input
-                      type="text"
-                      class="input-text"
-                      name="billing_address_2"
-                      id="billing_address_2"
-                      placeholder="Apartment, suite, unit, etc. (optional)"
-                      value=""
-                      autocomplete="address-line2"
-                      data-placeholder="Apartment, suite, unit, etc. (optional)"
-                  /></span>
-                </p>
-                <p class="form-row address-field validate-required form-row-wide" id="billing_city_field" data-priority="70" data-o_class="form-row form-row-wide address-field validate-required">
-                  <label for="billing_city" class="">Town / City&nbsp;<abbr class="required" title="required">*</abbr></label
-                  ><span class="woocommerce-input-wrapper"><input type="text" class="input-text" name="billing_city" id="billing_city" placeholder="" value="" autocomplete="address-level2" /></span>
-                </p>
-                <p
-                  class="form-row address-field validate-required validate-state form-row-wide"
-                  id="billing_state_field"
-                  data-priority="80"
-                  data-o_class="form-row form-row-wide address-field validate-required validate-state"
-                >
-                  <label for="billing_state" class="">State / County&nbsp;<abbr class="required" title="required">*</abbr></label
-                  ><span class="woocommerce-input-wrapper"
-                    ><select
-                      name="billing_state"
-                      id="billing_state"
-                      class="state_select select2-hidden-accessible"
-                      autocomplete="address-level1"
-                      data-placeholder="Select an option…"
-                      data-input-classes=""
-                      data-label="State / County"
-                      tabindex="-1"
-                      aria-hidden="true"
-                    >
-                      <option value="">Select an option…</option>
-                      <option value="TH-37">Amnat Charoen</option>
-                      <option value="TH-15">Ang Thong</option>
-                      <option value="TH-14">Ayutthaya</option>
-                      <option value="TH-10">Bangkok</option>
-                      <option value="TH-38">Bueng Kan</option>
-                      <option value="TH-31">Buri Ram</option>
-                      <option value="TH-24">Chachoengsao</option>
-                      <option value="TH-18">Chai Nat</option>
-                      <option value="TH-36">Chaiyaphum</option>
-                      <option value="TH-22">Chanthaburi</option>
-                      <option value="TH-50">Chiang Mai</option>
-                      <option value="TH-57">Chiang Rai</option>
-                      <option value="TH-20">Chonburi</option>
-                      <option value="TH-86">Chumphon</option>
-                      <option value="TH-46">Kalasin</option>
-                      <option value="TH-62">Kamphaeng Phet</option>
-                      <option value="TH-71">Kanchanaburi</option>
-                      <option value="TH-40">Khon Kaen</option>
-                      <option value="TH-81">Krabi</option>
-                      <option value="TH-52">Lampang</option>
-                      <option value="TH-51">Lamphun</option>
-                      <option value="TH-42">Loei</option>
-                      <option value="TH-16">Lopburi</option>
-                      <option value="TH-58">Mae Hong Son</option>
-                      <option value="TH-44">Maha Sarakham</option>
-                      <option value="TH-49">Mukdahan</option>
-                      <option value="TH-26">Nakhon Nayok</option>
-                      <option value="TH-73">Nakhon Pathom</option>
-                      <option value="TH-48">Nakhon Phanom</option>
-                      <option value="TH-30">Nakhon Ratchasima</option>
-                      <option value="TH-60">Nakhon Sawan</option>
-                      <option value="TH-80">Nakhon Si Thammarat</option>
-                      <option value="TH-55">Nan</option>
-                      <option value="TH-96">Narathiwat</option>
-                      <option value="TH-39">Nong Bua Lam Phu</option>
-                      <option value="TH-43">Nong Khai</option>
-                      <option value="TH-12">Nonthaburi</option>
-                      <option value="TH-13">Pathum Thani</option>
-                      <option value="TH-94">Pattani</option>
-                      <option value="TH-82">Phang Nga</option>
-                      <option value="TH-93">Phatthalung</option>
-                      <option value="TH-56">Phayao</option>
-                      <option value="TH-67">Phetchabun</option>
-                      <option value="TH-76">Phetchaburi</option>
-                      <option value="TH-66">Phichit</option>
-                      <option value="TH-65">Phitsanulok</option>
-                      <option value="TH-54">Phrae</option>
-                      <option value="TH-83">Phuket</option>
-                      <option value="TH-25">Prachin Buri</option>
-                      <option value="TH-77">Prachuap Khiri Khan</option>
-                      <option value="TH-85">Ranong</option>
-                      <option value="TH-70">Ratchaburi</option>
-                      <option value="TH-21">Rayong</option>
-                      <option value="TH-45">Roi Et</option>
-                      <option value="TH-27">Sa Kaeo</option>
-                      <option value="TH-47">Sakon Nakhon</option>
-                      <option value="TH-11">Samut Prakan</option>
-                      <option value="TH-74">Samut Sakhon</option>
-                      <option value="TH-75">Samut Songkhram</option>
-                      <option value="TH-19">Saraburi</option>
-                      <option value="TH-91">Satun</option>
-                      <option value="TH-17">Sing Buri</option>
-                      <option value="TH-33">Sisaket</option>
-                      <option value="TH-90">Songkhla</option>
-                      <option value="TH-64">Sukhothai</option>
-                      <option value="TH-72">Suphan Buri</option>
-                      <option value="TH-84">Surat Thani</option>
-                      <option value="TH-32">Surin</option>
-                      <option value="TH-63">Tak</option>
-                      <option value="TH-92">Trang</option>
-                      <option value="TH-23">Trat</option>
-                      <option value="TH-34">Ubon Ratchathani</option>
-                      <option value="TH-41">Udon Thani</option>
-                      <option value="TH-61">Uthai Thani</option>
-                      <option value="TH-53">Uttaradit</option>
-                      <option value="TH-95">Yala</option>
-                      <option value="TH-35">Yasothon</option></select
-                    ><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%"
-                      ><span class="selection"
-                        ><span class="select2-selection select2-selection--single" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-label="State / County" role="combobox"
-                          ><span class="select2-selection__rendered" id="select2-billing_state-container" role="textbox" aria-readonly="true" title="Bangkok">Bangkok</span
-                          ><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span
-                      ><span class="dropdown-wrapper" aria-hidden="true"></span></span
-                  ></span>
-                </p>
-                <p
-                  class="form-row address-field validate-required validate-postcode form-row-wide"
-                  id="billing_postcode_field"
-                  data-priority="90"
-                  data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
-                >
-                  <label for="billing_postcode" class="">Postcode / ZIP&nbsp;<abbr class="required" title="required">*</abbr></label
-                  ><span class="woocommerce-input-wrapper"
-                    ><input type="text" class="input-text" name="billing_postcode" id="billing_postcode" placeholder="" value="" autocomplete="postal-code"
-                  /></span>
-                </p>
-                <p class="form-row form-row-wide validate-required validate-phone" id="billing_phone_field" data-priority="100">
-                  <label for="billing_phone" class="">Phone&nbsp;<abbr class="required" title="required">*</abbr></label
-                  ><span class="woocommerce-input-wrapper"><input type="tel" class="input-text" name="billing_phone" id="billing_phone" placeholder="" value="" autocomplete="tel" /></span>
-                </p>
-                <p class="form-row form-row-wide validate-required validate-email" id="billing_email_field" data-priority="110">
-                  <label for="billing_email" class="">Email address&nbsp;<abbr class="required" title="required">*</abbr></label
-                  ><span class="woocommerce-input-wrapper"
-                    ><input type="email" class="input-text" name="billing_email" id="billing_email" placeholder="" value="" autocomplete="email username"
-                  /></span>
+                    <label for="billing_state" class="">State / County&nbsp;<abbr class="required" title="required">*</abbr></label
+                    ><span class="woocommerce-input-wrapper"
+                      ><select
+                        name="billing_state"
+                        id="billing_state"
+                        class="state_select select2-hidden-accessible"
+                        autocomplete="address-level1"
+                        data-placeholder="Select an option…"
+                        data-input-classes=""
+                        data-label="State / County"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="">Select an option…</option>
+                        <option value="TH-37">Amnat Charoen</option>
+                        <option value="TH-15">Ang Thong</option>
+                        <option value="TH-14">Ayutthaya</option>
+                        <option value="TH-10">Bangkok</option>
+                        <option value="TH-38">Bueng Kan</option>
+                        <option value="TH-31">Buri Ram</option>
+                        <option value="TH-24">Chachoengsao</option>
+                        <option value="TH-18">Chai Nat</option>
+                        <option value="TH-36">Chaiyaphum</option>
+                        <option value="TH-22">Chanthaburi</option>
+                        <option value="TH-50">Chiang Mai</option>
+                        <option value="TH-57">Chiang Rai</option>
+                        <option value="TH-20">Chonburi</option>
+                        <option value="TH-86">Chumphon</option>
+                        <option value="TH-46">Kalasin</option>
+                        <option value="TH-62">Kamphaeng Phet</option>
+                        <option value="TH-71">Kanchanaburi</option>
+                        <option value="TH-40">Khon Kaen</option>
+                        <option value="TH-81">Krabi</option>
+                        <option value="TH-52">Lampang</option>
+                        <option value="TH-51">Lamphun</option>
+                        <option value="TH-42">Loei</option>
+                        <option value="TH-16">Lopburi</option>
+                        <option value="TH-58">Mae Hong Son</option>
+                        <option value="TH-44">Maha Sarakham</option>
+                        <option value="TH-49">Mukdahan</option>
+                        <option value="TH-26">Nakhon Nayok</option>
+                        <option value="TH-73">Nakhon Pathom</option>
+                        <option value="TH-48">Nakhon Phanom</option>
+                        <option value="TH-30">Nakhon Ratchasima</option>
+                        <option value="TH-60">Nakhon Sawan</option>
+                        <option value="TH-80">Nakhon Si Thammarat</option>
+                        <option value="TH-55">Nan</option>
+                        <option value="TH-96">Narathiwat</option>
+                        <option value="TH-39">Nong Bua Lam Phu</option>
+                        <option value="TH-43">Nong Khai</option>
+                        <option value="TH-12">Nonthaburi</option>
+                        <option value="TH-13">Pathum Thani</option>
+                        <option value="TH-94">Pattani</option>
+                        <option value="TH-82">Phang Nga</option>
+                        <option value="TH-93">Phatthalung</option>
+                        <option value="TH-56">Phayao</option>
+                        <option value="TH-67">Phetchabun</option>
+                        <option value="TH-76">Phetchaburi</option>
+                        <option value="TH-66">Phichit</option>
+                        <option value="TH-65">Phitsanulok</option>
+                        <option value="TH-54">Phrae</option>
+                        <option value="TH-83">Phuket</option>
+                        <option value="TH-25">Prachin Buri</option>
+                        <option value="TH-77">Prachuap Khiri Khan</option>
+                        <option value="TH-85">Ranong</option>
+                        <option value="TH-70">Ratchaburi</option>
+                        <option value="TH-21">Rayong</option>
+                        <option value="TH-45">Roi Et</option>
+                        <option value="TH-27">Sa Kaeo</option>
+                        <option value="TH-47">Sakon Nakhon</option>
+                        <option value="TH-11">Samut Prakan</option>
+                        <option value="TH-74">Samut Sakhon</option>
+                        <option value="TH-75">Samut Songkhram</option>
+                        <option value="TH-19">Saraburi</option>
+                        <option value="TH-91">Satun</option>
+                        <option value="TH-17">Sing Buri</option>
+                        <option value="TH-33">Sisaket</option>
+                        <option value="TH-90">Songkhla</option>
+                        <option value="TH-64">Sukhothai</option>
+                        <option value="TH-72">Suphan Buri</option>
+                        <option value="TH-84">Surat Thani</option>
+                        <option value="TH-32">Surin</option>
+                        <option value="TH-63">Tak</option>
+                        <option value="TH-92">Trang</option>
+                        <option value="TH-23">Trat</option>
+                        <option value="TH-34">Ubon Ratchathani</option>
+                        <option value="TH-41">Udon Thani</option>
+                        <option value="TH-61">Uthai Thani</option>
+                        <option value="TH-53">Uttaradit</option>
+                        <option value="TH-95">Yala</option>
+                        <option value="TH-35">Yasothon</option></select
+                      ><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%"
+                        ><span class="selection"
+                          ><span class="select2-selection select2-selection--single" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-label="State / County" role="combobox"
+                            ><span class="select2-selection__rendered" id="select2-billing_state-container" role="textbox" aria-readonly="true" title="Bangkok">Bangkok</span
+                            ><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span
+                        ><span class="dropdown-wrapper" aria-hidden="true"></span></span
+                    ></span>
+                  </p>
+                  <p
+                    class="form-row address-field validate-required validate-postcode form-row-wide"
+                    id="billing_postcode_field"
+                    data-priority="90"
+                    data-o_class="form-row form-row-wide address-field validate-required validate-postcode"
+                  >
+                    <label for="billing_postcode" class="">Postcode / ZIP&nbsp;<abbr class="required" title="required">*</abbr></label
+                    ><span class="woocommerce-input-wrapper"
+                      ><input type="text" class="input-text" name="billing_postcode" id="billing_postcode" placeholder="" value="" autocomplete="postal-code"
+                    /></span>
+                  </p>
+                  <p class="form-row form-row-wide validate-required validate-phone" id="billing_phone_field" data-priority="100">
+                    <label for="billing_phone" class="">Phone&nbsp;<abbr class="required" title="required">*</abbr></label
+                    ><span class="woocommerce-input-wrapper"><input type="tel" class="input-text" name="billing_phone" id="billing_phone" placeholder="" value="" autocomplete="tel" /></span>
+                  </p>
+                  <p class="form-row form-row-wide validate-required validate-email" id="billing_email_field" data-priority="110">
+                    <label for="billing_email" class="">Email address&nbsp;<abbr class="required" title="required">*</abbr></label
+                    ><span class="woocommerce-input-wrapper"
+                      ><input type="email" class="input-text" name="billing_email" id="billing_email" placeholder="" value="" autocomplete="email username"
+                    /></span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="woocommerce-account-fields">
+                <p class="form-row form-row-wide create-account woocommerce-validated">
+                  <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                    <input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" type="checkbox" name="createaccount" value="1" />
+                    <span>Create an account?</span>
+                  </label>
                 </p>
               </div>
-            </div>
+              <div class="woocommerce-shipping-fields"></div>
+              <div class="mb-8 woocommerce-additional-fields">
+                <h3 class="mb-2 text-2xl font-bold">Additional information</h3>
 
-            <div class="mb-6 woocommerce-account-fields">
-              <p class="form-row form-row-wide create-account woocommerce-validated">
-                <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
-                  <input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" type="checkbox" name="createaccount" value="1" />
-                  <span>Create an account?</span>
-                </label>
-              </p>
-            </div>
-            <div class="woocommerce-shipping-fields"></div>
-            <div class="woocommerce-additional-fields">
-              <h3 class="text-2xl font-bold">Additional information</h3>
-
-              <div class="woocommerce-additional-fields__field-wrapper">
-                <p class="form-row notes" id="order_comments_field" data-priority="">
-                  <label for="order_comments" class="">Order notes&nbsp;<span class="optional">(optional)</span></label
-                  ><span class="woocommerce-input-wrapper">
-                    <textarea name="order_comments" class="input-text" id="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="2" cols="5"></textarea>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <section class="flex-[0.75]">
-            <h3 id="order_review_heading" class="mb-4 text-2xl font-bold">Your order</h3>
-
-            <div id="order_review" class="woocommerce-checkout-review-order">
-              <table class="shop_table woocommerce-checkout-review-order-table">
-                <thead>
-                  <tr>
-                    <th class="product-name">Product</th>
-                    <th class="product-total">Subtotal</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="cart_item">
-                    <td class="product-name">
-                      <div class="flex items-center gap-x-2">
-                        <a href="" target="_blank">
-                          <img
-                            src="https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_ONEARTH-04.jpg"
-                            alt=""
-                            width="300"
-                            height="300"
-                            class="object-contain w-16 mt-0 sm:w-20 aspect-square"
-                          />
-                        </a>
-                        FILMMAKER, FAILMAKER บันทึกกำ (กับ)&nbsp; <strong class="product-quantity">×&nbsp;1</strong>
-                      </div>
-                    </td>
-                    <td class="product-total">
-                      <span class="woocommerce-Price-amount amount"
-                        ><bdi><span class="woocommerce-Price-currencySymbol">฿</span>270.00</bdi></span
-                      >
-                    </td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr class="cart-subtotal">
-                    <th>Subtotal</th>
-                    <td>
-                      <span class="woocommerce-Price-amount amount"
-                        ><bdi><span class="woocommerce-Price-currencySymbol">฿</span>270.00</bdi></span
-                      >
-                    </td>
-                  </tr>
-
-                  <tr class="order-total">
-                    <th>Total</th>
-                    <td>
-                      <strong
-                        ><span class="woocommerce-Price-amount amount"
-                          ><bdi><span class="woocommerce-Price-currencySymbol">฿</span>270.00</bdi></span
-                        ></strong
-                      >
-                    </td>
-                  </tr>
-                </tfoot>
-              </table>
-
-              <div id="payment" class="woocommerce-checkout-payment [&_li]:list-none">
-                <ul class="wc_payment_methods payment_methods methods">
-                  <li class="wc_payment_method payment_method_omise_internetbanking">
-                    <input id="payment_method_omise_internetbanking" type="radio" class="input-radio" name="payment_method" value="omise_internetbanking" checked="checked" data-order_button_text="" />
-
-                    <label for="payment_method_omise_internetbanking"> Internet Banking </label>
-                    <div class="payment_box payment_method_omise_internetbanking">
-                      <fieldset id="omise-form-internetbanking">
-                        <ul class="omise-banks-list">
-                          <!-- BAY -->
-                          <li class="item">
-                            <input id="internet_banking_bay" type="radio" name="omise-offsite" value="internet_banking_bay" />
-                            <label for="internet_banking_bay">
-                              <div class="bank-logo bay"></div>
-                              <div class="bank-label">
-                                <span class="title">Krungsri Bank</span><br />
-                                <span class="omise-secondary-text">Fee: 15 THB (same zone), 15 THB (out zone)</span>
-                              </div>
-                            </label>
-                          </li>
-
-                          <!-- BBL -->
-                          <li class="item">
-                            <input id="internet_banking_bbl" type="radio" name="omise-offsite" value="internet_banking_bbl" />
-                            <label for="internet_banking_bbl">
-                              <div class="bank-logo bbl"></div>
-                              <div class="bank-label">
-                                <span class="title">Bangkok Bank</span><br />
-                                <span class="omise-secondary-text">Fee: 10 THB (same zone), 20 THB (out zone)</span>
-                              </div>
-                            </label>
-                          </li>
-                        </ul>
-                      </fieldset>
-                    </div>
-                  </li>
-                  <li class="wc_payment_method payment_method_omise_mobilebanking">
-                    <input id="payment_method_omise_mobilebanking" type="radio" class="input-radio" name="payment_method" value="omise_mobilebanking" data-order_button_text="" />
-
-                    <label for="payment_method_omise_mobilebanking"> Mobile Banking </label>
-                    <div class="payment_box payment_method_omise_mobilebanking" style="display: none">
-                      <fieldset id="omise-form-mobliebanking">
-                        <ul class="omise-banks-list">
-                          <li class="item mobile-banking">
-                            <div>
-                              <input id="mobile_banking_kbank" type="radio" name="omise-offsite" value="mobile_banking_kbank" />
-                              <label for="mobile_banking_kbank">
-                                <div class="mobile-banking-logo kplus"></div>
-                                <div class="mobile-banking-label"><span class="title">K PLUS</span><br /></div>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="item mobile-banking">
-                            <div>
-                              <input id="mobile_banking_bay" type="radio" name="omise-offsite" value="mobile_banking_bay" />
-                              <label for="mobile_banking_bay">
-                                <div class="mobile-banking-logo bay"></div>
-                                <div class="mobile-banking-label"><span class="title">KMA</span><br /></div>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="item mobile-banking">
-                            <div>
-                              <input id="mobile_banking_scb" type="radio" name="omise-offsite" value="mobile_banking_scb" />
-                              <label for="mobile_banking_scb">
-                                <div class="mobile-banking-logo scb"></div>
-                                <div class="mobile-banking-label"><span class="title">SCB EASY</span><br /></div>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="item mobile-banking">
-                            <div>
-                              <input id="mobile_banking_bbl" type="radio" name="omise-offsite" value="mobile_banking_bbl" />
-                              <label for="mobile_banking_bbl">
-                                <div class="mobile-banking-logo bbl"></div>
-                                <div class="mobile-banking-label"><span class="title">Bualuang mBanking</span><br /></div>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="item mobile-banking">
-                            <div>
-                              <input id="mobile_banking_ktb" type="radio" name="omise-offsite" value="mobile_banking_ktb" />
-                              <label for="mobile_banking_ktb">
-                                <div class="mobile-banking-logo ktb"></div>
-                                <div class="mobile-banking-label"><span class="title">Krungthai NEXT</span><br /></div>
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </fieldset>
-                    </div>
-                  </li>
-                  <li class="wc_payment_method payment_method_omise_promptpay">
-                    <input id="payment_method_omise_promptpay" type="radio" class="input-radio" name="payment_method" value="omise_promptpay" data-order_button_text="" />
-
-                    <label for="payment_method_omise_promptpay"> PromptPay </label>
-                  </li>
-                  <li class="wc_payment_method payment_method_omise_truemoney">
-                    <input id="payment_method_omise_truemoney" type="radio" class="input-radio" name="payment_method" value="omise_truemoney" data-order_button_text="" />
-
-                    <label for="payment_method_omise_truemoney"> TrueMoney Wallet </label>
-                    <div class="payment_box payment_method_omise_truemoney" style="display: none">
-                      <fieldset id="omise-form-truemoney">
-                        TrueMoney phone number<br />
-
-                        <p id="omise_phone_number_default_field" class="form-row form-row-wide omise-label-inline woocommerce-validated">
-                          <input id="omise_phone_number_default" type="checkbox" name="omise_phone_number_default" value="1" checked="checked" />
-                          <label for="omise_phone_number_default">Same as Billing Detail</label>
-                        </p>
-
-                        <p id="omise_phone_number_field" class="form-row form-row-wide woocommerce-validated" style="display: none">
-                          <span class="woocommerce-input-wrapper">
-                            <input id="omise_phone_number" class="input-text" name="omise_phone_number" type="tel" autocomplete="off" />
-                          </span>
-                        </p>
-
-                        <p class="omise-secondary-text">One-Time Password (OTP) will be sent to the phone number above</p>
-                      </fieldset>
-
-                      <script type="text/javascript">
-                        var phone_number_field = document.getElementById("omise_phone_number_field");
-                        var phone_number_default = document.getElementById("omise_phone_number_default");
-
-                        phone_number_default.addEventListener("change", (e) => {
-                          phone_number_field.style.display = e.target.checked ? "none" : "block";
-                        });
-                      </script>
-                    </div>
-                  </li>
-                  <li class="wc_payment_method payment_method_omise_rabbit_linepay">
-                    <input id="payment_method_omise_rabbit_linepay" type="radio" class="input-radio" name="payment_method" value="omise_rabbit_linepay" data-order_button_text="" />
-
-                    <label for="payment_method_omise_rabbit_linepay"> Rabbit LINE Pay </label>
-                  </li>
-                </ul>
-                <div class="form-row place-order">
-                  <noscript>
-                    Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than
-                    the amount stated above if you fail to do so. <br /><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Update totals">Update totals</button>
-                  </noscript>
-
-                  <div class="mb-6 woocommerce-terms-and-conditions-wrapper">
-                    <div class="woocommerce-privacy-policy-text">
-                      <p>
-                        Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our
-                        <a href="https://salmonbooks.deeboon.live/?page_id=3" class="woocommerce-privacy-policy-link" target="_blank">privacy policy</a>.
-                      </p>
-                    </div>
-                  </div>
-
-                  <button type="submit" class="button alt" name="woocommerce_checkout_place_order btn-orange " id="place_order" value="Place order" data-value="Place order">Place order</button>
-
-                  <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="9c16861557" /><input
-                    type="hidden"
-                    name="_wp_http_referer"
-                    value="/?wc-ajax=update_order_review"
-                  />
+                <div class="woocommerce-additional-fields__field-wrapper">
+                  <p class="form-row notes" id="order_comments_field" data-priority="">
+                    <label for="order_comments" class="">Order notes&nbsp;<span class="optional">(optional)</span></label
+                    ><span class="woocommerce-input-wrapper">
+                      <textarea name="order_comments" class="input-text" id="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="2" cols="5"></textarea>
+                    </span>
+                  </p>
                 </div>
               </div>
             </div>
-          </section>
+
+            <div class="col-2">
+              <h3 class="mb-4 text-2xl font-bold" id="order_review_heading">Your order</h3>
+
+              <div id="order_review" class="woocommerce-checkout-review-order">
+                <table class="shop_table woocommerce-checkout-review-order-table">
+                  <tbody>
+                    <tr class="cart_item">
+                      <td class="product-image">
+                        <a href="https://salmonbooks.deeboon.live/product/failmaker/"
+                          ><img
+                            width="300"
+                            height="300"
+                            src="https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_FAIL-04-300x300.jpg"
+                            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                            alt=""
+                            decoding="async"
+                            loading="lazy"
+                            srcset="
+                              https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_FAIL-04-300x300.jpg 300w,
+                              https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_FAIL-04-150x150.jpg 150w,
+                              https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_FAIL-04-100x100.jpg 100w
+                            "
+                        /></a>
+                      </td>
+                      <td class="product-info">
+                        <div class="inner">
+                          <h4><a href="https://salmonbooks.deeboon.live/product/failmaker/">FILMMAKER, FAILMAKER บันทึกกำ (กับ)</a> <strong class="product-quantity">Quantity&nbsp;1</strong></h4>
+                        </div>
+                        <span class="woocommerce-Price-amount amount"
+                          ><bdi><span class="woocommerce-Price-currencySymbol">฿</span>270.00</bdi></span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr class="cart-subtotal">
+                      <th>Subtotal</th>
+                      <td>
+                        <span class="woocommerce-Price-amount amount"
+                          ><bdi><span class="woocommerce-Price-currencySymbol">฿</span>270.00</bdi></span
+                        >
+                      </td>
+                    </tr>
+
+                    <tr class="order-total">
+                      <th>Total</th>
+                      <td>
+                        <strong
+                          ><span class="woocommerce-Price-amount amount"
+                            ><bdi><span class="woocommerce-Price-currencySymbol">฿</span>270.00</bdi></span
+                          ></strong
+                        >
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+                <div id="payment" class="woocommerce-checkout-payment">
+                  <ul class="wc_payment_methods payment_methods methods">
+                    <li class="wc_payment_method payment_method_omise_internetbanking">
+                      <input
+                        id="payment_method_omise_internetbanking"
+                        type="radio"
+                        class="input-radio"
+                        name="payment_method"
+                        value="omise_internetbanking"
+                        checked="checked"
+                        data-order_button_text=""
+                      />
+
+                      <label for="payment_method_omise_internetbanking"> Internet Banking </label>
+                      <div class="payment_box payment_method_omise_internetbanking">
+                        <fieldset id="omise-form-internetbanking">
+                          <ul class="omise-banks-list">
+                            <!-- BAY -->
+                            <li class="item">
+                              <input id="internet_banking_bay" type="radio" name="omise-offsite" value="internet_banking_bay" />
+                              <label for="internet_banking_bay">
+                                <div class="bank-logo bay"></div>
+                                <div class="bank-label">
+                                  <span class="title">Krungsri Bank</span><br />
+                                  <span class="omise-secondary-text">Fee: 15 THB (same zone), 15 THB (out zone)</span>
+                                </div>
+                              </label>
+                            </li>
+
+                            <!-- BBL -->
+                            <li class="item">
+                              <input id="internet_banking_bbl" type="radio" name="omise-offsite" value="internet_banking_bbl" />
+                              <label for="internet_banking_bbl">
+                                <div class="bank-logo bbl"></div>
+                                <div class="bank-label">
+                                  <span class="title">Bangkok Bank</span><br />
+                                  <span class="omise-secondary-text">Fee: 10 THB (same zone), 20 THB (out zone)</span>
+                                </div>
+                              </label>
+                            </li>
+                          </ul>
+                        </fieldset>
+                      </div>
+                    </li>
+                    <li class="wc_payment_method payment_method_omise_mobilebanking">
+                      <input id="payment_method_omise_mobilebanking" type="radio" class="input-radio" name="payment_method" value="omise_mobilebanking" data-order_button_text="" />
+
+                      <label for="payment_method_omise_mobilebanking"> Mobile Banking </label>
+                      <div class="payment_box payment_method_omise_mobilebanking" style="display: none">
+                        <fieldset id="omise-form-mobliebanking">
+                          <ul class="omise-banks-list">
+                            <li class="item mobile-banking">
+                              <div>
+                                <input id="mobile_banking_kbank" type="radio" name="omise-offsite" value="mobile_banking_kbank" />
+                                <label for="mobile_banking_kbank">
+                                  <div class="mobile-banking-logo kplus"></div>
+                                  <div class="mobile-banking-label"><span class="title">K PLUS</span><br /></div>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="item mobile-banking">
+                              <div>
+                                <input id="mobile_banking_bay" type="radio" name="omise-offsite" value="mobile_banking_bay" />
+                                <label for="mobile_banking_bay">
+                                  <div class="mobile-banking-logo bay"></div>
+                                  <div class="mobile-banking-label"><span class="title">KMA</span><br /></div>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="item mobile-banking">
+                              <div>
+                                <input id="mobile_banking_scb" type="radio" name="omise-offsite" value="mobile_banking_scb" />
+                                <label for="mobile_banking_scb">
+                                  <div class="mobile-banking-logo scb"></div>
+                                  <div class="mobile-banking-label"><span class="title">SCB EASY</span><br /></div>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="item mobile-banking">
+                              <div>
+                                <input id="mobile_banking_bbl" type="radio" name="omise-offsite" value="mobile_banking_bbl" />
+                                <label for="mobile_banking_bbl">
+                                  <div class="mobile-banking-logo bbl"></div>
+                                  <div class="mobile-banking-label"><span class="title">Bualuang mBanking</span><br /></div>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="item mobile-banking">
+                              <div>
+                                <input id="mobile_banking_ktb" type="radio" name="omise-offsite" value="mobile_banking_ktb" />
+                                <label for="mobile_banking_ktb">
+                                  <div class="mobile-banking-logo ktb"></div>
+                                  <div class="mobile-banking-label"><span class="title">Krungthai NEXT</span><br /></div>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </fieldset>
+                      </div>
+                    </li>
+                    <li class="wc_payment_method payment_method_omise_promptpay">
+                      <input id="payment_method_omise_promptpay" type="radio" class="input-radio" name="payment_method" value="omise_promptpay" data-order_button_text="" />
+
+                      <label for="payment_method_omise_promptpay"> PromptPay </label>
+                    </li>
+                    <li class="wc_payment_method payment_method_omise_truemoney">
+                      <input id="payment_method_omise_truemoney" type="radio" class="input-radio" name="payment_method" value="omise_truemoney" data-order_button_text="" />
+
+                      <label for="payment_method_omise_truemoney"> TrueMoney Wallet </label>
+                      <div class="payment_box payment_method_omise_truemoney" style="display: none">
+                        <fieldset id="omise-form-truemoney">
+                          TrueMoney phone number<br />
+
+                          <p id="omise_phone_number_default_field" class="form-row form-row-wide omise-label-inline woocommerce-validated">
+                            <input id="omise_phone_number_default" type="checkbox" name="omise_phone_number_default" value="1" checked="checked" />
+                            <label for="omise_phone_number_default">Same as Billing Detail</label>
+                          </p>
+
+                          <p id="omise_phone_number_field" class="form-row form-row-wide woocommerce-validated" style="display: none">
+                            <span class="woocommerce-input-wrapper">
+                              <input id="omise_phone_number" class="input-text" name="omise_phone_number" type="tel" autocomplete="off" />
+                            </span>
+                          </p>
+
+                          <p class="omise-secondary-text">One-Time Password (OTP) will be sent to the phone number above</p>
+                        </fieldset>
+
+                        <script type="text/javascript">
+                          var phone_number_field = document.getElementById("omise_phone_number_field");
+                          var phone_number_default = document.getElementById("omise_phone_number_default");
+
+                          phone_number_default.addEventListener("change", (e) => {
+                            phone_number_field.style.display = e.target.checked ? "none" : "block";
+                          });
+                        </script>
+                      </div>
+                    </li>
+                    <li class="wc_payment_method payment_method_omise_rabbit_linepay">
+                      <input id="payment_method_omise_rabbit_linepay" type="radio" class="input-radio" name="payment_method" value="omise_rabbit_linepay" data-order_button_text="" />
+
+                      <label for="payment_method_omise_rabbit_linepay"> Rabbit LINE Pay </label>
+                    </li>
+                  </ul>
+                  <div class="form-row place-order">
+                    <noscript>
+                      Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more
+                      than the amount stated above if you fail to do so. <br /><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Update totals">
+                        Update totals
+                      </button>
+                    </noscript>
+
+                    <div class="woocommerce-terms-and-conditions-wrapper">
+                      <div class="woocommerce-privacy-policy-text">
+                        <p>
+                          Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our
+                          <a href="https://salmonbooks.deeboon.live/?page_id=3" class="woocommerce-privacy-policy-link" target="_blank">privacy policy</a>.
+                        </p>
+                      </div>
+                    </div>
+
+                    <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">Place order</button>
+
+                    <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="9c16861557" /><input
+                      type="hidden"
+                      name="_wp_http_referer"
+                      value="/?wc-ajax=update_order_review"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     </main>
@@ -1529,6 +1535,6 @@
     <script id="child-local-theme-js-extra">
       var server_object = { ajax_url: "https:\/\/salmonbooks.deeboon.live\/wp-admin\/admin-ajax.php" };
     </script>
-    <script type="module" src="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/js/theme.js?ver=1698894902" id="child-local-theme-js"></script>
+    <script type="module" src="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/js/theme.js?ver=1698917465" id="child-local-theme-js"></script>
   </body>
 </html>
