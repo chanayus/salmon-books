@@ -250,6 +250,126 @@
   width: 6px;
 }
 
+.woocommerce-checkout #payment {
+  background: transparent !important;
+}
+
+button#place_order {
+  width: 100% !important;
+  margin: 0 auto;
+  max-width: 30rem !important;
+}
+
+.woocommerce-checkout #payment div.payment_box {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em;
+  margin: 1em 0;
+  font-size: 0.92em;
+  border-radius: 2px;
+  line-height: 1.5;
+  background-color: transparent !important;
+  color: #515151;
+}
+.woocommerce-checkout #payment div.payment_box .bank-label, .woocommerce-checkout #payment div.payment_box .mobile-banking-label {
+  margin-left: 0.625rem !important;
+}
+.woocommerce-checkout #payment div.payment_box #omise_phone_number_default_field {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex !important;
+  align-items: center;
+  flex-direction: row !important;
+}
+
+.woocommerce-checkout #payment div.payment_box::before {
+  display: none !important;
+}
+
+.woocommerce table.shop_table thead {
+  display: none;
+}
+
+.woocommerce table.shop_table {
+  background: #fff;
+  padding: 1rem;
+  border: none !important;
+}
+
+.woocommerce table.shop_table tbody tr:last-of-type td,
+.woocommerce table.shop_table tbody tr:last-of-type th {
+  border-top: none !important;
+}
+
+.woocommerce table.shop_table tfoot tr:last-of-type td,
+.woocommerce table.shop_table tfoot tr:last-of-type th {
+  border-top: none !important;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  row-gap: 0.25rem;
+}
+.form-row abbr {
+  color: black;
+}
+.form-row label {
+  font-size: 0.875rem;
+}
+.form-row .show-password-button {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.form-row .show-password-button::after {
+  position: absolute;
+  content: url('data:image/svg+xml;utf8,<svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 16 16" height="1.5rem" width="1.25rem" xmlns="http://www.w3.org/2000/svg"><path d="M7.99993 6.00316C9.47266 6.00316 10.6666 7.19708 10.6666 8.66981C10.6666 10.1426 9.47266 11.3365 7.99993 11.3365C6.52715 11.3365 5.33324 10.1426 5.33324 8.66981C5.33324 7.19708 6.52715 6.00316 7.99993 6.00316ZM7.99993 7.00315C7.07946 7.00315 6.33324 7.74935 6.33324 8.66981C6.33324 9.59028 7.07946 10.3365 7.99993 10.3365C8.9204 10.3365 9.6666 9.59028 9.6666 8.66981C9.6666 7.74935 8.9204 7.00315 7.99993 7.00315ZM7.99993 3.66675C11.0756 3.66675 13.7307 5.76675 14.4673 8.70968C14.5344 8.97755 14.3716 9.24908 14.1037 9.31615C13.8358 9.38315 13.5643 9.22041 13.4973 8.95248C12.8713 6.45205 10.6141 4.66675 7.99993 4.66675C5.38454 4.66675 3.12664 6.45359 2.50182 8.95555C2.43491 9.22341 2.16348 9.38635 1.89557 9.31948C1.62766 9.25255 1.46471 8.98115 1.53162 8.71321C2.26701 5.76856 4.9229 3.66675 7.99993 3.66675Z"></path></svg>');
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.form-row:has(input:required, select:required) label {
+  position: relative;
+}
+.form-row:has(input:required, select:required) label::after {
+  content: " *";
+}
+.form-row input, .form-row select, .form-row textarea {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.form-row input:hover, .form-row select:hover, .form-row textarea:hover {
+  border-color: rgb(252, 116, 74);
+}
+.form-row input:is(select), .form-row select:is(select), .form-row textarea:is(select) {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z' /><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 99.75%;
+  background-position-y: 50%;
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+  border-color: rgb(252, 116, 74);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.form-row input[type=text] ~ .show-password-button, .form-row select[type=text] ~ .show-password-button, .form-row textarea[type=text] ~ .show-password-button {
+  opacity: 0.25;
+}
+.form-row input::-webkit-outer-spin-button, .form-row input::-webkit-inner-spin-button, .form-row select::-webkit-outer-spin-button, .form-row select::-webkit-inner-spin-button, .form-row textarea::-webkit-outer-spin-button, .form-row textarea::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 nav #mobile-nav-menu-button {
   width: 1.5rem;
   height: 1rem;
