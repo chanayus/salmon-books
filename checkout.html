@@ -49,6 +49,41 @@
         </a>
       </div>
 
+      <div class="woocommerce-notices-wrapper"></div>
+
+      <div class="px-4 py-3 mb-2 text-white woocommerce-form-login-toggle bg-orange">
+        <div class="woocommerce-info">Returning customer? <a id="login-form-toggle" class="duration-100 border-b border-transparent cursor-pointer hover:border-white">Click here to login</a></div>
+      </div>
+      <form id="login-form" action="" class="woocommerce-form woocommerce-form-login login w-full mb-6 grid grid-rows-[0fr] transition-[grid-template-rows,padding] duration-300 space-y-6">
+        <div class="space-y-4 overflow-hidden">
+          <p>If you have shopped with us before, please enter your details below. If you are a new customer, please proceed to the Billing section.</p>
+          <section class="flex gap-4 max-sm:flex-col">
+            <div class="flex-1 input-wrapper">
+              <label for="username" class="text-sm">Username or Email</label>
+              <input type="text" class="theme-input" required id="username" name="username" autocomplete="username" />
+            </div>
+            <div class="flex-1 input-wrapper input-password">
+              <label for="password-input" class="text-sm">Password</label>
+              <input type="password" class="theme-input" required id="password-input" />
+              <button type="button" class="woocommerce-Input show-password-button"></button>
+            </div>
+          </section>
+          <section class="flex items-center gap-x-4">
+            <button type="submit" name="login" value="Login" class="woocommerce-button button woocommerce-form-login__submit btn-orange max-w-fit">Log in</button>
+            <div class="flex items-center gap-x-1.5">
+              <input type="hidden" name="_wp_http_referer" value="/checkout/" />
+              <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="53f81ed304" />
+              <input type="hidden" name="redirect" value="https://shop.websitecafe.info/checkout/" />
+              <input type="checkbox" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="53f81ed304" id="remember-me" />
+              <label for="remember-me" class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">Remember me</label>
+            </div>
+          </section>
+          <a class="block" href="./forgot-password.html">Lost your password?</a>
+        </div>
+      </form>
+
+      <div class="woocommerce-notices-wrapper"></div>
+
       <div class="px-4 py-3 mb-4 text-white woocommerce-form-coupon-toggle bg-orange">
         <div class="woocommerce-info">Have a coupon? <a id="coupon-toggle" class="duration-100 border-b border-transparent cursor-pointer hover:border-white">Click here to enter your code</a></div>
       </div>
@@ -71,7 +106,7 @@
       <form name="checkout" action="" method="" enctype="multipart/form-data" novalidate="novalidate" class="checkout woocommerce-checkout force-contained-rows">
         <div class="flex gap-8 mt-8 max-lg:flex-col" id="customer_details">
           <div class="flex-1 woocommerce-billing-fields">
-            <h3 class="mb-4 text-2xl font-bold">Billing detail</h3>
+            <h3 class="text-2xl font-bold max-lg:mb-4">Billing detail</h3>
             <div class="mb-12 space-y-4 woocommerce-billing-fields__field-wrapper">
               <div class="lg:!inline-block lg:max-w-[calc(50%-0.5rem)] lg:mr-2 w-full input-wrapper" id="billing_first_name_field" data-priority="10">
                 <label for="firstname" class="text-sm">First name</label>
@@ -151,6 +186,14 @@
                   <input type="email" class="theme-input" required id="email" />
                 </span>
               </section>
+            </div>
+            <div class="mb-8 woocommerce-account-fields">
+              <p class="form-row form-row-wide create-account woocommerce-validated">
+                <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                  <input class="mr-1 woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" type="checkbox" name="createaccount" value="1" />
+                  <span>Create an account?</span>
+                </label>
+              </p>
             </div>
             <div class="space-y-4 woocommerce-additional-fields">
               <h3 class="text-2xl font-bold">Additional information</h3>
@@ -246,11 +289,20 @@
                     </div>
                   </li>
                 </ul>
-                <div class="form-row place-order">
+                <div class="mt-8 form-row place-order">
                   <noscript>
                     Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than
                     the amount stated above if you fail to do so. <br /><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Update totals">Update totals</button>
                   </noscript>
+
+                  <div class="woocommerce-terms-and-conditions-wrapper">
+                    <div class="woocommerce-privacy-policy-text">
+                      <p>
+                        Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our
+                        <a href="https://shop.websitecafe.info/?page_id=3" class="woocommerce-privacy-policy-link" target="_blank">privacy policy</a>.
+                      </p>
+                    </div>
+                  </div>
 
                   <div class="hidden woocommerce-terms-and-conditions-wrapper">
                     <div class="woocommerce-privacy-policy-text desc">
