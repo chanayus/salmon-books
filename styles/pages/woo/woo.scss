@@ -1,5 +1,63 @@
 @import "../../modules/colors";
 
+// base
+
+.woocommerce {
+    h1 {
+        display: block;
+        font-size: 2rem;
+        margin-top: 0.67rem;
+        margin-bottom: 0.67rem;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+    h2 {
+        display: block;
+        font-size: 1.5rem;
+        margin-top: 0.83rem;
+        margin-bottom: 0.83rem;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+    h3 {
+        display: block;
+        font-size: 1.17rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+    h4 {
+        display: block;
+        margin-top: 1.33rem;
+        margin-bottom: 1.33rem;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+    h5 {
+        display: block;
+        font-size: 0.83rem;
+        margin-top: 1.67rem;
+        margin-bottom: 1.67rem;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+    h6 {
+        display: block;
+        font-size: 0.67rem;
+        margin-top: 2.33rem;
+        margin-bottom: 2.33rem;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+}
+
 ul {
     padding: 0;
 }
@@ -20,6 +78,8 @@ ul li {
     top: 50% !important;
     transform: translateY(-50%) !important;
 }
+
+// Check out Page
 
 .woocommerce-checkout-review-order-table {
     font-size: 1rem !important;
@@ -90,9 +150,6 @@ button#place_order {
     display: none !important;
 }
 
-.woocommerce table.shop_table thead {
-    // display: none;
-}
 .woocommerce table.shop_table {
     background: #fff;
     padding: 0.75rem;
@@ -201,4 +258,54 @@ button#place_order {
 
 div.payment_box {
     margin-top: 0 !important;
+}
+
+// order confirm page
+
+.woocommerce-order-overview,
+.wc-bacs-bank-details {
+    margin-bottom: 3.5rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    & li {
+        display: flex;
+        flex-direction: column;
+        padding: 0.75rem 1.5rem;
+        background: #fff;
+        border-radius: 0.25rem;
+    }
+}
+
+.woocommerce-table--order-details {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+
+    & th,
+    & td {
+        padding: 1rem;
+        border: 1px solid rgba(#000000, 0.15);
+        text-align: left !important;
+    }
+
+    & tr {
+        background: #eee;
+    }
+}
+
+.woocommerce-customer-details address {
+    width: 100%;
+    background: #eee;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(#000000, 0.15);
+}
+
+.woocommerce-order-details {
+    margin-bottom: 3rem;
+}
+p.woocommerce-notice {
+    margin-bottom: 1rem;
 }

@@ -20,6 +20,7 @@
     </script>
     <link rel="stylesheet" href="./styles/pages/global/global.css" />
     <link rel="stylesheet" href="./styles/pages/auth/auth.css" />
+    <link rel="stylesheet" href="./styles/pages/woo/woo.css" />
 
     <!-- Components -->
     <script src="./components/navbar.js"></script>
@@ -38,8 +39,8 @@
   <body>
     <navbar-component></navbar-component>
 
-    <main id="main-content" class="mt-8 space-y-6 main-container">
-      <div class="flex justify-end gap-x-6">
+    <main id="main-content" class="mt-8 main-container">
+      <div class="flex justify-end mb-8 gap-x-6">
         <a href="./account-detail.html">
           <img src="./icons/user-black.svg" alt="" class="w-6" />
         </a>
@@ -48,136 +49,94 @@
         </a>
       </div>
 
-      <div class="space-y-12">
-        <section class="space-y-4">
-          <p class="text-lg">Thank you. Your order has been received.</p>
-          <div class="flex flex-wrap gap-2">
-            <div class="px-6 py-3 bg-white border rounded">
-              <p class="text-sm">ORDER NUMBER:</p>
-              <b>1647</b>
-            </div>
-            <div class="px-6 py-3 bg-white border rounded">
-              <p class="text-sm">DATE:</p>
-              <b>October 3, 2023</b>
-            </div>
-            <div class="px-6 py-3 bg-white border rounded">
-              <p class="text-sm">EMAIL:</p>
-              <b>info@deeboon.com</b>
-            </div>
-            <div class="px-6 py-3 bg-white border rounded">
-              <p class="text-sm">TOTAL:</p>
-              <b>฿159.00</b>
-            </div>
-            <div class="px-6 py-3 bg-white border rounded">
-              <p class="text-sm">PAYMENT METHOD:</p>
-              <b>Direct bank transfer</b>
-            </div>
-          </div>
-        </section>
-
-        <section class="space-y-4">
-          <h3 class="text-4xl"><b>Our bank details</b></h3>
-          <h4 class="text-2xl"><b>123456:</b></h4>
-          <div class="flex flex-wrap gap-2">
-            <div class="px-6 py-3 bg-white border rounded">
-              <p class="text-sm">BANK:</p>
-              <b>11111</b>
-            </div>
-            <div class="px-6 py-3 bg-white border rounded">
-              <p class="text-sm">ACCOUNT NUMBER:</p>
-              <b>54321</b>
-            </div>
-            <div class="px-6 py-3 bg-white border rounded">
-              <p class="text-sm">SORT CODE:</p>
-              <b>22222</b>
-            </div>
-            <div class="px-6 py-3 bg-white border rounded">
-              <p class="text-sm">IBAN:</p>
-              <b>33333</b>
-            </div>
-            <div class="px-6 py-3 bg-white border rounded">
-              <p class="text-sm">BIC:</p>
-              <b>44444</b>
-            </div>
-          </div>
-        </section>
-
-        <section class="space-y-4">
-          <h3 class="text-4xl"><b>Order details</b></h3>
-          <table class="woocommerce-table woocommerce-table--order-details table-fixed w-full text-left border-collapse [&_tr_th,&_tr_td]:border-black/10 [&_tr_th,&_tr_td]:border [&_th,&_td]:p-3">
-            <thead>
-              <tr>
-                <th class="w-4/6">Product</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody class="[&>tr:nth-child(odd)]:bg-white/60">
-              <tr class="woocommerce-table__line-item">
-                <td class="woocommerce-table__product-name">ON EARTH WE'RE BRIEFLY GORGEOUS เราต่างงดงามแล้วจางหาย x 1</td>
-                <td class="woocommerce-table__product-total product-total">
-                  <span class="woocommerce-Price-amount amount"
-                    ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
-                  >
-                </td>
-              </tr>
-              <tr class="woocommerce-table__line-item">
-                <td class="woocommerce-table__product-name">Vid regnbågens slut finns en katt x 1</td>
-                <td class="woocommerce-table__product-total product-total">
-                  <span class="woocommerce-Price-amount amount"
-                    ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
-                  >
-                </td>
-              </tr>
-              <tr class="woocommerce-table__line-item">
-                <td class="woocommerce-table__product-name">Våga våga x 1</td>
-                <td class="woocommerce-table__product-total product-total">
-                  <span class="woocommerce-Price-amount amount"
-                    ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
-                  >
-                </td>
-              </tr>
-              <tr class="woocommerce-table__line-item">
-                <td class="woocommerce-table__product-name">Närmare x 1</td>
-                <td class="woocommerce-table__product-total product-total">
-                  <span class="woocommerce-Price-amount amount"
-                    ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
-                  >
-                </td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td>Subtotal:</td>
-                <td>฿300.00</td>
-              </tr>
-              <tr>
-                <td>Pay method:</td>
-                <td>฿300.00</td>
-              </tr>
-              <tr>
-                <th>Total:</th>
-                <th>฿300.00</th>
-              </tr>
-            </tfoot>
-          </table>
-        </section>
-
-        <section class="space-y-4">
-          <h3 class="text-4xl"><b>Billing address</b></h3>
-          <div class="w-full p-4 border rounded bg-white/60 border-black/10">
-            <p>Bukayo Saka</p>
-            <p>Deeboon Ltd,.Part,</p>
-            <p>47/402 Industry Condominium Building (Narita Building) 7th Floor (NOO7035)</p>
-            <p>Poppulat Road, Banmai</p>
-            <p>Pak Kret</p>
-            <p>Nonthaburi</p>
-            <p>11120</p>
-            <p>Thailand</p>
-            <p>012345678</p>
-
-            <p>asd@hotmail.com</p>
-          </div>
-        </section>
+      <div class="woocommerce">
+        <div class="woocommerce-order">
+          <p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received">Thank you. Your order has been received.</p>
+          <ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
+            <li class="woocommerce-order-overview__order order">Order number: <strong>1673</strong></li>
+            <li class="woocommerce-order-overview__date date">Date: <strong>November 2, 2023</strong></li>
+            <li class="woocommerce-order-overview__email email">Email: <strong>chanayus1526@gmail.com</strong></li>
+            <li class="woocommerce-order-overview__total total">
+              Total:
+              <strong
+                ><span class="woocommerce-Price-amount amount"
+                  ><bdi><span class="woocommerce-Price-currencySymbol">$</span>79.99</bdi></span
+                ></strong
+              >
+            </li>
+            <li class="woocommerce-order-overview__payment-method method">Payment method: <strong>Direct bank transfer</strong></li>
+          </ul>
+          <section class="woocommerce-bacs-bank-details">
+            <h2 class="wc-bacs-bank-details-heading">Our bank details</h2>
+            <h3 class="wc-bacs-bank-details-account-name">12345:</h3>
+            <ul class="wc-bacs-bank-details order_details bacs_details">
+              <li class="bank_name">Bank: <strong>11111</strong></li>
+              <li class="account_number">Account number: <strong>54321</strong></li>
+              <li class="sort_code">Sort code: <strong>22222</strong></li>
+              <li class="iban">IBAN: <strong>33333</strong></li>
+              <li class="bic">BIC: <strong>44444</strong></li>
+            </ul>
+          </section>
+          <section class="woocommerce-order-details">
+            <h2 class="woocommerce-order-details__title">Order details</h2>
+            <table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
+              <thead>
+                <tr>
+                  <th class="woocommerce-table__product-name product-name">Product</th>
+                  <th class="woocommerce-table__product-table product-total">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="woocommerce-table__line-item order_item">
+                  <td class="woocommerce-table__product-name product-name">
+                    <a href="https://shop.websitecafe.info/product/acne-defense-cleanser/">Acne Defense Cleanser</a> <strong class="product-quantity">×&nbsp;1</strong>
+                  </td>
+                  <td class="woocommerce-table__product-total product-total">
+                    <span class="woocommerce-Price-amount amount"
+                      ><bdi><span class="woocommerce-Price-currencySymbol">$</span>29.99</bdi></span
+                    >
+                  </td>
+                </tr>
+                <tr class="woocommerce-table__line-item order_item">
+                  <td class="woocommerce-table__product-name product-name">
+                    <a href="https://shop.websitecafe.info/product/bha-liquid-exfoliant/">BHA Liquid Exfoliant</a> <strong class="product-quantity">×&nbsp;1</strong>
+                  </td>
+                  <td class="woocommerce-table__product-total product-total">
+                    <span class="woocommerce-Price-amount amount"
+                      ><bdi><span class="woocommerce-Price-currencySymbol">$</span>50.00</bdi></span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row">Subtotal:</th>
+                  <td>
+                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>79.99</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Payment method:</th>
+                  <td>Direct bank transfer</td>
+                </tr>
+                <tr>
+                  <th scope="row">Total:</th>
+                  <td>
+                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>79.99</span>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </section>
+          <section class="woocommerce-customer-details">
+            <h2 class="woocommerce-column__title">Billing address</h2>
+            <address>
+              asdasd asdasd<br />-<br />asdasd 1235135<br />asdasd 15313513<br />asdasd<br />CA<br />10540<br />Wallis and Futuna
+              <p class="woocommerce-customer-details--phone">0123456789</p>
+              <p class="woocommerce-customer-details--email">chanayus1526@gmail.com</p>
+            </address>
+          </section>
+        </div>
       </div>
     </main>
 

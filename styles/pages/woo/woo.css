@@ -1,3 +1,57 @@
+.woocommerce h1 {
+  display: block;
+  font-size: 2rem;
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+.woocommerce h2 {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 0.83rem;
+  margin-bottom: 0.83rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+.woocommerce h3 {
+  display: block;
+  font-size: 1.17rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+.woocommerce h4 {
+  display: block;
+  margin-top: 1.33rem;
+  margin-bottom: 1.33rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+.woocommerce h5 {
+  display: block;
+  font-size: 0.83rem;
+  margin-top: 1.67rem;
+  margin-bottom: 1.67rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+.woocommerce h6 {
+  display: block;
+  font-size: 0.67rem;
+  margin-top: 2.33rem;
+  margin-bottom: 2.33rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
 ul {
   padding: 0;
 }
@@ -191,4 +245,51 @@ button#place_order {
 
 div.payment_box {
   margin-top: 0 !important;
+}
+
+.woocommerce-order-overview,
+.wc-bacs-bank-details {
+  margin-bottom: 3.5rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.woocommerce-order-overview li,
+.wc-bacs-bank-details li {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  border-radius: 0.25rem;
+}
+
+.woocommerce-table--order-details {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+.woocommerce-table--order-details th, .woocommerce-table--order-details td {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  text-align: left !important;
+}
+.woocommerce-table--order-details tr {
+  background: #eee;
+}
+
+.woocommerce-customer-details address {
+  width: 100%;
+  background: #eee;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.woocommerce-order-details {
+  margin-bottom: 3rem;
+}
+
+p.woocommerce-notice {
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=woo.css.map */
