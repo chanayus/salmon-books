@@ -409,10 +409,7 @@ button#place_order {
 }
 
 .woocommerce table.shop_table tbody tr:last-of-type td,
-.woocommerce table.shop_table tbody tr:last-of-type th {
-  border-top: none !important;
-}
-
+.woocommerce table.shop_table tbody tr:last-of-type th,
 .woocommerce table.shop_table tfoot tr:last-of-type td,
 .woocommerce table.shop_table tfoot tr:last-of-type th {
   border-top: none !important;
