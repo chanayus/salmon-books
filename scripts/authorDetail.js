@@ -4,7 +4,7 @@ import { infiniteScroll } from "./modules/infiniteScroll.js";
 gsap
   .timeline()
   .fromTo(
-    "header",
+    "header#author-header",
     {
       autoAlpha: 0,
     },
