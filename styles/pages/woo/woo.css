@@ -79,7 +79,7 @@
 }
 
 .woocommerce-form-login .woocommerce-form-login__submit {
-  max-width: 9rem !important;
+  max-width: 8rem !important;
 }
 .woocommerce-form-login p:not(.form-row) {
   margin-bottom: 1.25rem;
@@ -87,12 +87,15 @@
 .woocommerce-form-login .woocommerce-form-login__rememberme {
   display: flex !important;
   align-items: center;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 .woocommerce-form-login .woocommerce-form-login__rememberme input {
   width: -moz-fit-content !important;
   width: fit-content !important;
+}
+.woocommerce-form-login .woocommerce-form__label-for-checkbox {
+  margin-top: 0.4rem;
 }
 .woocommerce-form-login .form-row:has(input[type=checkbox]) {
   flex-direction: row-reverse !important;

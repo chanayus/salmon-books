@@ -88,7 +88,7 @@
 .woocommerce-form-login {
     & .woocommerce-form-login__submit {
         @extend .btn-orange;
-        max-width: 9rem !important;
+        max-width: 8rem !important;
     }
     & p:not(.form-row) {
         margin-bottom: 1.25rem;
@@ -96,10 +96,13 @@
     & .woocommerce-form-login__rememberme {
         display: flex !important;
         align-items: center;
-        column-gap: 1rem;
+        column-gap: 0.5rem;
         & input {
             width: fit-content !important;
         }
+    }
+    & .woocommerce-form__label-for-checkbox {
+        margin-top: 0.4rem;
     }
     & .form-row:has(input[type="checkbox"]) {
         flex-direction: row-reverse !important;
