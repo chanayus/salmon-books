@@ -17,9 +17,9 @@
         hash: false,
       });
     </script>
-    <link rel="stylesheet" href="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/styles/pages/global/global.css?ver=1698917465" />
+    <link rel="stylesheet" href="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/styles/pages/global/global.css?ver=1698994411" />
 
-    <link rel="stylesheet" href="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/styles/pages/auth/auth.css?ver=1698917465" />
+    <link rel="stylesheet" href="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/styles/pages/auth/auth.css?ver=1698994411" />
     <link rel="stylesheet" href="./styles/pages/woo/woo.css" />
 
     <!-- JS -->
@@ -31,9 +31,9 @@
       referrerpolicy="no-referrer"
     ></script>
     <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/scripts/main.js?ver=1698917465"></script>
+    <script type="module" src="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/scripts/main.js?ver=1698994411"></script>
 
-    <script type="module" src="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/scripts/checkout.js?ver=1698917465"></script>
+    <script type="module" src="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/scripts/checkout.js?ver=1698994411"></script>
 
     <!-- Wordpress -->
     <script>
@@ -495,7 +495,7 @@
         visibility: visible;
       }
     </style>
-    <link rel="stylesheet" id="salmon-books-style-css" href="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/style.css?ver=1698917465" media="all" />
+    <link rel="stylesheet" id="salmon-books-style-css" href="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/style.css?ver=1698994411" media="all" />
     <link rel="stylesheet" id="omise-css" href="https://salmonbooks.deeboon.live/wp-content/plugins/omise/includes/gateway/../../assets/css/omise-css.css?ver=5.5.0" media="all" />
     <link
       rel="stylesheet"
@@ -641,7 +641,7 @@
             <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
               <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span>Remember me</span>
             </label>
-            <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="4539aafb19" /><input type="hidden" name="_wp_http_referer" value="/checkout/" />
+            <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="bdcab34350" /><input type="hidden" name="_wp_http_referer" value="/checkout/" />
             <input type="hidden" name="redirect" value="https://salmonbooks.deeboon.live/checkout/" />
             <button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="Login">Login</button>
           </p>
@@ -655,7 +655,7 @@
           <div>Have a coupon? <a id="coupon-toggle" class="duration-100 border-b border-transparent cursor-pointer hover:border-white">Click here to enter your code</a></div>
         </div>
 
-        <form id="coupon-form" class="w-full grid grid-rows-[0fr] transition-[grid-template-rows,padding] duration-300 space-y-6" method="post">
+        <form id="coupon-form" class="w-full grid transition-[grid-template-rows,padding] duration-300 space-y-6 grid-rows-[1fr] py-3" method="post">
           <div class="space-y-4 overflow-hidden">
             <p>If you have a coupon code, please apply it below.</p>
 
@@ -1138,7 +1138,7 @@
               </div>
               <div class="woocommerce-shipping-fields"></div>
               <div class="mb-8 woocommerce-additional-fields">
-                <h3 class="mb-2 text-2xl font-bold">Additional information</h3>
+                <h3 class="mb-4 text-2xl font-bold">Additional information</h3>
 
                 <div class="woocommerce-additional-fields__field-wrapper">
                   <p class="form-row notes" id="order_comments_field" data-priority="">
@@ -1173,6 +1173,7 @@
                               https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_FAIL-04-150x150.jpg 150w,
                               https://salmonbooks.deeboon.live/wp-content/uploads/2023/09/MNM_FAIL-04-100x100.jpg 100w
                             "
+                            sizes="(max-width: 300px) 100vw, 300px"
                         /></a>
                       </td>
                       <td class="product-info">
@@ -1209,19 +1210,19 @@
                 </table>
                 <div id="payment" class="woocommerce-checkout-payment">
                   <ul class="wc_payment_methods payment_methods methods">
+                    <li class="wc_payment_method payment_method_cod">
+                      <input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod" checked="checked" data-order_button_text="" />
+
+                      <label for="payment_method_cod"> Cash on delivery </label>
+                      <div class="payment_box payment_method_cod" style="">
+                        <p>Pay with cash upon delivery.</p>
+                      </div>
+                    </li>
                     <li class="wc_payment_method payment_method_omise_internetbanking">
-                      <input
-                        id="payment_method_omise_internetbanking"
-                        type="radio"
-                        class="input-radio"
-                        name="payment_method"
-                        value="omise_internetbanking"
-                        checked="checked"
-                        data-order_button_text=""
-                      />
+                      <input id="payment_method_omise_internetbanking" type="radio" class="input-radio" name="payment_method" value="omise_internetbanking" data-order_button_text="" />
 
                       <label for="payment_method_omise_internetbanking"> Internet Banking </label>
-                      <div class="payment_box payment_method_omise_internetbanking">
+                      <div class="payment_box payment_method_omise_internetbanking" style="display: none">
                         <fieldset id="omise-form-internetbanking">
                           <ul class="omise-banks-list">
                             <!-- BAY -->
@@ -1369,7 +1370,7 @@
 
                     <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">Place order</button>
 
-                    <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="9c16861557" /><input
+                    <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="3d265a4b7f" /><input
                       type="hidden"
                       name="_wp_http_referer"
                       value="/?wc-ajax=update_order_review"
@@ -1456,14 +1457,14 @@
           load_fragments: "load_fragments",
         },
         nonce: {
-          add_to_wishlist_nonce: "c7c6076387",
-          remove_from_wishlist_nonce: "c974608223",
-          reload_wishlist_and_adding_elem_nonce: "3442a32142",
-          load_mobile_nonce: "6ece7a34e3",
-          delete_item_nonce: "e1122692d3",
-          save_title_nonce: "419dae8818",
-          save_privacy_nonce: "9ebb74025e",
-          load_fragments_nonce: "d9c58beb0a",
+          add_to_wishlist_nonce: "bf7a7fe267",
+          remove_from_wishlist_nonce: "d9b195bb0a",
+          reload_wishlist_and_adding_elem_nonce: "cd0a1427cf",
+          load_mobile_nonce: "76a78f560d",
+          delete_item_nonce: "508bab813f",
+          save_title_nonce: "e1d2601464",
+          save_privacy_nonce: "3a26825c41",
+          load_fragments_nonce: "9129d281f6",
         },
         redirect_after_ask_estimate: "",
         ask_estimate_redirect_url: "https:\/\/salmonbooks.deeboon.live",
@@ -1521,9 +1522,9 @@
       var wc_checkout_params = {
         ajax_url: "\/wp-admin\/admin-ajax.php",
         wc_ajax_url: "\/?wc-ajax=%%endpoint%%",
-        update_order_review_nonce: "fa94529b9b",
-        apply_coupon_nonce: "6af4a7ec45",
-        remove_coupon_nonce: "016d478b6e",
+        update_order_review_nonce: "70b0db72c7",
+        apply_coupon_nonce: "3246b5d60f",
+        remove_coupon_nonce: "bd0bf6f48f",
         option_guest_checkout: "yes",
         checkout_url: "\/?wc-ajax=checkout",
         is_checkout: "1",
@@ -1535,6 +1536,6 @@
     <script id="child-local-theme-js-extra">
       var server_object = { ajax_url: "https:\/\/salmonbooks.deeboon.live\/wp-admin\/admin-ajax.php" };
     </script>
-    <script type="module" src="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/js/theme.js?ver=1698917465" id="child-local-theme-js"></script>
+    <script type="module" src="https://salmonbooks.deeboon.live/wp-content/themes/salmon-books/js/theme.js?ver=1698994411" id="child-local-theme-js"></script>
   </body>
 </html>
