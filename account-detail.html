@@ -19,6 +19,8 @@
       });
     </script>
     <link rel="stylesheet" href="./styles/pages/global/global.css" />
+    <link rel="stylesheet" href="./styles/pages/woo/woo.css" />
+
 
     <!-- Components -->
     <script src="./components/navbar.js"></script>
@@ -38,7 +40,7 @@
   <body>
     <navbar-component></navbar-component>
 
-    <main id="main-content">
+    <main id="main-content" class="main-container">
       <!-- Breadcrumb -->
       <section class="relative main-container">
         <section class="breadcrumb">
@@ -56,71 +58,92 @@
           </a>
         </div>
       </section>
-      <section class="flex flex-col gap-8 md:flex-row main-container">
-        <aside class="flex-[0.3] min-w-[17.5rem] flex flex-col font-medium bg-[#eeeeee] h-fit p-4 rounded-lg">
-          <a href="./orders.html" class="w-full p-2.5 flex items-center gap-x-2">
-            <img src="./icons/cart-black.svg" alt="" class="mb-0.5" width="18" height="18" />
-            Orders
-          </a>
-          <a href="./addresses.html" class="w-full p-2.5 flex items-center gap-x-2">
-            <img src="./icons/home-black.svg" alt="" class="mb-0.5" width="18" height="18" />
-            Addresses
-          </a>
-          <a href="./account-detail.html" class="w-full p-2.5 flex items-center gap-x-2 bg-orange rounded text-white">
-            <img src="./icons/user-white.svg" alt="" class="mb-0.5" width="18" height="18" />
-            Account details
-          </a>
-        </aside>
 
-        <form action="" class="flex-1 space-y-6">
-          <section class="flex items-center gap-4">
-            <div class="flex-1 input-wrapper">
-              <label for="firstname" class="text-sm">First name</label>
-              <input type="text" class="theme-input" required id="firstname" />
-            </div>
-
-            <div class="flex-1 input-wrapper">
-              <label for="lastname" class="text-sm">Last name</label>
-              <input type="text" class="theme-input" required id="lastname" />
-            </div>
-          </section>
-
-          <section class="input-wrapper">
-            <label for="display-name" class="text-sm">Display name</label>
-            <input type="text" class="theme-input" required id="display-name" />
-            <i class="text-sm opacity-70"><b>This will be how your name will be displayed in the account section and in reviews</b></i>
-          </section>
-
-          <section class="input-wrapper">
-            <label for="email" class="text-sm">Email address</label>
-            <input type="email" class="theme-input" required id="email" />
-          </section>
-
-          <h4 class="text-xl font-bold">Password Change</h4>
-
-          <section class="input-wrapper input-password">
-            <label for="current-password" class="text-sm">Current password (leave blank to leave unchanged)</label>
-            <input type="password" class="theme-input" required id="current-password" />
-            <button type="button" class="show-password-button"></button>
-          </section>
-
-          <section class="input-wrapper input-password">
-            <label for="new-password" class="text-sm">New password (leave blank to leave unchanged)</label>
-            <input type="password" class="theme-input" required id="new-password" />
-            <button type="button" class="show-password-button"></button>
-          </section>
-
-          <section class="input-wrapper input-password">
-            <label for="confirm-password" class="text-sm">Confirm new password</label>
-            <input type="password" class="theme-input" required id="confirm-password" />
-            <button type="button" class="show-password-button"></button>
-          </section>
-
-          <button class="btn-orange md:max-w-fit">
-            <b>Save Changes</b>
-          </button>
-        </form>
-      </section>
+      <div class="flex flex-col gap-8 mt-8 woocommerce lg:mt-14 lg:flex-row">
+        <nav class="woocommerce-MyAccount-navigation">
+          <ul>
+            <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard">
+              <a href="">Dashboard</a>
+            </li>
+            <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
+              <a href="./orders.html">Orders</a>
+            </li>
+            <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--downloads">
+              <a href="">Downloads</a>
+            </li>
+            <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address">
+              <a href="./addresses.html">Addresses</a>
+            </li>
+            <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account is-active">
+              <a href="./account-detail.html">Account details</a>
+            </li>
+            <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout">
+              <a href="">Log out</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="woocommerce-MyAccount-content">
+          <div class="woocommerce-notices-wrapper"></div>
+          <form class="woocommerce-EditAccountForm edit-account" action="" method="post">
+            <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+              <label for="account_first_name">First name&nbsp;<span class="required">*</span></label>
+              <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" autocomplete="given-name" value="asdasd" />
+            </p>
+            <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+              <label for="account_last_name">Last name&nbsp;<span class="required">*</span></label>
+              <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" autocomplete="family-name" value="asdasd" />
+            </p>
+            <div class="clear"></div>
+            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+              <label for="account_display_name">Display name&nbsp;<span class="required">*</span></label>
+              <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_display_name" id="account_display_name" value="No" />
+              <span><em>This will be how your name will be displayed in the account section and in reviews</em></span>
+            </p>
+            <div class="clear"></div>
+            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+              <label for="account_email">Email address&nbsp;<span class="required">*</span></label>
+              <input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="chanayus1526@gmail.com" />
+            </p>
+            <fieldset>
+              <legend>Password change</legend>
+              <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                <label for="password_current">Current password (leave blank to leave unchanged)</label>
+                <span class="password-input"
+                  ><input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_current" id="password_current" autocomplete="off" /><span
+                    class="show-password-input"
+                  ></span
+                ></span>
+              </p>
+              <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                <label for="password_1">New password (leave blank to leave unchanged)</label>
+                <span class="password-input"
+                  ><input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1" autocomplete="off" /><span
+                    class="show-password-input"
+                  ></span
+                ></span>
+              </p>
+              <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                <label for="password_2">Confirm new password</label>
+                <span class="password-input"
+                  ><input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" autocomplete="off" /><span
+                    class="show-password-input"
+                  ></span
+                ></span>
+              </p>
+            </fieldset>
+            <div class="clear"></div>
+            <p>
+              <input type="hidden" id="save-account-details-nonce" name="save-account-details-nonce" value="a15759cc5a" /><input
+                type="hidden"
+                name="_wp_http_referer"
+                value="/my-account/edit-account/"
+              />
+              <button type="submit" class="woocommerce-Button button" name="save_account_details" value="Save changes">Save changes</button>
+              <input type="hidden" name="action" value="save_account_details" />
+            </p>
+          </form>
+        </div>
+      </div>
     </main>
 
     <footer-component></footer-component>
