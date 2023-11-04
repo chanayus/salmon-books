@@ -945,4 +945,20 @@ input[type=checkbox] {
 }
 .podcast-card .podcast-info .podcast-actions .playby-list a:hover {
   background: rgba(255, 255, 255, 0.6);
+}
+
+.gravity-hover {
+  animation: gravity-hover-anim 0.75s forwards;
+}
+
+@keyframes gravity-hover-anim {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(var(--gravity-x, 0), var(--gravity-y, 0));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }/*# sourceMappingURL=global.css.map */

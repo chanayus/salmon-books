@@ -529,3 +529,19 @@
         }
     }
 }
+
+.gravity-hover {
+    animation: gravity-hover-anim 0.75s forwards;
+}
+
+@keyframes gravity-hover-anim {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(var(--gravity-x, 0), var(--gravity-y, 0));
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}

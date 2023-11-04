@@ -2,20 +2,21 @@ export const gravityHover = (selector) => {
   const cards = document.querySelectorAll(selector);
 
   cards?.forEach((card) => {
-    let isPlaying = false;
-    card.addEventListener("mouseover", (e) => {
-      if (!isPlaying) {
-        const x = e.layerX < 50 ? 5 : -5;
-        const y = e.layerY < 50 ? 5 : -5;
-        gsap
-          .timeline({
-            onComplete: () => (isPlaying = false),
-          })
-          .to(card, { x: x, y: y })
-          .to(card, { x: -x, y: -y }, "-=0.35")
-          .to(card, { x: 0, y: 0 });
+    card.addEventListener("mouseenter", (e) => {
+      if (!card.classList.contains("gravity-hover")) {
+        const x = e.layerX < 50 ? 7 : -7;
+        const y = e.layerY < 50 ? 7 : -7;
+
+        // Set unique animation values for each card
+        card.style.setProperty("--gravity-x", `${x}px`);
+        card.style.setProperty("--gravity-y", `${y}px`);
+
+        card.classList.add("gravity-hover");
       }
-      isPlaying = true;
+    });
+
+    card.addEventListener("animationend", (e) => {
+      card.classList.remove("gravity-hover");
     });
   });
 };
