@@ -531,15 +531,18 @@
 }
 
 .gravity-hover {
-    animation: gravity-hover-anim 0.75s forwards;
+    animation: gravity-hover-anim 1.25s forwards ;
 }
 
 @keyframes gravity-hover-anim {
     0% {
         transform: translate(0, 0);
     }
-    50% {
+    25% {
         transform: translate(var(--gravity-x, 0), var(--gravity-y, 0));
+    }
+    75% {
+        transform: translate(calc((var(--gravity-x, 0) * -1) / 2), calc((var(--gravity-y, 0) * -1) / 2));
     }
     100% {
         transform: translate(0, 0);
