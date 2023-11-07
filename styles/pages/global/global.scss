@@ -167,6 +167,7 @@
         & img {
             width: 100%;
             height: 100%;
+            border-radius: 9999px;
             object-fit: cover;
             transition: 0.5s;
         }
@@ -531,7 +532,7 @@
 }
 
 .gravity-hover {
-    animation: gravity-hover-anim 1.25s forwards ;
+    animation: gravity-hover-anim 1.25s forwards;
 }
 
 @keyframes gravity-hover-anim {
