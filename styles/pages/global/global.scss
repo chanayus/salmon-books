@@ -165,7 +165,9 @@
         border-radius: 9999px;
         overflow: hidden;
         position: relative;
+        border: 1px solid red;
         & img {
+            border: 1px solid blue;
             position: absolute;
             width: 100%;
             height: 100%;
