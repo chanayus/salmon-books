@@ -1,6 +1,6 @@
 let currentSearchVisible = false;
 
-const navSearchButton = document.querySelector("#nav-search-button");
+const navSearchButton = document.querySelectorAll(".search--button--object");
 const closeSearchButton = document.querySelector("#close-search-popup");
 
 const searchPopup = document.querySelector("#search-popup");
@@ -32,7 +32,7 @@ const toggleSearchPopup = (type) => {
   }
 };
 
-navSearchButton?.addEventListener("click", () => toggleSearchPopup("open"));
+navSearchButton?.forEach((item) => item?.addEventListener("click", () => toggleSearchPopup("open")));
 closeSearchButton?.addEventListener("click", () => toggleSearchPopup("close"));
 
 input?.addEventListener("input", (e) => {

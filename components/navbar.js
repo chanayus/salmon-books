@@ -32,7 +32,7 @@ class Navbar extends HTMLElement {
           </div>
         </div>
 
-        <button id="nav-search-button" class="w-8 h-8 bg-white rounded-full">
+        <button id="nav-search-button" class="search--button--object w-8 h-8 bg-white rounded-full">
           <img src="./icons/search-orange.svg" width="16" height="16" class="mx-auto" alt="" />
         </button>
       </div>
